@@ -1,0 +1,43 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#08080a"/>
+
+  <!-- Maya 3D Viewport Grid -->
+  <defs>
+    <pattern id="envWireGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="800" fill="url(#envWireGrid)"/>
+
+  <!-- Wireframe Columns & Architecture -->
+  <g stroke="#00f3ff" stroke-width="1.5">
+    <!-- Sanctuary Arch Wireframe -->
+    <path d="M520,380 C520,260 640,200 640,200 C640,200 760,260 760,380 L760,650 L520,650 Z" fill="none"/>
+    <line x1="640" y1="200" x2="640" y2="650" stroke="#ff2a3b"/>
+
+    <!-- Left Pillar Wireframe -->
+    <rect x="80" y="100" width="120" height="700" fill="none"/>
+    <line x1="120" y1="100" x2="120" y2="800"/>
+    <line x1="160" y1="100" x2="160" y2="800"/>
+    <line x1="80" y1="240" x2="200" y2="240"/>
+    <line x1="80" y1="380" x2="200" y2="380"/>
+    <line x1="80" y1="520" x2="200" y2="520"/>
+
+    <!-- Right Pillar Wireframe -->
+    <rect x="1080" y="100" width="120" height="700" fill="none"/>
+    <line x1="1120" y1="100" x2="1120" y2="800"/>
+    <line x1="1160" y1="100" x2="1160" y2="800"/>
+    <line x1="1080" y1="240" x2="1200" y2="240"/>
+    <line x1="1080" y1="380" x2="1200" y2="380"/>
+    <line x1="1080" y1="520" x2="1200" y2="520"/>
+
+    <!-- Stepped Platform Wireframe -->
+    <polygon points="100,750 1180,750 1080,600 200,600" fill="none"/>
+    <line x1="200" y1="600" x2="1080" y2="600" stroke="#ff2a3b"/>
+    <polygon points="200,600 1080,600 980,520 300,520" fill="none"/>
+  </g>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#00f3ff" letter-spacing="3">MAYA MODULAR KIT // TOPOLOGY PASS</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">MODULAR ARCHITECTURE WIREFRAME</text>
+  <text x="1220" y="80" font-family="monospace" font-size="12" fill="#888888" letter-spacing="2" text-anchor="end">MODULE REUSABILITY: 94%</text>
+</svg>

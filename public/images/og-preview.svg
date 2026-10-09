@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050505"/>
+  <radialGradient id="ogGlow" cx="70%" cy="40%" r="60%">
+    <stop offset="0%" stopColor="#7d070d" stopOpacity="0.8"/>
+    <stop offset="50%" stopColor="#260306" stopOpacity="0.4"/>
+    <stop offset="100%" stopColor="#050505" stopOpacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+
+  <!-- Border Frame -->
+  <rect x="40" y="40" width="1120" height="550" stroke="#ff2a3b" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="50" y="50" width="1100" height="530" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- Symbol Watermark -->
+  <text x="1000" y="380" font-family="serif" font-size="280" fill="#ff2a3b" fill-opacity="0.06" text-anchor="middle">ॐ</text>
+
+  <!-- Brand Content -->
+  <text x="100" y="150" font-family="monospace" font-size="16" fill="#ff2a3b" letter-spacing="4">◆ C.A. AAJAY KUMAR // 3D PORTFOLIO</text>
+  <text x="100" y="250" font-family="sans-serif" font-weight="800" font-size="74" fill="#ffffff" letter-spacing="1">BUILT IN 3D.</text>
+  <text x="100" y="340" font-family="sans-serif" font-weight="800" font-size="74" fill="#ff2a3b" letter-spacing="1">FINISHED WITH IMPACT.</text>
+
+  <text x="100" y="420" font-family="sans-serif" font-size="22" fill="#aaaaaa">Autodesk Maya • Substance 3D Painter • Arnold • Motion Graphics</text>
+
+  <line x1="100" y1="470" x2="1100" y2="470" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <text x="100" y="515" font-family="monospace" font-size="14" fill="#666666" letter-spacing="2">ACEScg COLOR PIPELINE // PRODUCTION QUAD TOPOLOGY // 4K PBR TEXTURES</text>
+  <text x="1100" y="515" font-family="monospace" font-size="14" fill="#d49755" letter-spacing="2" text-anchor="end">2026 EDITION</text>
+</svg>

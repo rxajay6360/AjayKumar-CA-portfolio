@@ -1,0 +1,33 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#08080a"/>
+  <defs>
+    <pattern id="bcWireGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bcWireGrid)"/>
+
+  <!-- Banana Car Wireframe Flow -->
+  <g transform="translate(640, 440)" stroke="#00f3ff" stroke-width="1.5" fill="none">
+    <path d="M-360,-20 C-320,-120 -150,-160 80,-140 C280,-120 380,-20 380,20 C360,90 220,110 50,110 C-180,110 -320,60 -360,-20 Z"/>
+    <line x1="-300" y1="-80" x2="-300" y2="40"/>
+    <line x1="-200" y1="-120" x2="-200" y2="90"/>
+    <line x1="-100" y1="-140" x2="-100" y2="105"/>
+    <line x1="0" y1="-145" x2="0" y2="110" stroke="#ff2a3b"/>
+    <line x1="100" y1="-140" x2="100" y2="105"/>
+    <line x1="200" y1="-100" x2="200" y2="80"/>
+    <line x1="300" y1="-50" x2="300" y2="50"/>
+
+    <!-- Canopy Wireframe -->
+    <path d="M-60,-130 C-30,-200 120,-190 180,-130 C120,-120 20,-115 -60,-130 Z"/>
+
+    <!-- Wheel Wireframes -->
+    <circle cx="-180" cy="70" r="85"/>
+    <circle cx="-180" cy="70" r="42"/>
+    <circle cx="220" cy="70" r="75"/>
+    <circle cx="220" cy="70" r="36"/>
+  </g>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#00f3ff" letter-spacing="3">MAYA SUBDIVISION TOPOLOGY // CARTOON VOLUMES</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">ORGANIC TO MECHANICAL MESH CONTINUITY</text>
+</svg>

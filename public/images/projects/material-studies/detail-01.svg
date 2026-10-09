@@ -1,0 +1,11 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#08080a"/>
+  <!-- Micro surface roughness map analysis -->
+  <rect x="240" y="160" width="800" height="480" fill="#18181a" stroke="#888" stroke-width="2"/>
+  <line x1="640" y1="160" x2="640" y2="640" stroke="#ff2a3b" stroke-width="2"/>
+  <text x="440" y="415" font-family="monospace" font-size="16" fill="#888" text-anchor="middle">ROUGHNESS (0.28)</text>
+  <text x="840" y="415" font-family="monospace" font-size="16" fill="#fff" text-anchor="middle">SPECULAR PASS</text>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#888" letter-spacing="3">GRAYSCALE HISTOGRAM CALIBRATION</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">ROUGHNESS MAP ANALYSIS UNDER GRAZING LIGHT</text>
+</svg>

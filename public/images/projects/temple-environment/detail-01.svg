@@ -1,0 +1,10 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#08080a"/>
+  <!-- Stone texture study -->
+  <rect x="240" y="150" width="800" height="500" fill="#2d2926" stroke="#d49755" stroke-opacity="0.4" stroke-width="2"/>
+  <circle cx="640" cy="400" r="160" stroke="#ff2a3b" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="640" y="415" font-family="serif" font-size="60" fill="#d49755" text-anchor="middle">RELIEF</text>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#d49755" letter-spacing="3">SUBSTANCE 3D PAINTER // STONE DETAIL</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">CARVED STONE BAS-RELIEF STUDY</text>
+</svg>

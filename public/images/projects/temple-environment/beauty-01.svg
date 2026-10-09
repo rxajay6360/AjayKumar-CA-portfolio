@@ -1,0 +1,10 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#060608"/>
+  <!-- Grand Sanctuary Vista Beauty Shot -->
+  <polygon points="500,0 780,0 1200,800 100,800" fill="#d49755" opacity="0.12"/>
+  <rect x="200" y="200" width="880" height="480" fill="#181513" stroke="#ff2a3b" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="640" y="420" font-family="serif" font-size="120" fill="#ff2a3b" fill-opacity="0.15" text-anchor="middle">ॐ</text>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#d49755" letter-spacing="3">ATMOSPHERIC PERSPECTIVE // CAMERA 02</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">SANCTUARY ENVIRONMENT VISTA</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="thBeautyBg" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stopColor="#1a0408"/>
+      <stop offset="50%" stopColor="#0a0a0c"/>
+      <stop offset="100%" stopColor="#040405"/>
+    </radialGradient>
+    <radialGradient id="thSpot" cx="60%" cy="30%" r="40%">
+      <stop offset="0%" stopColor="#ff5355" stopOpacity="0.5"/>
+      <stop offset="100%" stopColor="#000000" stopOpacity="0"/>
+    </radialGradient>
+    <linearGradient id="thBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#e2e6ed"/>
+      <stop offset="50%" stopColor="#434851"/>
+      <stop offset="100%" stopColor="#191a1d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#thBeautyBg)"/>
+  <circle cx="700" cy="350" r="350" fill="url(#thSpot)"/>
+
+  <!-- Dramatic Low-Angle Hammer View -->
+  <g transform="translate(620, 380) rotate(12)">
+    <polygon points="-260,-130 260,-130 300,10 260,140 -260,140 -300,10" fill="url(#thBlade)" stroke="#ff2a3b" stroke-width="2"/>
+    <path d="M-100,-30 L-60,-30 L-80,10 L-40,10" stroke="#ff2a3b" stroke-width="6" stroke-linecap="round"/>
+    <path d="M40,-30 L80,-30 L60,10 L100,10" stroke="#ff2a3b" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-24" y="140" width="48" height="280" rx="4" fill="#301b0f" stroke="#111111" stroke-width="2"/>
+  </g>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#ff2a3b" letter-spacing="3">ARNOLD BEAUTY PASS // THREE-POINT LIGHT RIG</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">CLOSE-UP BEAUTY RENDER</text>
+</svg>

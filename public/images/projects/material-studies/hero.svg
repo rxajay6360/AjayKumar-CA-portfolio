@@ -1,0 +1,93 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="matBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stopColor="#1a0c0e"/>
+      <stop offset="45%" stopColor="#0b0a0c"/>
+      <stop offset="100%" stopColor="#040405"/>
+    </radialGradient>
+    <!-- Material Sphere 1: Weathered Oxidized Copper -->
+    <radialGradient id="copperMat" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stopColor="#7be4d5"/>
+      <stop offset="35%" stopColor="#38a89d"/>
+      <stop offset="70%" stopColor="#bf5700"/>
+      <stop offset="100%" stopColor="#4a1c02"/>
+    </radialGradient>
+    <!-- Material Sphere 2: Oiled Antique Teakwood -->
+    <radialGradient id="woodMat" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stopColor="#96603a"/>
+      <stop offset="45%" stopColor="#5c341b"/>
+      <stop offset="85%" stopColor="#30180a"/>
+      <stop offset="100%" stopColor="#120803"/>
+    </radialGradient>
+    <!-- Material Sphere 3: Cracked Basalt Volcanic Stone -->
+    <radialGradient id="stoneMat" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stopColor="#696c73"/>
+      <stop offset="40%" stopColor="#3c3e42"/>
+      <stop offset="80%" stopColor="#1d1e21"/>
+      <stop offset="100%" stopColor="#0b0b0c"/>
+    </radialGradient>
+    <!-- Material Sphere 4: Forged Damascus Steel -->
+    <radialGradient id="steelMat" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stopColor="#ffffff"/>
+      <stop offset="25%" stopColor="#9da3ad"/>
+      <stop offset="60%" stopColor="#41454d"/>
+      <stop offset="100%" stopColor="#141517"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#matBg)"/>
+
+  <!-- Pedestal Floor Shelf -->
+  <line x1="80" y1="560" x2="1200" y2="560" stroke="#ff2a3b" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="80" y="560" width="1120" height="120" fill="#08080a" stroke="white" stroke-opacity="0.05"/>
+
+  <!-- 4 PBR Shader Calibration Spheres -->
+  <!-- Sphere 1: Copper -->
+  <g transform="translate(240, 420)">
+    <ellipse cx="0" cy="140" rx="90" ry="20" fill="#000000" opacity="0.6"/>
+    <circle cx="0" cy="0" r="110" fill="url(#copperMat)" stroke="#ff2a3b" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="-35" cy="-35" r="14" fill="#ffffff" opacity="0.6" filter="blur(2px)"/>
+    <!-- Patina crack veins -->
+    <path d="M-60,10 C-30,-20 10,20 40,-10 C70,-40 60,30 80,60" stroke="#256b64" stroke-width="2.5" fill="none"/>
+    <text x="0" y="175" font-family="monospace" font-size="11" fill="#7be4d5" text-anchor="middle">OXIDIZED COPPER</text>
+    <text x="0" y="195" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">METALLIC: 1.0 | ROUGH: 0.42</text>
+  </g>
+
+  <!-- Sphere 2: Teakwood -->
+  <g transform="translate(500, 420)">
+    <ellipse cx="0" cy="140" rx="90" ry="20" fill="#000000" opacity="0.6"/>
+    <circle cx="0" cy="0" r="110" fill="url(#woodMat)" stroke="#d49755" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="-35" cy="-35" r="14" fill="#ffffff" opacity="0.4" filter="blur(2px)"/>
+    <!-- Wood grain bands -->
+    <path d="M-80,-40 C-30,-20 30,-30 80,-50 M-90,0 C-20,20 20,10 90,-10 M-80,40 C-30,60 30,50 80,30" stroke="#1f0f06" stroke-width="3" fill="none" opacity="0.6"/>
+    <text x="0" y="175" font-family="monospace" font-size="11" fill="#d49755" text-anchor="middle">OILED TEAKWOOD</text>
+    <text x="0" y="195" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">METALLIC: 0.0 | ROUGH: 0.28</text>
+  </g>
+
+  <!-- Sphere 3: Basalt Stone -->
+  <g transform="translate(760, 420)">
+    <ellipse cx="0" cy="140" rx="90" ry="20" fill="#000000" opacity="0.6"/>
+    <circle cx="0" cy="0" r="110" fill="url(#stoneMat)" stroke="#888" stroke-opacity="0.3" stroke-width="1.5"/>
+    <circle cx="-35" cy="-35" r="10" fill="#ffffff" opacity="0.3" filter="blur(2px)"/>
+    <!-- Basalt fracture fissures -->
+    <path d="M-40,-70 L-20,-20 L20,-10 L10,50 L50,80" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+    <text x="0" y="175" font-family="monospace" font-size="11" fill="#aaaaaa" text-anchor="middle">CRACKED BASALT</text>
+    <text x="0" y="195" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">METALLIC: 0.0 | ROUGH: 0.82</text>
+  </g>
+
+  <!-- Sphere 4: Damascus Steel -->
+  <g transform="translate(1020, 420)">
+    <ellipse cx="0" cy="140" rx="90" ry="20" fill="#000000" opacity="0.6"/>
+    <circle cx="0" cy="0" r="110" fill="url(#steelMat)" stroke="#ff2a3b" stroke-opacity="0.6" stroke-width="1.5"/>
+    <circle cx="-35" cy="-35" r="20" fill="#ffffff" opacity="0.8" filter="blur(2px)"/>
+    <!-- Wavy damascus folds -->
+    <path d="M-80,-60 C-30,-40 20,-60 80,-40 M-80,-20 C-30,0 20,-20 80,0 M-80,20 C-30,40 20,20 80,40" stroke="#1a1c20" stroke-width="2.5" fill="none"/>
+    <text x="0" y="175" font-family="monospace" font-size="11" fill="#ffffff" text-anchor="middle">DAMASCUS STEEL</text>
+    <text x="0" y="195" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">METALLIC: 1.0 | ROUGH: 0.18</text>
+  </g>
+
+  <!-- Technical Overlay HUD -->
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#ff2a3b" letter-spacing="3">SUBSTANCE 3D PAINTER // MATERIAL LABORATORY</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">PBR MATERIAL EXPLORATIONS</text>
+  <text x="1220" y="80" font-family="monospace" font-size="12" fill="#888888" letter-spacing="2" text-anchor="end">4K PROCEDURAL SMART MATERIALS</text>
+</svg>

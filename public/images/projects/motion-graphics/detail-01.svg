@@ -1,0 +1,9 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#050304"/>
+  <!-- 3D typography space pass with depth of field -->
+  <rect x="200" y="200" width="880" height="400" fill="#120608" stroke="#ff2a3b" stroke-width="1.5"/>
+  <text x="640" y="420" font-family="sans-serif" font-weight="900" font-size="70" fill="#ff5355" opacity="0.8" text-anchor="middle">3D CAMERA PASS</text>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#ff2a3b" letter-spacing="3">AFTER EFFECTS 3D CAMERA</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">3D SPACE MOTION &amp; DEPTH OF FIELD</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#070709"/>
+  <!-- Studio Beauty Shot with Anisotropic Reflection Highlights -->
+  <circle cx="640" cy="380" r="280" fill="#d49755" opacity="0.15"/>
+  <ellipse cx="640" cy="450" rx="280" ry="120" fill="#4d1b0d" stroke="#d49755" stroke-width="2"/>
+  <path d="M500,200 C640,100 800,200 800,200" stroke="#ffe6a8" stroke-width="6" fill="none"/>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#d49755" letter-spacing="3">STUDIO STRIP-BOX LIGHTING // ANISOTROPY</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">STUDIO COMMERCIAL BEAUTY RENDER</text>
+</svg>

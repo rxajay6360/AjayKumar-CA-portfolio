@@ -1,0 +1,10 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#08080a"/>
+  <!-- Front 3/4 Dynamic Stylized Beauty Shot -->
+  <circle cx="640" cy="400" r="300" fill="#fbc02d" opacity="0.1"/>
+  <ellipse cx="640" cy="500" rx="350" ry="100" fill="#f57f17" opacity="0.2"/>
+  <text x="640" y="420" font-family="sans-serif" font-weight="900" font-size="110" fill="#ffffff" fill-opacity="0.04" text-anchor="middle">BANANA SPEED</text>
+
+  <text x="60" y="80" font-family="monospace" font-size="12" fill="#fbc02d" letter-spacing="3">ARNOLD CAR-PAINT PASS // STUDIO CYCLORAMA</text>
+  <text x="60" y="105" font-family="sans-serif" font-weight="700" font-size="28" fill="#ffffff">DYNAMIC 3/4 BEAUTY PRESENTATION</text>
+</svg>
