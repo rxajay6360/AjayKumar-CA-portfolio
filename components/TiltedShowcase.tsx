@@ -31,7 +31,7 @@ export default function TiltedShowcase() {
       <div className="stick">
         <div className="grid-3d">
           <div className="tile t1">Mjölnir</div>
-          <div className="tile t2">3D✦</div>
+          <div className="tile t2">Ajay✦</div>
           <div className="tile t3">
             <span>.</span>
           </div>
