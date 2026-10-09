@@ -728,28 +728,286 @@ h2.section-heading {
   text-transform: uppercase;
 }
 
-/* Responsive Rules from Reference HTML */
+/* Responsive Rules for Mobile and Desktop */
 @media (max-width: 800px) {
-  .about,
-  .cards,
-  .shots,
-  .row {
-    grid-template-columns: 1fr;
+  /* Navigation on mobile */
+  nav.site-nav {
+    padding: 14px 16px;
+    font-size: 12px;
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(12px);
+    mix-blend-mode: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
+
+  nav.site-nav a {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* Hero on mobile */
+  .hero {
+    padding: 100px 16px 40px;
+    min-height: 100svh;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    white-space: normal;
+    font-size: clamp(38px, 11vw, 76px);
+    line-height: 0.95;
+    margin-top: 14vh;
+    letter-spacing: -0.04em;
+  }
+
+  .hero h1 span,
+  .hero h1 b {
+    display: inline-block;
+  }
+
+  .avatar {
+    width: clamp(140px, 36vw, 190px);
+    top: calc(14vh + 50px);
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    opacity: 0.4;
+  }
+
+  .hero .sub {
+    position: static;
+    margin-top: 32px;
+    max-width: 320px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .dots {
+    justify-content: center;
+  }
+
+  .hero .pill {
+    position: static;
+    margin-top: 24px;
+  }
+
+  /* Tilted showcase on mobile */
+  .show {
+    height: 140vh;
+  }
+
   .grid-3d {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 94vw;
   }
+
+  .tile {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: clamp(14px, 4.2vw, 20px);
+  }
+
+  /* Section containers on mobile */
+  section.html-section {
+    padding: 10vh 16px;
+  }
+
+  /* About on mobile */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    min-height: auto;
+  }
+
+  .about h2 {
+    font-size: clamp(40px, 12vw, 84px);
+  }
+
+  .about p {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+
+  .soc {
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
   .float {
-    height: 200px;
+    height: 220px;
+    margin-top: 10px;
   }
-  .hero .sub {
-    bottom: 20vh;
+
+  .float i {
+    width: 48px;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 12px;
   }
+
+  /* Services on mobile */
+  .services h2 {
+    font-size: clamp(42px, 12vw, 90px);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 4vh;
+    perspective: none;
+  }
+
+  .card {
+    min-height: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    border-radius: 20px;
+  }
+
+  .card .in {
+    padding: 22px 18px;
+  }
+
+  .card h3 {
+    margin: 18px 0 8px;
+    font-size: 22px;
+  }
+
+  .card .bar {
+    padding: 12px 18px;
+    font-size: 11px;
+  }
+
+  /* Projects on mobile */
+  .projects {
+    padding-bottom: 12vh;
+  }
+
+  .projects h2 {
+    font-size: clamp(42px, 12vw, 90px);
+  }
+
+  .stack {
+    margin-top: 4vh;
+  }
+
   .proj {
-    height: 62vh;
+    height: auto;
+    min-height: 440px;
+    padding: 18px 14px;
+    margin-bottom: 8vh;
+    border-radius: 20px;
+    position: sticky;
+    top: calc(65px + var(--n) * 14px);
   }
-  nav.site-nav a:nth-child(n + 2) {
-    font-size: 12px;
+
+  .proj header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .proj header div {
+    gap: 12px;
+  }
+
+  .proj b {
+    font-size: 30px;
+  }
+
+  .proj h3 {
+    font-size: 18px;
+  }
+
+  .proj .pill {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .shots {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .shots > div:first-child {
+    height: 60px;
+    font-size: 22px;
+    border-radius: 14px;
+  }
+
+  .shots > div:last-child {
+    height: 240px;
+    border-radius: 14px;
+  }
+
+  /* Contact & Form on mobile */
+  .contact {
+    padding: 8vh 14px;
+    min-height: auto;
+  }
+
+  .contact h2 {
+    font-size: clamp(38px, 12vw, 90px);
+  }
+
+  .contact p.l {
+    font-size: 13px;
+    margin-top: 14px;
+    padding: 0 8px;
+  }
+
+  .form {
+    padding: 22px 16px;
+    margin-top: 4vh;
+    border-radius: 20px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+  }
+
+  .form h3 {
+    font-size: 22px;
+    margin: 8px 0 16px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .chips {
+    gap: 6px;
+  }
+
+  .chips button {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .form .pill {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .connect {
+    margin-top: 8vh;
+  }
+
+  .connect h2 {
+    font-size: clamp(34px, 12vw, 110px);
+  }
+
+  .connect .avatar {
+    width: clamp(90px, 22vw, 150px);
+  }
+
+  .connect small {
+    margin-top: 4vh;
+    font-size: 10px;
   }
 }
 
