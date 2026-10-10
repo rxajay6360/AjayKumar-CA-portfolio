@@ -1,10 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="about html-section" id="about">
+    <section ref={sectionRef} className="about html-section" id="about">
       {/* Background concept artwork centered with seamless edge fading */}
       <div className="about-bg-stage" aria-hidden="true">
         <div className="about-bg-aura" />
@@ -21,8 +42,13 @@ export default function About() {
       </div>
 
       <div className="about-content">
-        <h2 className="chrome">
-          About<br />me
+        <h2 className={`about-title ${isVisible ? "is-visible" : ""}`}>
+          <span className="title-reveal-line">
+            <span className="title-reveal-word">About</span>
+          </span>
+          <span className="title-reveal-line">
+            <span className="title-reveal-word">Me</span>
+          </span>
         </h2>
         <p>
           I am C.A. Aajay Kumar, a creative artist focused on 3D modeling, texturing, materials, environments, and motion graphics. I enjoy transforming ideas into visually striking digital experiences through detailed modeling, cinematic lighting, material development, and creative presentation. Let&apos;s build something incredible together!
