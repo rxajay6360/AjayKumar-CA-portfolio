@@ -220,14 +220,6 @@ export default function InteractiveAvatar() {
             aria-hidden="true"
           />
         </div>
-
-        {/* Interactive Badge Below Portrait */}
-        <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-[#0a0c10]/95 border border-[#ff2a3b]/40 backdrop-blur-md shadow-xl flex items-center gap-1.5 whitespace-nowrap z-30 group-hover:border-[#ff2a3b] transition-colors">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a3b] animate-ping" />
-          <span className="text-[10px] font-mono tracking-widest uppercase text-white/95 font-semibold">
-            AJAY KUMAR
-          </span>
-        </div>
       </div>
     </div>
   );
