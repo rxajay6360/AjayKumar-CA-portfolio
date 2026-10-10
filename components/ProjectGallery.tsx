@@ -28,12 +28,12 @@ export default function ProjectGallery() {
     {
       n: 2,
       num: "03",
-      cat: "PRODUCT VISUALIZATION",
-      title: "Vintage Gramophone",
-      link: "/work/vintage-gramophone",
-      leftText: "Acoustic",
+      cat: "THE FUTURE MOVES DIFFERENTLY",
+      title: "Futuristic Single Wheel Bike",
+      link: "/work/futuristic-single-wheel-bike",
+      leftText: "Monowheel",
       leftClass: "p3a",
-      image: "/images/projects/vintage-gramophone/hero.svg",
+      image: "/images/projects/futuristic-bike/front-low-angle.jpg",
     },
     {
       n: 3,
