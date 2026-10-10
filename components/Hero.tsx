@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import InteractiveAvatar from "@/components/InteractiveAvatar";
 
 export default function Hero() {
@@ -79,6 +80,20 @@ export default function Hero() {
 
   return (
     <header className="hero" id="home">
+      {/* Cinematic Hero Background Showcase (50% Opacity with Smooth Entry) */}
+      <div className="hero-bg-container" aria-hidden="true">
+        <Image
+          src="/images/hero/hero-showcase-bg.png"
+          alt="Ajay Kumar 3D Artist Background Showcase"
+          fill
+          priority
+          sizes="100vw"
+          className="hero-bg-image"
+          quality={90}
+        />
+        <div className="hero-bg-vignette" />
+      </div>
+
       {/* Animated Hero Title with Interactive 3D Avatar */}
       <h1 className="hero-title">
         <InteractiveAvatar />
