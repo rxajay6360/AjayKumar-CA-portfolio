@@ -25,6 +25,7 @@ export interface Project {
   techniques: string[];
   heroImage: string;
   wireframeImage?: string;
+  wireframeBeautyImage?: string;
   textureBreakdown?: TextureBreakdownItem[];
   processStages: ProcessStage[];
   galleryImages: {
@@ -57,7 +58,8 @@ export const projects: Project[] = [
       "Cinematic Alpine Environment Staging",
     ],
     heroImage: "/images/projects/hanuman-gadha/closeup.jpg",
-    wireframeImage: "/images/projects/hanuman-gadha/Front.jpg",
+    wireframeImage: "/images/projects/hanuman-gadha/Front-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/hanuman-gadha/Front.jpg",
     keyHighlights: [
       "Ornate golden finish with realistic micro-roughness, specular reflections, and surface wear",
       "Dynamic alpine setting with snow coverage, rocky cliff terrain, and dramatic sky backdrop",

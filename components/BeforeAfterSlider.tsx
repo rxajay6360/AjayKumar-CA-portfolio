@@ -92,18 +92,16 @@ export default function BeforeAfterSlider({
 
       {/* "Before" Image (Clipped overlay: Wireframe) */}
       <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ width: `${sliderPosition}%` }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
-        <div className="relative w-full h-full min-w-full" style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : "100%" }}>
-          <Image
-            src={beforeImage}
-            alt={beforeLabel}
-            fill
-            className="object-cover"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-          />
-        </div>
+        <Image
+          src={beforeImage}
+          alt={beforeLabel}
+          fill
+          className="object-cover"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+        />
         <div className="absolute bottom-4 left-4 px-2.5 py-1 rounded bg-[#050505]/80 backdrop-blur-md border border-white/10 text-[10px] font-mono tracking-widest text-[#ff2a3b] uppercase z-10 whitespace-nowrap">
           {beforeLabel}
         </div>

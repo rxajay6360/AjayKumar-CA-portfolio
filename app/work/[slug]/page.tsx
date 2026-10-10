@@ -207,9 +207,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
             <BeforeAfterSlider
               beforeImage={project.wireframeImage}
-              afterImage={project.heroImage}
-              beforeLabel="WIREFRAME TOPOLOGY (MAYA)"
-              afterLabel="FINAL ARNOLD BEAUTY RENDER"
+              afterImage={project.wireframeBeautyImage || project.heroImage}
+              beforeLabel="WIREFRAME TOPOLOGY"
+              afterLabel="FINAL BEAUTY RENDER"
               aspectRatio="aspect-[16/9]"
             />
           </section>
