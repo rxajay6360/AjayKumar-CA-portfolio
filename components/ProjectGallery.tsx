@@ -58,12 +58,12 @@ export default function ProjectGallery() {
     {
       n: 5,
       num: "06",
-      cat: "MOTION DESIGN",
-      title: "Cinematic Motion Graphics",
-      link: "/work/motion-graphics",
-      leftText: "Kinetic",
+      cat: "NIGHT HAS A NEW ADDRESS",
+      title: "AFTER DARK",
+      link: "/work/after-dark",
+      leftText: "Lounge",
       leftClass: "p3a",
-      image: "/images/projects/motion-graphics/hero.svg",
+      image: "/images/projects/after-dark/front-closeup-angle.jpg",
     },
     {
       n: 6,

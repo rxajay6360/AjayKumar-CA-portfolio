@@ -567,72 +567,135 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "motion-graphics",
-    title: "Cinematic Motion Graphics",
-    subtitle: "Kinetic Typography, Logo Reveals & Broadcast Design",
-    category: "Motion Design",
-    filterCategory: "motion",
+    slug: "after-dark",
+    title: "AFTER DARK",
+    subtitle: "NIGHT HAS A NEW ADDRESS",
+    category: "3D Environment / Architectural Visualization",
+    filterCategory: "environments",
     featured: true,
     year: "2025",
     shortDescription:
-      "A collection of kinetic typography, title animation, logo reveals, transitions, and cinematic visual sequences.",
+      "An evocative, atmospheric speakeasy bar interior featuring mood lighting, weathered brick walls, neon signage, vintage beverage bottles, and rich wooden counter craftsmanship.",
     objective:
-      "Craft high-octane cinematic title sequences and brand animations that leverage purposeful rhythm, dynamic easing curves, optical glow dissipation, and bold visual pacing.",
-    software: ["Adobe After Effects", "Adobe Premiere Pro", "Autodesk Maya"],
+      "Craft a moody, immersive lounge environment that balances warm amber tungsten lighting, cool neon signage reflections, tactile wood finishes, and realistic glass refractions.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
     techniques: [
-      "Custom Easing & Speed Graph Curve Crafting",
-      "Kinetic Typography Sequences",
-      "3D Camera Tracking & Depth Passes",
-      "Optical Flares & Glitch Transitions",
-      "Audio-Synchronized Visual Beats",
+      "Modular Environment & Interior Arch-Viz Modeling",
+      "PBR Glass Refraction & Beverage Shader Synthesis",
+      "Atmospheric Volumetric Neon & Tungsten Lighting",
+      "Detailed Prop Assembly (Glassware, Taps, Chillers)",
+      "High-Fidelity Studio Depth-of-Field Cinematography",
     ],
-    heroImage: "/images/projects/motion-graphics/hero.svg",
+    heroImage: "/images/projects/after-dark/front-closeup-angle.jpg",
+    wireframeImage: "/images/projects/after-dark/front-closeup-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/after-dark/front-closeup-angle.jpg",
     keyHighlights: [
-      "Punchy kinetic typography sequences synced to cinematic percussion beats",
-      "Sophisticated 3D camera sweeps traversing layered typography and floating light particles",
-      "Custom glitch and film burn transitions designed frame-by-frame for maximum visual tension",
-      "Broadcast-ready title identity package with modular intro slates and lower-thirds",
+      "Intimate cocktail lounge ambiance illuminated by glowing neon wall art and warm Edison bulbs",
+      "Rich PBR material palette featuring polished mahogany bar tops, brushed steel sinks, and dusty brickwork",
+      "1:1 matching wireframe topology comparison illustrating clean quad flow across architectural structures and furniture",
+      "Expansive multi-shot render suite capturing panoramic wide angles, macro beverage bottles, and counter closeups",
+    ],
+    textureBreakdown: [
+      {
+        name: "Vintage Bottle Glass & Labels",
+        resolution: "4096 x 4096",
+        description:
+          "Thin-walled refractive dielectric glass with realistic IOR, surface condensation, and micro-embossed paper labels.",
+      },
+      {
+        name: "Polished Bar Countertop",
+        resolution: "4096 x 4096",
+        description:
+          "Deep varnished timber with subtle drink ring stains, edge softening, and anisotropic specular reflections.",
+      },
+      {
+        name: "Commercial Stainless Steel Sink & Taps",
+        resolution: "4096 x 4096",
+        description:
+          "Brushed industrial metallic finish with water droplet normals and realistic specular roughness variations.",
+      },
+      {
+        name: "Exposed Industrial Brick & Neon Glow",
+        resolution: "4096 x 4096",
+        description:
+          "Rough masonry with mortar displacement maps responding naturally to colored neon tube emission falloff.",
+      },
     ],
     processStages: [
       {
         phase: "01",
-        title: "Moodboard & Storyboarding",
+        title: "Architectural Layout & Spatial Blocking",
         description:
-          "Mapped out visual beats, pacing markers, and keyframe transitions on a timeline grid to achieve synchronized impact with audio rhythm.",
-        techniques: ["Visual Pacing", "Timeline Storyboarding"],
+          "Established realistic interior scale and seating flow in Autodesk Maya, ensuring accurate bar counter ergonomics, stool heights, and ceiling clearance.",
+        techniques: ["Spatial Ergonomics", "Architectural Scale", "Sub-D Modular Props"],
       },
       {
         phase: "02",
-        title: "Typography & Layout Construction",
+        title: "Prop Modeling & Bar Mechanics",
         description:
-          "Designed bold typographic lockups with contrasting weights and tracking, leveraging cinematic small caps and architectural framing.",
-        techniques: ["Cinematic Layout", "Negative Space"],
+          "Modeled specialized bar assets including dual-tap beverage dispensers, back-bar bottle shelving, commercial under-counter fridges, and glassware.",
+        techniques: ["Precision Prop Modeling", "Glass Lathe Geometry", "Hygienic Hardware"],
       },
       {
         phase: "03",
-        title: "Animation Curves & Motion Choreography",
+        title: "Atmospheric Substance PBR Texturing",
         description:
-          "Hand-crafted speed graphs in After Effects for snappy acceleration into smooth, controlled deceleration, eliminating rigid linear motion.",
-        techniques: ["Speed Graph Tuning", "Secondary Motion"],
+          "Textured diverse materials ranging from sticky varnished wood to cold refrigerator glass, brushed chrome taps, and worn leather barstools.",
+        techniques: ["Smart Materials", "Liquid Glass Shading", "Surface Micro-Wear"],
       },
       {
         phase: "04",
-        title: "Post-Processing, Glows & Color Grading",
+        title: "Arnold Cinematic Lighting & Mood Staging",
         description:
-          "Added chromatic aberration, cinematic film grain, lens distortion, and atmospheric volumetric red glows for theater-grade polish.",
-        techniques: ["Color Grading", "Film Emulation", "Chromatic Passes"],
+          "Orchestrated layered lighting with warm tungsten key accents, cool atmospheric neon fills, and subtle volumetric haze for authentic nightlife mood.",
+        techniques: ["Arnold Mesh Lights", "Volumetric Atmosphere", "Bokeh Depth of Field"],
       },
     ],
     galleryImages: [
       {
-        url: "/images/projects/motion-graphics/beauty-01.svg",
-        caption: "Kinetic typography title sequence frame with crimson rim glow and optical flare",
-        label: "Title Reveal",
+        url: "/images/projects/after-dark/front-closeup-angle.jpg",
+        caption: "Front closeup angle emphasizing the polished wooden bar counter, liquor bottle racks, and warm lighting",
+        label: "Front Closeup Angle",
       },
       {
-        url: "/images/projects/motion-graphics/detail-01.svg",
-        caption: "Multi-layered 3D space typography pass with depth-of-field blur",
-        label: "3D Space Motion",
+        url: "/images/projects/after-dark/front-wide-angle.jpg",
+        caption: "Panoramic wide angle showing the full lounge interior, seating arrangements, and architectural flow",
+        label: "Front Wide Angle",
+      },
+      {
+        url: "/images/projects/after-dark/interior-view.jpg",
+        caption: "Atmospheric perspective inside the bar highlighting mood lighting and intimate seating booths",
+        label: "Interior Ambiance",
+      },
+      {
+        url: "/images/projects/after-dark/bottle-view.jpg",
+        caption: "Macro focus on assorted premium spirits bottles with transparent refractive liquid shaders",
+        label: "Bottle Rack Detail",
+      },
+      {
+        url: "/images/projects/after-dark/boys-adda-view.jpg",
+        caption: "Feature wall neon signage casting vibrant colorful glows across the rustic interior textures",
+        label: "Neon Feature Wall",
+      },
+      {
+        url: "/images/projects/after-dark/fridge-view.jpg",
+        caption: "Under-counter commercial beverage cooler with internal lighting and transparent door reflections",
+        label: "Beverage Chiller",
+      },
+      {
+        url: "/images/projects/after-dark/side-angle-closeup.jpg",
+        caption: "Close perspective along the counter edge highlighting tactile wood grain and service taps",
+        label: "Counter Service Angle",
+      },
+      {
+        url: "/images/projects/after-dark/side-view-poster.jpg",
+        caption: "Wall art and vintage cocktail posters framed against textured brickwork and warm sconce lights",
+        label: "Wall Art & Brickwork",
+      },
+      {
+        url: "/images/projects/after-dark/where-there-is-quatar.jpg",
+        caption: "Detailed counter setup capturing coasters, glassware reflections, and subtle nightlife atmosphere",
+        label: "Countertop Details",
       },
     ],
   },
