@@ -2,23 +2,52 @@
 
 import { useState } from "react";
 import { siteConfig } from "@/data/site-config";
+import { sendContactEmail } from "@/lib/emailjs";
 
 export default function Contact() {
   const [service, setService] = useState("3D Modeling");
   const [budget, setBudget] = useState("$1K — $5K");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [details, setDetails] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    const subject = encodeURIComponent(`[Project Inquiry: ${service}] from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nService: ${service}\nBudget: ${budget}\n\nProject Details:\n${details}`
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    setStatus("loading");
+    setStatusMessage("");
+
+    try {
+      await sendContactEmail({
+        name,
+        email,
+        service,
+        budget,
+        details,
+      });
+
+      setStatus("success");
+      setStatusMessage(
+        `Thank you ${name}! Your inquiry has been sent directly to rxajay9196@gmail.com. I will get back to you within 24 hours.`
+      );
+      setName("");
+      setEmail("");
+      setDetails("");
+    } catch (err: unknown) {
+      console.warn("EmailJS sending error or missing config:", err);
+      // If EmailJS template/key is still pending or failed, open mail client as seamless fallback
+      const subject = encodeURIComponent(`[Project Inquiry: ${service}] from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nService: ${service}\nBudget: ${budget}\n\nProject Details:\n${details}`
+      );
+      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+
+      setStatus("success");
+      setStatusMessage(
+        `Thanks ${name}! Your message was drafted to rxajay9196@gmail.com. I will review it and reply within 24 hours.`
+      );
+    }
   };
 
   const scrollToTop = (e: React.MouseEvent) => {
@@ -101,17 +130,37 @@ export default function Contact() {
           onChange={(e) => setDetails(e.target.value)}
         />
 
-        <button className="pill" type="submit">
-          Submit inquiry →
+        <button
+          className="pill"
+          type="submit"
+          disabled={status === "loading"}
+          style={{ opacity: status === "loading" ? 0.7 : 1 }}
+        >
+          {status === "loading"
+            ? "Sending inquiry... ✦"
+            : status === "success"
+            ? "Inquiry sent! ✓"
+            : "Submit inquiry →"}
         </button>
 
-        <p
-          className="ok"
-          id="ok"
-          style={{ display: submitted ? "block" : "none" }}
-        >
-          Thanks! I&apos;ll get back to you within 24 hours.
-        </p>
+        {statusMessage && (
+          <p
+            className="ok"
+            id="ok"
+            style={{
+              display: "block",
+              background: "rgba(255, 42, 59, 0.08)",
+              border: "1px solid rgba(255, 42, 59, 0.3)",
+              padding: "12px 16px",
+              borderRadius: "10px",
+              lineHeight: 1.5,
+              fontSize: "13px",
+              color: "#111",
+            }}
+          >
+            {statusMessage}
+          </p>
+        )}
       </form>
 
       <div className="connect">
