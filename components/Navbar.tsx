@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -117,8 +117,20 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right Action: Let's Talk CTA */}
+          {/* Right Action: Resume & Let's Talk CTA */}
           <div className="nav-actions">
+            <a
+              href="/Ajay_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Ajay_Kumar_Resume.pdf"
+              className="nav-resume-btn"
+              title="Download C.A. Ajay Kumar's Resume"
+            >
+              <FileText className="nav-resume-icon" size={13} />
+              <span>Resume</span>
+            </a>
+
             <a
               href="/#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
@@ -180,6 +192,16 @@ export default function Navbar() {
           </div>
 
           <div className="mobile-drawer-footer">
+            <a
+              href="/Ajay_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Ajay_Kumar_Resume.pdf"
+              className="mobile-resume-btn"
+            >
+              <FileText size={16} />
+              <span>Download Resume</span>
+            </a>
             <a
               href="/#contact"
               onClick={(e) => handleNavClick(e, "#contact")}

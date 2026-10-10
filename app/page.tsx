@@ -1,3 +1,4 @@
+import MultilingualIntro from "@/components/MultilingualIntro";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TiltedShowcase from "@/components/TiltedShowcase";
@@ -11,6 +12,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
+      <MultilingualIntro />
       <Navbar />
       <main>
         <Hero />
