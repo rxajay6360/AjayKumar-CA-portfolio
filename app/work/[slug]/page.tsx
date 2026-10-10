@@ -7,6 +7,8 @@ import { siteConfig } from "@/data/site-config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import ProjectGalleryViewer from "@/components/ProjectGalleryViewer";
+import HeroShowcaseImage from "@/components/HeroShowcaseImage";
 import {
   ArrowLeft,
   ArrowRight,
@@ -148,17 +150,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Hero Render / Showcase Image */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
-          <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.8)] bg-[#0d0d10]">
-            <Image
-              src={project.heroImage}
-              alt={project.title}
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1200px) 100vw, 1200px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-30" />
-          </div>
+          <HeroShowcaseImage
+            src={project.heroImage}
+            alt={project.title}
+            title={project.title}
+          />
         </section>
 
         {/* Objective & Concept Section */}
@@ -311,32 +307,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {project.galleryImages.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#0a0a0c] border border-white/10 rounded overflow-hidden group"
-                >
-                  <div className="relative aspect-[16/10] bg-[#0d0d10]">
-                    <Image
-                      src={img.url}
-                      alt={img.caption}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/70 backdrop-blur-sm border border-white/10 text-[9px] font-mono text-[#cccccc]">
-                      {img.label}
-                    </div>
-                  </div>
-                  <div className="p-4 bg-[#0a0a0c]">
-                    <p className="text-xs text-[#888888] leading-snug">
-                      {img.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ProjectGalleryViewer
+              images={project.galleryImages}
+              projectTitle={project.title}
+            />
           </section>
         )}
 
