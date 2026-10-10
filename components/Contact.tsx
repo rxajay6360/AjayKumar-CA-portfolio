@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { siteConfig } from "@/data/site-config";
 import { sendContactEmail } from "@/lib/emailjs";
 
@@ -12,6 +12,19 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [details, setDetails] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+
+  useEffect(() => {
+    const handleServiceSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      if (customEvent.detail) {
+        setService(customEvent.detail);
+      }
+    };
+    window.addEventListener("portfolio-select-service", handleServiceSelect);
+    return () => {
+      window.removeEventListener("portfolio-select-service", handleServiceSelect);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
