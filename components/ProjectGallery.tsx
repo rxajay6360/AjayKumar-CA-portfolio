@@ -95,6 +95,16 @@ export default function ProjectGallery() {
       leftClass: "p3a",
       image: "/images/projects/cookie-jar/front-view.jpg",
     },
+    {
+      n: 9,
+      num: "10",
+      cat: "SMALL SIZE, BIG IMPACT",
+      title: "FRAG GRENADE",
+      link: "/work/frag-grenade",
+      leftText: "Tactical",
+      leftClass: "p1a",
+      image: "/images/projects/frag-grenade/front-side-corner.jpg",
+    },
   ];
 
   return (

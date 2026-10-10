@@ -1063,4 +1063,117 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "frag-grenade",
+    title: "FRAG GRENADE",
+    subtitle: "SMALL SIZE, BIG IMPACT",
+    category: "3D Military Hard-Surface & Weapon Prop Modeling",
+    filterCategory: "modeling",
+    featured: true,
+    year: "2025",
+    shortDescription:
+      "A production-grade military fragmentation grenade hero asset featuring a segmented cast-iron pineapple body, pressed-steel safety lever, zinc fuse assembly, and weathered ordnance paint.",
+    objective:
+      "Model and texture an authentic tactical explosive asset with game-ready optimization—featuring segmented fragmentation notches, stamped steel lever physics, safety cotter pins, and battlefield edge wear.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Tactical Weapon & Ordnance Hard-Surface Modeling",
+      "Cast Iron & Powder-Coated Metal PBR Texturing",
+      "Safety Pin, Spring & Lever Mechanical Rigging",
+      "Stenciled Military Lot Numbers & Surface Abrasion",
+      "High-Contrast Studio & Battlefield Spotlight Staging",
+    ],
+    heroImage: "/images/projects/frag-grenade/front-side-corner.jpg",
+    wireframeImage: "/images/projects/frag-grenade/right-side-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/frag-grenade/right-side-view.jpg",
+    keyHighlights: [
+      "Precision-machined segmentation grid across cast iron fragmentation envelope with clean quad bevels",
+      "Faithful mechanical safety assembly including zinc striker mechanism, stamped lever, and pull-ring cotter pin",
+      "1:1 matching wireframe topology comparison illustrating clean edge loop density around spherical grooved geometry",
+      "Comprehensive multi-angle studio renders covering 3/4 hero angles, left/right profiles, and firing pin mechanisms",
+    ],
+    textureBreakdown: [
+      {
+        name: "Olive Drab Powder-Coated Steel",
+        resolution: "4096 x 4096",
+        description:
+          "Matte military green finish with chipped paint edges revealing oxidized cast iron substrate, oil stains, and tactical scuffs.",
+      },
+      {
+        name: "Cast Iron Fragmentation Shell",
+        resolution: "4096 x 4096",
+        description:
+          "Heavy pitted sand-cast iron texture with deep fragmentation grooves, micro-porosity, and ambient occlusion depth.",
+      },
+      {
+        name: "Stamped Steel Safety Lever",
+        resolution: "4096 x 4096",
+        description:
+          "Pressed sheet metal with stamped manufacturer lot codes, edge curvature highlight wear, and galvanized zinc sheen.",
+      },
+      {
+        name: "Spring Steel Pull Ring & Cotter Pin",
+        resolution: "4096 x 4096",
+        description:
+          "High-tensile wire ring with micro-scratches, zinc plating, and slight mechanical bend deformation.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Spherical Grid Topology & Grooving",
+        description:
+          "Constructed continuous quad topology across the segmented fragmentation sphere in Autodesk Maya, ensuring no pinching at the polar cap transitions.",
+        techniques: ["Polar Grid Topology", "Sub-D Bevel Control", "Hard-Surface Quad Mesh"],
+      },
+      {
+        phase: "02",
+        title: "Fuse Assembly & Safety Hardware",
+        description:
+          "Modeled the threaded fuse plug, spring-loaded striker mechanism, safety spoon lever, and split-pin ring assembly with authentic military tolerances.",
+        techniques: ["Sheet Metal Bends", "Cotter Pin Geometry", "Mechanical Interlocking"],
+      },
+      {
+        phase: "03",
+        title: "Substance Tactical PBR Texturing",
+        description:
+          "Authored multi-tiered materials in Substance Painter with smart masks for paint flaking along segmented edges, oil finger smudges, and combat grit.",
+        techniques: ["Curvature Masked Chipping", "Cast Iron Normal Generators", "Matte Specular Balancing"],
+      },
+      {
+        phase: "04",
+        title: "Cinematic Tactical Studio Lighting",
+        description:
+          "Staged high-contrast three-point studio lighting with sharp rim accents defining the segmented silhouette against a dark industrial floor.",
+        techniques: ["Arnold High-Contrast Softboxes", "Rim Silhouette Kickers", "Depth of Field"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/frag-grenade/front-side-corner.jpg",
+        caption: "Front 3/4 corner hero view emphasizing the segmented iron body, safety lever, and pull-ring assembly",
+        label: "Front 3/4 Corner Hero",
+      },
+      {
+        url: "/images/projects/frag-grenade/right-side-view.jpg",
+        caption: "Right profile angle capturing safety spoon lever tension, split cotter pin, and threaded fuse neck",
+        label: "Right Profile",
+      },
+      {
+        url: "/images/projects/frag-grenade/left-side-view.jpg",
+        caption: "Left profile angle highlighting the clean segmentation grid, specular rim kickers, and cast iron porosity",
+        label: "Left Profile",
+      },
+      {
+        url: "/images/projects/frag-grenade/side-view.jpg",
+        caption: "High-angle studio shot showcasing top striker mechanics, pin ring placement, and fuse detailing",
+        label: "High-Angle Fuse View",
+      },
+      {
+        url: "/images/projects/frag-grenade/backside-view.jpg",
+        caption: "Rear perspective displaying the seamless cylindrical fragmentation shell and bottom flat base",
+        label: "Rear Perspective",
+      },
+    ],
+  },
 ];
