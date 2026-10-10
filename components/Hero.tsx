@@ -1,13 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import EditorialHeroTitle from "@/components/EditorialHeroTitle";
+import InteractiveAvatar from "@/components/InteractiveAvatar";
 
 export default function Hero() {
   return (
     <header className="hero" id="home">
-      {/* Minimalist Swiss Editorial Title with 35mm Grain & Negative Space Mask */}
-      <EditorialHeroTitle />
+      {/* Animated Hero Title with Interactive 3D Avatar */}
+      <h1 className="hero-title">
+        <InteractiveAvatar />
+        <span className="hero-intro">HI THIS IS</span>
+        <b className="hero-name" data-text="AJAY KUMAR">
+          {/* Inverted Monochrome Silhouette Blade Cutting Through Solid Tones */}
+          <span className="inverted-alpha-blade" aria-hidden="true" />
+          AJAY KUMAR
+        </b>
+      </h1>
 
       {/* Subtitle with dots badges matching reference HTML */}
       <div className="sub">
