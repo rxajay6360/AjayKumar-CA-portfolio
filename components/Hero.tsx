@@ -1,36 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Hero() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <header className="hero">
-      {/* Center avatar with scroll parallax matching reference HTML */}
-      <div
-        className="avatar"
-        style={{
-          transform: `translate(-50%, calc(-62% + ${scrollY * 0.15}px))`,
-        }}
-      >
-        <svg>
-          <use href="#face" />
-        </svg>
-      </div>
-
-      {/* Giant H1 matching reference HTML */}
-      <h1>
-        <span>Hi, I&apos;m</span> <b>C.A. Aajay</b>
+      {/* Animated Hero Title */}
+      <h1 className="hero-title">
+        <span className="hero-intro">HI THIS IS</span>
+        <b className="hero-name">AJAY KUMAR</b>
       </h1>
 
       {/* Subtitle with dots badges matching reference HTML */}

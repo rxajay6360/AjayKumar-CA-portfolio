@@ -115,11 +115,6 @@ export default function Contact() {
       </form>
 
       <div className="connect">
-        <div className="avatar">
-          <svg>
-            <use href="#face" />
-          </svg>
-        </div>
         <h2 className="chrome">Let&apos;s connect</h2>
       </div>
 
