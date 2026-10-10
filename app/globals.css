@@ -1922,97 +1922,159 @@ h2.section-heading {
   text-transform: uppercase;
 }
 
-/* WhatsApp Quick Direct Banner */
-.wa-direct-banner {
-  max-width: 720px;
+/* Direct Contact Actions: Phone Call & WhatsApp */
+.direct-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 780px;
   margin: 32px auto 0;
   padding: 0 16px;
 }
 
-.wa-direct-link {
+.direct-action-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 140, 126, 0.06) 100%);
-  border: 1px solid rgba(37, 211, 102, 0.35);
+  gap: 14px;
   border-radius: 20px;
-  padding: 16px 24px;
+  padding: 16px 20px;
   text-decoration: none;
   color: #fff;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.direct-action-card.phone {
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.12) 0%, rgba(255, 136, 0, 0.05) 100%);
+  border: 1px solid rgba(255, 184, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 184, 0, 0.08);
+}
+
+.direct-action-card.phone:hover {
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.22) 0%, rgba(255, 136, 0, 0.12) 100%);
+  border-color: rgba(255, 184, 0, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 32px rgba(255, 184, 0, 0.25);
+}
+
+.direct-action-card.wa {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 140, 126, 0.05) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.35);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(37, 211, 102, 0.08);
 }
 
-.wa-direct-link:hover {
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.22) 0%, rgba(18, 140, 126, 0.14) 100%);
-  border-color: rgba(37, 211, 102, 0.6);
+.direct-action-card.wa:hover {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.22) 0%, rgba(18, 140, 126, 0.12) 100%);
+  border-color: rgba(37, 211, 102, 0.65);
   transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 35px rgba(37, 211, 102, 0.22);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 32px rgba(37, 211, 102, 0.25);
 }
 
-.wa-icon-box {
+.action-icon-box {
   width: 44px;
   height: 44px;
   min-width: 44px;
   border-radius: 12px;
-  background: #25d366;
-  color: #fff;
   display: grid;
   place-items: center;
+}
+
+.action-icon-box.phone {
+  background: #ffb800;
+  color: #111;
+  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.4);
+}
+
+.action-icon-box.wa {
+  background: #25d366;
+  color: #fff;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
 }
 
-.wa-text-group {
+.action-text-group {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   flex: 1;
   text-align: left;
+  min-width: 0;
 }
 
-.wa-tagline {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.action-tagline {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.action-tagline.phone {
+  color: #ffb800;
+}
+
+.action-tagline.wa {
   color: #25d366;
 }
 
-.wa-headline {
-  font-size: 15px;
+.action-headline {
+  font-size: 14px;
   color: #e5e5e5;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.wa-headline strong {
+.action-headline strong {
   color: #fff;
   font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
-.wa-action-badge {
+.action-badge {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.4);
-  color: #25d366;
-  padding: 8px 16px;
+  gap: 7px;
+  padding: 7px 14px;
   border-radius: 99px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   white-space: nowrap;
 }
 
-.wa-pulse-dot {
+.action-badge.phone {
+  background: rgba(255, 184, 0, 0.15);
+  border: 1px solid rgba(255, 184, 0, 0.4);
+  color: #ffb800;
+}
+
+.action-badge.wa {
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #25d366;
+}
+
+.action-pulse-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
+}
+
+.action-pulse-dot.phone {
+  background: #ffb800;
+  box-shadow: 0 0 8px #ffb800;
+  animation: phonePulse 1.8s infinite;
+}
+
+.action-pulse-dot.wa {
   background: #25d366;
   box-shadow: 0 0 8px #25d366;
   animation: waPulse 1.8s infinite;
+}
+
+@keyframes phonePulse {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.7; }
 }
 
 @keyframes waPulse {
@@ -2025,13 +2087,35 @@ h2.section-heading {
 .form-submit-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   margin-top: 26px;
 }
 
 .form-submit-row .pill {
   margin-top: 0;
+}
+
+.form-call-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffb800;
+  color: #111;
+  padding: 14px 22px;
+  border-radius: 99px;
+  font: 700 12px var(--b);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 184, 0, 0.3);
+}
+
+.form-call-link:hover {
+  background: #ffc726;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 184, 0, 0.45);
+  color: #000;
 }
 
 .form-wa-link {
@@ -2054,6 +2138,12 @@ h2.section-heading {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
   color: #fff;
+}
+
+@media (max-width: 640px) {
+  .direct-contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Connect Channels (Bottom) */
@@ -2088,6 +2178,11 @@ h2.section-heading {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.connect-chip.phone:hover {
+  border-color: rgba(255, 184, 0, 0.6);
+  box-shadow: 0 8px 24px rgba(255, 184, 0, 0.2);
+}
+
 .connect-chip.wa:hover {
   border-color: rgba(37, 211, 102, 0.6);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2);
@@ -2104,6 +2199,11 @@ h2.section-heading {
   border-radius: 8px;
   display: grid;
   place-items: center;
+}
+
+.connect-chip.phone .connect-chip-icon {
+  background: rgba(255, 184, 0, 0.18);
+  color: #ffb800;
 }
 
 .connect-chip.wa .connect-chip-icon {
