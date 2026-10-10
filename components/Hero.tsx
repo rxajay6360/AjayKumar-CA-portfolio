@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <header className="hero">
+    <header className="hero" id="home">
       {/* Animated Hero Title */}
       <h1 className="hero-title">
         <span className="hero-intro">HI THIS IS</span>

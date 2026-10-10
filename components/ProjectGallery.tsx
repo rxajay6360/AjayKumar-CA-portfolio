@@ -68,7 +68,8 @@ export default function ProjectGallery() {
   ];
 
   return (
-    <section className="projects html-section" id="projects">
+    <section className="projects html-section" id="work">
+      <span id="projects" style={{ position: "absolute", top: 0, opacity: 0, pointerEvents: "none" }} />
       <h2 className="chrome section-heading">Project</h2>
       <div className="stack">
         {projectList.map((p) => (
