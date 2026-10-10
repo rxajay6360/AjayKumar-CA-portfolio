@@ -459,110 +459,296 @@ main {
   overflow: hidden;
 }
 
-/* Hero Title & Animations */
-.hero h1.hero-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* =========================================================================
+   Editorial 35mm Title Animation System
+   Minimalist Swiss Typography, Inverted Monochrome Alpha Mask, Grain Windows
+   ========================================================================= */
+
+.editorial-poster-frame {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  user-select: none;
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  gap: 0.08em;
+  padding: 20px 14px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: radial-gradient(
+    circle at var(--matte-x, 50%) var(--matte-y, 50%),
+    rgba(255, 42, 59, 0.08) 0%,
+    rgba(10, 12, 16, 0.4) 45%,
+    transparent 75%
+  );
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+  animation: cameraHoldFloat 8s ease-in-out infinite;
 }
 
-.hero-intro {
-  font: 800 clamp(22px, 5vw, 76px) / 1.05 var(--d);
+/* Swiss Crosshair Registration Marks */
+.swiss-reg-mark {
+  position: absolute;
+  font-family: var(--font-mono, monospace);
+  font-size: 15px;
+  color: #52525b;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.swiss-reg-mark.top-left { top: 6px; left: 8px; }
+.swiss-reg-mark.top-right { top: 6px; right: 8px; }
+.swiss-reg-mark.bottom-left { bottom: 6px; left: 8px; }
+.swiss-reg-mark.bottom-right { bottom: 6px; right: 8px; }
+
+.editorial-poster-frame:hover .swiss-reg-mark {
+  color: #ff2a3b;
+}
+
+/* Editorial Metadata Strip */
+.editorial-meta-strip {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+  padding-bottom: 8px;
+  user-select: none;
+}
+
+/* Typographic Canvas & Horizontal 35mm Analog Scanline */
+.editorial-title-canvas {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 0;
+  width: 100%;
+}
+
+.analog-scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 42, 59, 0.3) 20%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(255, 42, 59, 0.3) 80%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0.75;
+  animation: analogScanDrift 6.5s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+@keyframes analogScanDrift {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+/* 1. Intro Line: HI THIS IS (Matte Reveal & Inverted Monochrome) */
+.matte-curtain-intro {
+  animation: matteCurtainCut 0.9s cubic-bezier(0.85, 0, 0.15, 1) both;
+}
+
+.editorial-intro-text {
+  font: 800 clamp(16px, 3.8vw, 48px) / 1.05 var(--d);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: #ffffff;
+  display: inline-block;
   background: linear-gradient(
     135deg,
     #ffffff 0%,
-    #a8a8a8 25%,
+    #a1a1aa 30%,
     #ffffff 50%,
-    #787878 75%,
+    #71717a 75%,
     #ffffff 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  display: inline-block;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
-  animation: introShine 6s ease-in-out infinite, titleEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.8));
+  -webkit-font-smoothing: antialiased;
+  animation: introShimmer 8s ease-in-out infinite;
 }
 
-.hero-name {
-  font: 800 clamp(36px, 7.8vw, 118px) / 0.95 var(--d);
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: var(--lime);
-  display: inline-block;
-  white-space: nowrap;
-  text-shadow: 0 0 35px rgba(255, 42, 59, 0.6), 0 0 70px rgba(255, 42, 59, 0.25);
-  animation: heroGlowPulse 3.5s ease-in-out infinite, nameEntrance 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.3s;
-  cursor: default;
+@keyframes introShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-.hero-name:hover {
-  transform: scale(1.02);
-  text-shadow: 0 0 50px rgba(255, 42, 59, 0.9), 0 0 100px rgba(255, 42, 59, 0.5), 0 0 140px rgba(255, 42, 59, 0.3);
-}
-
-@keyframes introShine {
+@keyframes matteCurtainCut {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(28px);
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@keyframes heroGlowPulse {
+/* 2. Hero Name: AJAY KUMAR (Counter-Space Windows, 35mm Grain & Razor Edges) */
+.matte-curtain-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.editorial-hero-name {
+  font: 900 clamp(26px, 6.4vw, 92px) / 0.94 var(--d);
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  color: #ff2a3b;
+  text-shadow: 
+    0 0 35px rgba(255, 42, 59, 0.7),
+    0 0 75px rgba(255, 42, 59, 0.35),
+    0 0 120px rgba(255, 42, 59, 0.15);
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
+  animation: 
+    heroMatteReveal 1.3s cubic-bezier(0.85, 0, 0.15, 1) 0.15s both,
+    heroGlowBreathe 4.5s ease-in-out infinite 1.5s;
+  transition: transform 0.35s cubic-bezier(0.85, 0, 0.15, 1), text-shadow 0.35s;
+  filter: url(#analog35mmGrain);
+}
+
+.editorial-hero-name:hover {
+  transform: scale(1.02);
+  text-shadow: 
+    0 0 50px rgba(255, 42, 59, 0.95),
+    0 0 100px rgba(255, 42, 59, 0.6),
+    0 0 160px rgba(255, 42, 59, 0.35);
+}
+
+@keyframes heroMatteReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transform: translateY(34px) scale(0.95);
+    filter: blur(12px) brightness(2);
+    opacity: 0;
+  }
+  60% {
+    filter: blur(2px) brightness(1.4);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0) scale(1);
+    filter: blur(0) brightness(1);
+    opacity: 1;
+  }
+}
+
+@keyframes heroGlowBreathe {
   0%, 100% {
-    text-shadow: 0 0 25px rgba(255, 42, 59, 0.5), 0 0 50px rgba(255, 42, 59, 0.2);
-    filter: drop-shadow(0 0 15px rgba(255, 42, 59, 0.25));
+    text-shadow: 
+      0 0 30px rgba(255, 42, 59, 0.6),
+      0 0 65px rgba(255, 42, 59, 0.25);
   }
   50% {
-    text-shadow: 0 0 50px rgba(255, 42, 59, 0.9), 0 0 100px rgba(255, 42, 59, 0.5), 0 0 150px rgba(255, 42, 59, 0.25);
-    filter: drop-shadow(0 0 30px rgba(255, 42, 59, 0.55));
+    text-shadow: 
+      0 0 55px rgba(255, 42, 59, 0.95),
+      0 0 110px rgba(255, 42, 59, 0.5),
+      0 0 150px rgba(255, 42, 59, 0.25);
     transform: scale(1.008);
   }
 }
 
-@keyframes titleEntrance {
-  0% {
+/* Inverted Monochrome Silhouette Blade Wipe */
+.inverted-alpha-blade {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  width: 45%;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: difference;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.85) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.85) 55%,
+    transparent 100%
+  );
+  animation: invertedBladeWipe 8s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+@keyframes invertedBladeWipe {
+  0%, 65% {
+    transform: translateX(-150%) skewX(-20deg);
     opacity: 0;
-    transform: translateY(24px) scale(0.96);
-    filter: blur(10px);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+  70% {
+    opacity: 0.95;
+  }
+  85% {
+    transform: translateX(350%) skewX(-20deg);
+    opacity: 0.95;
+  }
+  90%, 100% {
+    transform: translateX(350%) skewX(-20deg);
+    opacity: 0;
   }
 }
 
-@keyframes nameEntrance {
-  0% {
-    opacity: 0;
-    transform: translateY(32px) scale(0.94);
-    filter: blur(14px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
+/* Negative Space Precision Under-Rules */
+.editorial-grid-rule-bottom {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.rule-accent-marker {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, #ff2a3b, transparent);
+  animation: ruleMarkerTravel 5s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+@keyframes ruleMarkerTravel {
+  0% { left: -100px; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+@keyframes cameraHoldFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.editorial-footnote-strip {
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 8px;
+  user-select: none;
 }
 
 .hero .sub {
