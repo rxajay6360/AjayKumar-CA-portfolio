@@ -3,83 +3,74 @@
 import { useEffect, useState, useRef } from "react";
 
 const NAMES = [
-  { text: "C.A. AJAY KUMAR", lang: "English" },
-  { text: "ಸಿ.ಎ. ಅಜಯ್ ಕುಮಾರ್", lang: "Kannada" },
-  { text: "सी.ए. अजय कुमार", lang: "Hindi" },
-  { text: "சி.ஏ. அஜய் குமார்", lang: "Tamil" },
-  { text: "సి.ఏ. అజయ్ కుమార్", lang: "Telugu" },
-  { text: "সি.এ. অজয় কুমার", lang: "Bengali" },
-  { text: "シー・エー・アジャイ・クマール", lang: "Japanese" },
+  "C.A. AJAY KUMAR",
+  "ಸಿ.ಎ. ಅಜಯ್ ಕುಮಾರ್",       // Kannada
+  "सी.ए. अजय कुमार",         // Hindi
+  "சி.ஏ. அஜய் குமார்",       // Tamil
+  "సి.ఏ. అజయ్ కుమార్",       // Telugu
+  "সি.এ. অজয় কুমার",        // Bengali
+  "シー・エー・アジャイ・クマール" // Japanese phonetic rendering
 ];
 
 const HEADLINE = "What if your portfolio could speak for you?";
-const INTRO_DURATION = 3800; // milliseconds
+const INTRO_DURATION = 4200; // 4.2 seconds matching the script
 
 export default function MultilingualIntro() {
-  const [mounted, setMounted] = useState(false);
   const [typedText, setTypedText] = useState("");
   const [nameIndex, setNameIndex] = useState(0);
-  const [isNameVisible, setIsNameVisible] = useState(true);
+  const [showName, setShowName] = useState(true);
   const [isLeaving, setIsLeaving] = useState(false);
-  const [isFinished, setIsFinished] = useState(false);
+  const [isDone, setIsDone] = useState(false);
 
   const hasExitedRef = useRef(false);
 
   useEffect(() => {
-    // Check if user has already seen the intro during this browser session
-    const hasSeen = sessionStorage.getItem("ajay_portfolio_intro_seen");
-    if (hasSeen) {
-      setIsFinished(true);
-      return;
-    }
-
-    setMounted(true);
+    // Prevent scrolling while intro is active
     document.body.style.overflow = "hidden";
 
-    // 1. Typewriter effect
-    let charIdx = 0;
-    const typeInterval = setInterval(() => {
-      charIdx++;
-      setTypedText(HEADLINE.slice(0, charIdx));
-      if (charIdx >= HEADLINE.length) {
-        clearInterval(typeInterval);
+    // 1. Typewriter headline (tick every 34ms matching the script)
+    let i = 0;
+    const typeTimer = setInterval(() => {
+      i++;
+      setTypedText(HEADLINE.slice(0, i));
+      if (i >= HEADLINE.length) {
+        clearInterval(typeTimer);
       }
-    }, 36);
+    }, 34);
 
-    // 2. Multilingual Name Cycle
-    const cycleInterval = setInterval(() => {
-      setIsNameVisible(false);
+    // 2. Multilingual Name Cycle (matching the script)
+    setShowName(true);
+    let index = 0;
+    const cycleTimer = setInterval(() => {
+      index = (index + 1) % NAMES.length;
+      setShowName(false);
       setTimeout(() => {
-        setNameIndex((prev) => (prev + 1) % NAMES.length);
-        setIsNameVisible(true);
-      }, 140);
-    }, 480);
+        setNameIndex(index);
+        setShowName(true);
+      }, 160);
+    }, 470);
 
-    // 3. Exit Transition Timer
-    const exitTimer = setTimeout(() => {
-      triggerExit();
-    }, INTRO_DURATION);
-
-    const triggerExit = () => {
+    const openHomepage = () => {
       if (hasExitedRef.current) return;
       hasExitedRef.current = true;
 
-      clearInterval(typeInterval);
-      clearInterval(cycleInterval);
-      clearTimeout(exitTimer);
+      clearInterval(typeTimer);
+      clearInterval(cycleTimer);
 
       setIsLeaving(true);
       document.body.style.overflow = "";
-      sessionStorage.setItem("ajay_portfolio_intro_seen", "true");
 
       setTimeout(() => {
-        setIsFinished(true);
-      }, 950);
+        setIsDone(true);
+      }, 1100);
     };
 
+    // 3. Auto-open homepage after INTRO_DURATION
+    const exitTimer = setTimeout(openHomepage, INTRO_DURATION);
+
     return () => {
-      clearInterval(typeInterval);
-      clearInterval(cycleInterval);
+      clearInterval(typeTimer);
+      clearInterval(cycleTimer);
       clearTimeout(exitTimer);
       document.body.style.overflow = "";
     };
@@ -90,67 +81,47 @@ export default function MultilingualIntro() {
     hasExitedRef.current = true;
     setIsLeaving(true);
     document.body.style.overflow = "";
-    sessionStorage.setItem("ajay_portfolio_intro_seen", "true");
     setTimeout(() => {
-      setIsFinished(true);
-    }, 800);
+      setIsDone(true);
+    }, 1000);
   };
 
-  if (!mounted || isFinished) {
-    return null;
-  }
-
-  const currentItem = NAMES[nameIndex];
+  if (isDone) return null;
 
   return (
-    <aside
-      className={`multilingual-intro ${isLeaving ? "is-leaving" : ""}`}
-      aria-label="Portfolio Introduction"
+    <section
+      className={`intro ${isLeaving ? "is-leaving" : ""}`}
+      id="intro"
+      aria-label="Portfolio introduction"
+      onClick={handleSkip}
     >
-      {/* Background radial gradient & cinematic noise */}
-      <div className="intro-bg-gradient" />
-      <div className="intro-noise-overlay" />
-
-      {/* Top Typewriter headline */}
-      <div className="intro-headline-wrap">
-        <span className="intro-typewriter">
-          {typedText}
-          <span className="intro-caret" />
-        </span>
+      <div className="intro-copy">
+        <span id="typewriter">{typedText}</span>
       </div>
 
-      {/* Center Monogram & Multilingual Name */}
-      <div className="intro-center-stage">
-        <div className="intro-monogram">
-          <span>CA</span>
+      <div className="center-mark">
+        <div className="monogram">CA</div>
+        <div className={`name-script ${showName ? "show" : ""}`} id="nameScript">
+          {NAMES[nameIndex]}
         </div>
-
-        <div className="intro-name-container">
-          <div className={`intro-name-display ${isNameVisible ? "visible" : "hidden"}`}>
-            {currentItem.text}
-          </div>
-          <div className="intro-lang-badge">{currentItem.lang}</div>
-        </div>
-
-        <div className="intro-caption">
-          A creative mind &bull; A world of visuals
-        </div>
+        <div className="intro-caption">A creative mind · A world of visuals</div>
       </div>
 
-      {/* Bottom Progress Bar & Skip Button */}
-      <div className="intro-footer-controls">
-        <div className="intro-progress-bar">
-          <span className="intro-progress-fill" />
-        </div>
-        <button
-          type="button"
-          onClick={handleSkip}
-          className="intro-skip-btn"
-          aria-label="Skip Introduction"
-        >
-          Skip ✕
-        </button>
+      <div className="intro-progress">
+        <span />
       </div>
-    </aside>
+
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          handleSkip();
+        }}
+        className="intro-skip-pill"
+        aria-label="Skip Introduction"
+      >
+        Skip ✕
+      </button>
+    </section>
   );
 }

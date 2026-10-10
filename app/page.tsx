@@ -1,7 +1,6 @@
 import MultilingualIntro from "@/components/MultilingualIntro";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TiltedShowcase from "@/components/TiltedShowcase";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import ProjectGallery from "@/components/ProjectGallery";
@@ -16,7 +15,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TiltedShowcase />
         <About />
         <Services />
         <ProjectGallery />
