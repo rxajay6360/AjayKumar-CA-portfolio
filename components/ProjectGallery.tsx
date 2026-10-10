@@ -14,6 +14,8 @@ export interface ProjectItem {
   link: string;
   leftText: string;
   leftClass: string;
+  leftTag?: string;
+  leftSub?: string;
   image: string;
   category: ProjectCategory;
 }
@@ -34,6 +36,8 @@ export default function ProjectGallery() {
       link: "/work/hanuman-gadha",
       leftText: "Gadha",
       leftClass: "p1a",
+      leftTag: "DIVINE PROP",
+      leftSub: "GOLD PBR ↗",
       image: "/images/projects/hanuman-gadha/closeup.jpg",
       category: "3D ART",
     },
@@ -45,6 +49,8 @@ export default function ProjectGallery() {
       link: "/work/kgf-narachi-gate",
       leftText: "Narachi",
       leftClass: "p2a",
+      leftTag: "ENVIRONMENT",
+      leftSub: "LOOKDEV ↗",
       image: "/images/projects/kgf-narachi/narachi-front-gate.jpg",
       category: "3D ART",
     },
@@ -56,6 +62,8 @@ export default function ProjectGallery() {
       link: "/work/futuristic-single-wheel-bike",
       leftText: "Monowheel",
       leftClass: "p3a",
+      leftTag: "VEHICLE",
+      leftSub: "HARD SURFACE ↗",
       image: "/images/projects/futuristic-bike/front-low-angle.jpg",
       category: "3D ART",
     },
@@ -67,6 +75,8 @@ export default function ProjectGallery() {
       link: "/work/banana-car",
       leftText: "Velocity",
       leftClass: "p1a",
+      leftTag: "STYLIZED",
+      leftSub: "CUSTOM RIG ↗",
       image: "/images/projects/banana-car/hero.svg",
       category: "3D ART",
     },
@@ -78,6 +88,8 @@ export default function ProjectGallery() {
       link: "/work/vintage-gramophone",
       leftText: "Acoustic",
       leftClass: "p2a",
+      leftTag: "PERIOD PROP",
+      leftSub: "BRASS & WOOD ↗",
       image: "/images/projects/vintage-gramophone/front-view.jpg",
       category: "3D ART",
     },
@@ -89,6 +101,8 @@ export default function ProjectGallery() {
       link: "/work/after-dark",
       leftText: "Lounge",
       leftClass: "p3a",
+      leftTag: "ARCHVIZ",
+      leftSub: "INTERIOR ↗",
       image: "/images/projects/after-dark/front-closeup-angle.jpg",
       category: "3D ART",
     },
@@ -100,6 +114,8 @@ export default function ProjectGallery() {
       link: "/work/thors-hammer",
       leftText: "Mjolnir",
       leftClass: "p1a",
+      leftTag: "MYTHIC",
+      leftSub: "WEATHERED ↗",
       image: "/images/projects/thors-hammer/front-wide-view.jpg",
       category: "3D ART",
     },
@@ -111,6 +127,8 @@ export default function ProjectGallery() {
       link: "/work/the-street-skate",
       leftText: "Skate",
       leftClass: "p2a",
+      leftTag: "URBAN",
+      leftSub: "STREET DECK ↗",
       image: "/images/projects/the-street-skate/corner-view.jpg",
       category: "3D ART",
     },
@@ -122,6 +140,8 @@ export default function ProjectGallery() {
       link: "/work/cookie-jar",
       leftText: "Cookies",
       leftClass: "p3a",
+      leftTag: "PROP",
+      leftSub: "CERAMIC ↗",
       image: "/images/projects/cookie-jar/front-view.jpg",
       category: "3D ART",
     },
@@ -133,6 +153,8 @@ export default function ProjectGallery() {
       link: "/work/frag-grenade",
       leftText: "Tactical",
       leftClass: "p1a",
+      leftTag: "MILITARY",
+      leftSub: "TACTICAL ↗",
       image: "/images/projects/frag-grenade/front-side-corner.jpg",
       category: "3D ART",
     },
@@ -197,16 +219,33 @@ export default function ProjectGallery() {
                 </Link>
               </header>
               <div className="shots">
-                <div className={p.leftClass}>{p.leftText}</div>
-                <div className="p1b relative overflow-hidden">
+                <Link
+                  href={p.link}
+                  className={`proj-left-panel ${p.leftClass}`}
+                  title={`View ${p.title}`}
+                >
+                  <span className="proj-left-tag">{p.leftTag || "3D ASSET"}</span>
+                  <div className="proj-left-word">{p.leftText}</div>
+                  <span className="proj-left-sub">{p.leftSub || "EXPLORE ↗"}</span>
+                </Link>
+                <Link
+                  href={p.link}
+                  className="p1b relative overflow-hidden group block cursor-pointer"
+                  title={`View ${p.title}`}
+                >
                   <Image
                     src={p.image}
                     alt={p.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     sizes="(max-width: 800px) 100vw, 800px"
                   />
-                </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <span className="text-white text-xs font-bold tracking-widest uppercase bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+                      View Project ↗
+                    </span>
+                  </div>
+                </Link>
               </div>
             </article>
           ))}

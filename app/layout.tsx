@@ -78,7 +78,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${cinzel.variable} ${inter.variable} scroll-smooth antialiased`}
     >
-      <body className="bg-[#070707] text-[#f2f2f2] font-sans min-h-screen selection:bg-[#ff2a3b] selection:text-white relative overflow-x-hidden">
+      <body className="bg-[#070707] text-[#f2f2f2] font-sans min-h-screen selection:bg-[#ff2a3b] selection:text-white relative overflow-x-clip">
         <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
             <symbol id="face" viewBox="0 0 200 200">
