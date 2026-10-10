@@ -48,12 +48,12 @@ export default function ProjectGallery() {
     {
       n: 4,
       num: "05",
-      cat: "SUBSTANCE 3D PAINTER",
-      title: "Material & Texturing Studies",
-      link: "/work/material-explorations",
-      leftText: "PBR Maps",
+      cat: "WHERE MUSIC BECOMES MEMORY",
+      title: "VINTAGE GRAMOPHONE",
+      link: "/work/vintage-gramophone",
+      leftText: "Acoustic",
       leftClass: "p2a",
-      image: "/images/projects/material-studies/hero.svg",
+      image: "/images/projects/vintage-gramophone/front-view.jpg",
     },
     {
       n: 5,
