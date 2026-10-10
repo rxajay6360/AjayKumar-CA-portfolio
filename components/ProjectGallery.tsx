@@ -75,6 +75,16 @@ export default function ProjectGallery() {
       leftClass: "p1a",
       image: "/images/projects/thors-hammer/front-wide-view.jpg",
     },
+    {
+      n: 7,
+      num: "08",
+      cat: "BUILT FOR THE STREET",
+      title: "THE STREET SKATE",
+      link: "/work/the-street-skate",
+      leftText: "Skate",
+      leftClass: "p2a",
+      image: "/images/projects/the-street-skate/corner-view.jpg",
+    },
   ];
 
   return (

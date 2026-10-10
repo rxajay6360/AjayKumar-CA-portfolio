@@ -812,4 +812,137 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "the-street-skate",
+    title: "THE STREET SKATE",
+    subtitle: "BUILT FOR THE STREET",
+    category: "3D Hard-Surface & Product Modeling",
+    filterCategory: "modeling",
+    featured: true,
+    year: "2025",
+    shortDescription:
+      "A rugged, high-performance custom street skateboard featuring 7-ply Canadian maple deck, heavy-duty aluminum trucks, polyurethane street wheels, and tactical grip tape.",
+    objective:
+      "Model and texture an authentic street skateboard that captures realistic mechanical assemblies—including truck bushings, kingpin bolts, ABEC bearings, grip tape friction, and graphic wear.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Precision Hard-Surface Subdivision & Lathe Modeling",
+      "PBR Polyurethane, Cast Metal & Wood Lamination Shading",
+      "Tactile High-Friction Grip Tape Material Authoring",
+      "Multi-Component Mechanical Truck & Bearing Assembly",
+      "High-Contrast Studio & Concrete Street Staging",
+    ],
+    heroImage: "/images/projects/the-street-skate/corner-view.jpg",
+    wireframeImage: "/images/projects/the-street-skate/right-side-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/the-street-skate/right-side-view.jpg",
+    keyHighlights: [
+      "Ergonomic double-kick concave deck profile modeled with continuous Sub-D quad topology",
+      "Authentic mechanical truck assemblies featuring cast aluminum hangers, baseplates, and polyurethane bushings",
+      "1:1 matching wireframe topology comparison showing clean edge loops along the deck curvature and wheel hubs",
+      "Comprehensive multi-angle render suite covering isometric corner shots, side profiles, underside graphics, and macro wheel details",
+    ],
+    textureBreakdown: [
+      {
+        name: "Laminated Maple Deck & Graphic",
+        resolution: "4096 x 4096",
+        description:
+          "Multi-ply pressed timber grain with underside silk-screened graphic transfer, slide abrasions, and clearcoat sheen.",
+      },
+      {
+        name: "High-Grip Silicon Carbide Tape",
+        resolution: "4096 x 4096",
+        description:
+          "Granular high-roughness micro-normal texture with dusty shoe marks and deck edge cutout bevels.",
+      },
+      {
+        name: "Cast Aluminum Trucks & Hardware",
+        resolution: "4096 x 4096",
+        description:
+          "Sand-cast metallic texture with grind marks, oxidized steel kingpin bolts, and rubber vibration dampening bushings.",
+      },
+      {
+        name: "54mm Polyurethane Street Wheels",
+        resolution: "4096 x 4096",
+        description:
+          "Semi-translucent 99A durometer urethane with core bearing shields, radial tread wear, and road grime accumulation.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Deck Curvature & Concave Geometry",
+        description:
+          "Engineered accurate skateboard ergonomics in Autodesk Maya, modeling the nose, tail kicks, and subtle radial concave with clean quad distribution.",
+        techniques: ["Ergonomic Spline Curves", "Concave Sub-D Mesh", "Edge Chamfers"],
+      },
+      {
+        phase: "02",
+        title: "Mechanical Truck & Hardware Assembly",
+        description:
+          "Modeled the hanger, baseplate, pivot cup, kingpin nut, washers, speed rings, and wheel bearings as modular production assets.",
+        techniques: ["Mechanical Detailing", "Fastener Standards", "Part Tolerances"],
+      },
+      {
+        phase: "03",
+        title: "PBR Material Crafting in Substance Painter",
+        description:
+          "Synthesized granular grip tape, multi-ply wood edges, poured urethane wheels, and cast aluminum truck surfaces using procedural grunge and curvature masks.",
+        techniques: ["Grip Tape Height Maps", "Cast Metal Smart Materials", "PBR Roughness Balances"],
+      },
+      {
+        phase: "04",
+        title: "Studio Lighting & Camera Staging",
+        description:
+          "Constructed dramatic studio lighting with rim kickers emphasizing the deck profile, wheel depth, and hardware reflections.",
+        techniques: ["Arnold Area Strip Lights", "Rim Highlights", "Macro Depth of Field"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/the-street-skate/corner-view.jpg",
+        caption: "Three-quarter isometric corner render showcasing the complete skateboard silhouette, concave deck, and truck stance",
+        label: "Corner 3/4 View",
+      },
+      {
+        url: "/images/projects/the-street-skate/right-side-view.jpg",
+        caption: "Side profile angle highlighting nose and tail kick angles, truck height clearance, and wheel stance",
+        label: "Side Profile",
+      },
+      {
+        url: "/images/projects/the-street-skate/closeup-wheel-view.jpg",
+        caption: "Macro closeup on the polyurethane street wheel, bearing shield, and axle locknut",
+        label: "Wheel & Bearing Macro",
+      },
+      {
+        url: "/images/projects/the-street-skate/closeup-back-view.jpg",
+        caption: "Rear perspective emphasizing tail deck rise, truck hanger width, and hardware fasteners",
+        label: "Rear Perspective",
+      },
+      {
+        url: "/images/projects/the-street-skate/bottom-view.jpg",
+        caption: "Underside view showcasing deck graphic placement, truck baseplates, and clean mounting bolts",
+        label: "Bottom Graphic View",
+      },
+      {
+        url: "/images/projects/the-street-skate/bottom-low-angle.jpg",
+        caption: "Dynamic low-angle street perspective capturing ground clearance and truck mechanics",
+        label: "Low-Angle Street View",
+      },
+      {
+        url: "/images/projects/the-street-skate/front-wheel-view.jpg",
+        caption: "Front wheel and truck assembly view showing wheel curvature and axle alignment",
+        label: "Front Truck Assembly",
+      },
+      {
+        url: "/images/projects/the-street-skate/top-angle-view.jpg",
+        caption: "Top perspective showing granular grip tape texture, concave curves, and hardware mounting holes",
+        label: "Top Grip Tape View",
+      },
+      {
+        url: "/images/projects/the-street-skate/wheel-view.jpg",
+        caption: "Detailed angle on the wheel profile and ground contact patch with subtle road wear",
+        label: "Wheel Profile",
+      },
+    ],
+  },
 ];
