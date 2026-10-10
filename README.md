@@ -1,6 +1,6 @@
-# C.A. AAJAY KUMAR — CINEMATIC 3D ARTIST PORTFOLIO
+# C.A. AJAY KUMAR — CINEMATIC 3D ARTIST PORTFOLIO
 
-A production-ready, cinematic portfolio website for **C.A. AAJAY KUMAR** — 3D Artist, Texture Artist, and Motion Graphics Designer.
+A production-ready, cinematic portfolio website for **C.A. AJAY KUMAR** — 3D Artist, Texture Artist, and Motion Graphics Designer.
 
 Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, matching the extracted **Google Stitch MCP** design reference (*Cinematic Obsidian*, Project ID: `5065931204751564559`).
 
@@ -22,7 +22,7 @@ Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Fra
   * Volumetric red rim lighting & radial gradients
   * SVG fractal noise film grain overlay
   * Top crimson scroll progress indicator
-  * Monogram brand lockup (`◆ C.A. AAJAY KUMAR`)
+  * Monogram brand lockup (`◆ C.A. AJAY KUMAR`)
   * Interactive Before/After Wireframe vs. Beauty Render slider
   * Clapperboard & timecode metadata callouts (`01 / ABOUT ME`, `02 / WHAT I DO`, `03 / FEATURED PROJECTS`, etc.)
 

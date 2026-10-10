@@ -51,7 +51,7 @@ export default function About() {
           </span>
         </h2>
         <p>
-          I am C.A. Aajay Kumar, a creative artist focused on 3D modeling, texturing, materials, environments, and motion graphics. I enjoy transforming ideas into visually striking digital experiences through detailed modeling, cinematic lighting, material development, and creative presentation. Let&apos;s build something incredible together!
+          I am C.A. Ajay Kumar, a creative artist focused on 3D modeling, texturing, materials, environments, and motion graphics. I enjoy transforming ideas into visually striking digital experiences through detailed modeling, cinematic lighting, material development, and creative presentation. Let&apos;s build something incredible together!
         </p>
         <div className="soc">
           <a href="https://www.artstation.com" target="_blank" rel="noopener noreferrer" title="ArtStation">

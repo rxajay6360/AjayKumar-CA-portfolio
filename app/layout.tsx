@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Arnold Renderer",
     "Hard-Surface Modeling",
     "PBR Texturing",
-    "C.A. Aajay Kumar",
+    "C.A. Ajay Kumar",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,

@@ -21,7 +21,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "C.A. AAJAY KUMAR",
+  name: "C.A. AJAY KUMAR",
   monogram: "CA",
   title: "3D Artist | Texture Artist | Motion Graphics Designer",
   headline: "BUILT IN 3D.",
