@@ -98,7 +98,7 @@ export default function SkillsArsenal() {
               CORE TOOLSET &bull; SKILLS
             </span>
           </div>
-          <h2 className="chrome text-center text-[clamp(44px,9vw,130px)] leading-[0.9] tracking-[-0.03em] mb-4">
+          <h2 className="chrome text-center text-[clamp(38px,6.8vw,98px)] leading-[0.95] tracking-[-0.03em] mb-4 whitespace-nowrap">
             Skills
           </h2>
           <p className="text-xs sm:text-sm text-[#888888] max-w-xl">

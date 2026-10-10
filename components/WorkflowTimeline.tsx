@@ -53,22 +53,19 @@ export default function WorkflowTimeline() {
     <section id="workflow" className="py-24 border-b border-[#171717] relative bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-[#ff2a3b] font-mono text-xs tracking-[0.25em]">05</span>
-              <div className="w-6 h-[1px] bg-[#ff2a3b]/40" />
-              <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#888888]">
-                PRODUCTION PIPELINE
-              </span>
-            </div>
-            <h2 className="chrome text-[clamp(40px,7.5vw,100px)] leading-[0.9] tracking-[-0.03em] mb-2">
-              Workflow
-            </h2>
+        <div className="flex flex-col mb-16 w-full">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-[#ff2a3b] font-mono text-xs tracking-[0.25em]">05</span>
+            <div className="w-6 h-[1px] bg-[#ff2a3b]/40" />
+            <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#888888]">
+              PRODUCTION PIPELINE &bull; WORKFLOW
+            </span>
           </div>
-          <p className="text-xs sm:text-sm text-[#888888] max-w-md">
-            A methodical six-stage pipeline ensuring high-fidelity visual results from initial blockout
-            to the polished final frame.
+          <h2 className="chrome text-[clamp(36px,5.8vw,86px)] leading-[0.95] tracking-[-0.03em] mb-4 whitespace-nowrap inline-block">
+            Workflow
+          </h2>
+          <p className="text-xs sm:text-sm text-[#888888] max-w-xl leading-relaxed">
+            A methodical six-stage pipeline ensuring high-fidelity visual results from initial blockout to the polished final frame.
           </p>
         </div>
 
