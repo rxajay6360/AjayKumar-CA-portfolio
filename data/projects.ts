@@ -636,4 +636,117 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "thors-hammer",
+    title: "THOR’S HAMMER",
+    subtitle: "Mythical Mjolnir Prop & Asgardian Hard-Surface Craftsmanship",
+    category: "3D Modeling / Texturing / Lighting",
+    filterCategory: "modeling",
+    featured: true,
+    year: "2025",
+    shortDescription:
+      "A cinematic hero prop recreation of Thor’s legendary hammer Mjolnir, featuring etched Norse runes, weathered battle-forged steel, authentic wrapped leather grip, and atmospheric studio lighting.",
+    objective:
+      "Sculpt and render the iconic Asgardian war hammer with tactile realism—balancing heavy forged metal heft, authentic Nordic runic engravings, worn leather wrapping, and striking specular rim lighting.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Precision Hard-Surface Subdivision Modeling",
+      "PBR Weathered Steel & Micro-Abrasion Shading",
+      "Organic Leather Strap & Grip Weaving",
+      "Nordic Runic Inset Detailing",
+      "Cinematic Three-Point Studio Lighting",
+    ],
+    heroImage: "/images/projects/thors-hammer/front-wide-view.jpg",
+    wireframeImage: "/images/projects/thors-hammer/front-wide-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/thors-hammer/front-wide-view.jpg",
+    keyHighlights: [
+      "Faithful cinematic proportions with distinct beveled hammerhead edges, Norse filigree, and inset side plates",
+      "Battle-worn forged steel materials with microscopic pitting, micro-scratches, and subtle edge wear highlights",
+      "1:1 matching wireframe topology comparison showing clean quad edge flow across intricate bevel transitions",
+      "Detailed multi-angle studio renders covering wide frontal shots, macro handle closeups, top down, and corner angles",
+    ],
+    textureBreakdown: [
+      {
+        name: "Forged Asgardian Steel",
+        resolution: "4096 x 4096",
+        description:
+          "Heavy forged metal with procedural micro-scratches, oxidation, edge chip curvature, and metallic specular highlights.",
+      },
+      {
+        name: "Braided Leather Handle",
+        resolution: "4096 x 4096",
+        description:
+          "Tactile brown leather bands with organic pore depth, seam stitching tension, and natural hand-rubbed wear.",
+      },
+      {
+        name: "Engraved Side Grills",
+        resolution: "4096 x 4096",
+        description:
+          "Recessed Nordic ornamental border patterns with subtle ambient occlusion shadowing and polished relief edges.",
+      },
+      {
+        name: "Chrome Pommel & Wrist Strap",
+        resolution: "4096 x 4096",
+        description:
+          "Polished end-cap metal with subtle grease patina and flexible reinforced leather wrist lanyard loop.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Proportion Studies & Maya Sub-D Blockout",
+        description:
+          "Established accurate silhouettes and scale in Autodesk Maya, modeling the primary head chamfers, handle tapering, and pommel assembly with clean quad topology.",
+        techniques: ["Reference Alignment", "Chamfer Management", "Sub-D Poly Modeling"],
+      },
+      {
+        phase: "02",
+        title: "High-Poly Detailing & Runic Carvings",
+        description:
+          "Crafted intricate Nordic knotwork engravings and endplate relief motifs with crisp support loops, maintaining clean quad distribution across all complex bevels.",
+        techniques: ["Support Loop Creasing", "Radial Symmetry", "Filigree Modeling"],
+      },
+      {
+        phase: "03",
+        title: "Multi-Layer PBR Texturing in Substance Painter",
+        description:
+          "Built tactile smart materials featuring raw uru-metal roughness, directional micro-scratches, edge discoloration, and authentic weathered leather wraps.",
+        techniques: ["Smart Masks", "Curvature Driven Dirt", "Roughness Maps", "Normal Mapping"],
+      },
+      {
+        phase: "04",
+        title: "Arnold Cinematic Studio Lighting & Render",
+        description:
+          "Set up dramatic high-contrast studio softboxes with warm key and cool rim kickers, highlighting the metallic beveled edges and table surface reflections.",
+        techniques: ["Arnold Area Lights", "Color Temperature Contrast", "Depth of Field"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/thors-hammer/front-wide-view.jpg",
+        caption: "Front wide perspective displaying Thor's Hammer resting on a polished studio surface with dramatic rim lighting",
+        label: "Front Wide View",
+      },
+      {
+        url: "/images/projects/thors-hammer/front-closeup-view.jpg",
+        caption: "Front closeup emphasizing the intricate side plate engravings, beveled edges, and surface metal textures",
+        label: "Front Closeup",
+      },
+      {
+        url: "/images/projects/thors-hammer/front-handle-view.jpg",
+        caption: "Close-up perspective focusing on the ribbed leather handle wrap, silver rings, and pommel connection",
+        label: "Handle & Grip Detail",
+      },
+      {
+        url: "/images/projects/thors-hammer/corner-view.jpg",
+        caption: "Three-quarter isometric corner render showcasing the full 3D silhouette and depth of the hammer head",
+        label: "Corner 3/4 View",
+      },
+      {
+        url: "/images/projects/thors-hammer/upper-view.jpg",
+        caption: "Top-down perspective capturing the top plate chamfers, surface roughness, and symmetrical form",
+        label: "Upper View",
+      },
+    ],
+  },
 ];

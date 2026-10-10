@@ -65,6 +65,16 @@ export default function ProjectGallery() {
       leftClass: "p3a",
       image: "/images/projects/motion-graphics/hero.svg",
     },
+    {
+      n: 6,
+      num: "07",
+      cat: "GOD OF THUNDER",
+      title: "THOR’S HAMMER",
+      link: "/work/thors-hammer",
+      leftText: "Mjolnir",
+      leftClass: "p1a",
+      image: "/images/projects/thors-hammer/front-wide-view.jpg",
+    },
   ];
 
   return (
