@@ -25,9 +25,9 @@ const SERVICES: ServiceItem[] = [
     id: "01",
     serviceName: "Autodesk Maya",
     tag: "SERVICE 01",
-    imageWebp: "/images/services/service-maya.webp",
+    imageWebp: "/images/services/maya-studio.webp",
     imageFallback: "/images/services/service-maya.png",
-    alt: "Autodesk Maya 3D frosted glass card with metallic emblem",
+    alt: "Autodesk Maya 3D frosted glass card on studio desk with workstation monitor",
     accent: "#00e5ff",
     accentClass: "service-card-c1",
     targetService: "3D Modeling",
@@ -41,9 +41,9 @@ const SERVICES: ServiceItem[] = [
     id: "02",
     serviceName: "Substance 3D Painter",
     tag: "SERVICE 02",
-    imageWebp: "/images/services/service-substance.webp",
+    imageWebp: "/images/services/substance-studio.webp",
     imageFallback: "/images/services/service-substance.jpg",
-    alt: "Substance 3D Painter frosted glass card with metallic Pt emblem",
+    alt: "Substance 3D Painter frosted glass card on studio desk with PBR viewport",
     accent: "#ff7043",
     accentClass: "service-card-c2",
     targetService: "Texturing",
@@ -57,9 +57,9 @@ const SERVICES: ServiceItem[] = [
     id: "03",
     serviceName: "Motion Graphics",
     tag: "SERVICE 03",
-    imageWebp: "/images/services/service-motion.webp",
+    imageWebp: "/images/services/motion-studio.webp",
     imageFallback: "/images/services/service-motion.jpg",
-    alt: "Motion Graphics frosted glass card with metallic Ae emblem",
+    alt: "Motion Graphics frosted glass card on studio desk with timeline monitor",
     accent: "#7c4dff",
     accentClass: "service-card-c3",
     targetService: "Motion Graphics",
@@ -247,6 +247,10 @@ function TiltCard({
 
   const handleMouseEnter = () => {
     setIsHovered(true);
+    const card = cardRef.current;
+    if (card) {
+      card.classList.remove("is-resetting");
+    }
   };
 
   const handleMouseLeave = () => {
@@ -254,12 +258,13 @@ function TiltCard({
     const card = cardRef.current;
     if (!card) return;
 
+    card.classList.add("is-resetting");
     card.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
     card.style.setProperty("--glare-opacity", "0");
   };
 
   return (
-    <div className={`service-card-wrapper ${!isHovered ? item.floatClass : ""}`}>
+    <div className={`service-card-wrapper relative ${!isHovered ? item.floatClass : ""}`}>
       <div
         ref={cardRef}
         className={`service-3d-card ${item.accentClass}`}
@@ -319,6 +324,9 @@ function TiltCard({
           </button>
         </div>
       </div>
+
+      {/* Cinematic Studio Desk Reflection Underglow */}
+      <div className="service-desk-underglow" aria-hidden="true" />
     </div>
   );
 }
