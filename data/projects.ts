@@ -945,4 +945,122 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "cookie-jar",
+    title: "COOKIE JAR",
+    subtitle: "EVERY TEXTURE TELLS A STORY",
+    category: "3D Prop Modeling & Photorealistic Texturing",
+    filterCategory: "texturing",
+    featured: true,
+    year: "2025",
+    shortDescription:
+      "A photorealistic vintage glass cookie jar filled with freshly baked artisanal cookies, exploring translucent glass refraction, organic baked dough porosity, ceramic glaze, and kitchen countertop ambiance.",
+    objective:
+      "Showcase mastery in micro-surface texture synthesis—simulating crumbly baked cookie porosity, chocolate chips, translucent refractive soda-lime glass, silicone lid seals, and warm natural studio lighting.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Translucent Dielectric Glass Refraction & Dispersion",
+      "Subsurface Scattering (SSS) for Baked Confectionery Dough",
+      "Organic Food Porosity & Crumb Displacement Mapping",
+      "Glazed Ceramic Lid & Gasket Seal Modeling",
+      "Three-Point Warm Kitchen Studio Lighting",
+    ],
+    heroImage: "/images/projects/cookie-jar/front-view.jpg",
+    wireframeImage: "/images/projects/cookie-jar/closeup-details-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/cookie-jar/closeup-details.jpg",
+    keyHighlights: [
+      "Ultra-realistic baked cookie materials featuring multi-octave crumb displacement, sugar crystal sparkle, and chocolate inclusions",
+      "Physically accurate soda-lime glass container with realistic wall thickness, Fresnel reflections, and internal refractions",
+      "1:1 matching macro wireframe topology comparison showing clean quad density across organic food surfaces and curved glass",
+      "Expansive multi-angle render suite covering frontal hero views, macro crumb closeups, rear lid details, and corner perspectives",
+    ],
+    textureBreakdown: [
+      {
+        name: "Baked Artisanal Cookies",
+        resolution: "4096 x 4096",
+        description:
+          "Multi-layered procedural food shader with Subsurface Scattering (SSS), golden-brown caramelization, crumb porosity, and semi-gloss chocolate chips.",
+      },
+      {
+        name: "Clear Soda-Lime Jar Glass",
+        resolution: "4096 x 4096",
+        description:
+          "High-transmission refractive dielectric material with micro-dust roughness, faint finger smudge smearing, and realistic edge tint.",
+      },
+      {
+        name: "Glazed Ceramic Cap & Knob",
+        resolution: "4096 x 4096",
+        description:
+          "Smooth white glazed porcelain with subtle orange-peel specular reflection and food-grade silicone rubber sealing gasket.",
+      },
+      {
+        name: "Textured Rustic Kitchen Counter",
+        resolution: "4096 x 4096",
+        description:
+          "Natural stone and wood composite surface with micro-roughness variations and warm diffuse bounce response.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Jar Silhouette & Organic Cookie Sculpting",
+        description:
+          "Modeled the glass jar profile with accurate physical wall thickness in Autodesk Maya, sculpting unique organic silhouettes and uneven bake edges for each cookie.",
+        techniques: ["Lathe Sub-D Modeling", "Food Silhouette Sculpting", "Wall Thickness Precision"],
+      },
+      {
+        phase: "02",
+        title: "Subsurface Scattering & Food Shading",
+        description:
+          "Configured complex random-walk SSS profiles to emulate the warm light transmission through porous baked flour dough, preventing plastic-looking flat surfaces.",
+        techniques: ["Random Walk SSS", "Color Scatter Distance", "Albedo Balancing"],
+      },
+      {
+        phase: "03",
+        title: "Substance Micro-Surface Texture Authoring",
+        description:
+          "Generated custom height and normal maps for crumbly cookie crevices, melted chocolate chip gloss, and subtle glass surface oils.",
+        techniques: ["Procedural Height Graphs", "Roughness Attenuation", "Normal Micro-Detail"],
+      },
+      {
+        phase: "04",
+        title: "Arnold Lighting & Optical Bokeh Rendering",
+        description:
+          "Employed warm softbox illumination simulating morning kitchen window light, highlighting glass rim caustics, soft shadow contact, and shallow depth of field.",
+        techniques: ["Arnold Area Lights", "Transmission Caustics", "Optical Depth of Field"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/cookie-jar/front-view.jpg",
+        caption: "Frontal hero render displaying the clear glass jar brimming with artisanal cookies on a textured countertop",
+        label: "Front Hero View",
+      },
+      {
+        url: "/images/projects/cookie-jar/closeup-details.jpg",
+        caption: "Macro detail shot revealing the crumbly baked texture, sugar crystals, and rich chocolate chunks",
+        label: "Macro Cookie Detail",
+      },
+      {
+        url: "/images/projects/cookie-jar/side-corner.jpg",
+        caption: "Three-quarter side corner angle capturing the subtle refractive distortion of cookies through thick curved glass",
+        label: "Corner 3/4 View",
+      },
+      {
+        url: "/images/projects/cookie-jar/upper-view.jpg",
+        caption: "Top-down perspective emphasizing the ceramic lid knob, sealing gasket, and mouth curvature",
+        label: "Top Lid View",
+      },
+      {
+        url: "/images/projects/cookie-jar/back-view.jpg",
+        caption: "Rear perspective displaying light transmission and specular highlights across the glass cylinder",
+        label: "Rear Perspective",
+      },
+      {
+        url: "/images/projects/cookie-jar/back-closeup-view.jpg",
+        caption: "Close-up rear shot focusing on the jar neck, ceramic glaze reflection, and cookie stacking layers",
+        label: "Rear Neck Closeup",
+      },
+    ],
+  },
 ];

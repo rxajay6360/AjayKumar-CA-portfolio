@@ -85,6 +85,16 @@ export default function ProjectGallery() {
       leftClass: "p2a",
       image: "/images/projects/the-street-skate/corner-view.jpg",
     },
+    {
+      n: 8,
+      num: "09",
+      cat: "EVERY TEXTURE TELLS A STORY",
+      title: "COOKIE JAR",
+      link: "/work/cookie-jar",
+      leftText: "Cookies",
+      leftClass: "p3a",
+      image: "/images/projects/cookie-jar/front-view.jpg",
+    },
   ];
 
   return (
