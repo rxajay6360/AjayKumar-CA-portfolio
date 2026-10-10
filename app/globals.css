@@ -523,34 +523,125 @@ main {
   }
 }
 
-/* 2. Hero Name: AJAY KUMAR (Solid Tones, Counter-Space Reveal & Glow Breathing) */
-.hero-name {
+/* =========================================================================
+   2. Optical Magnifier Lens System (Negative Space Inversion & Refraction)
+   Clipped Circular Lens with 1.24x Lens Refraction Displacement & Video-like Drift
+   ========================================================================= */
+
+.magnifier-stage {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+  overflow: visible;
+  --lens-radius: clamp(80px, 11vw, 130px);
+  animation: 
+    heroMatteReveal 1.25s cubic-bezier(0.85, 0, 0.15, 1) 0.12s both,
+    heroGlowBreathe 5s ease-in-out infinite 1.4s;
+  transition: transform 0.35s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.magnifier-stage:hover,
+.magnifier-stage.is-hovered {
+  transform: scale(1.02);
+}
+
+/* Base Typography: Radiant Crimson Red in normal scale */
+.magnifier-base-layer {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+}
+
+.hero-name-typography {
   font: 900 clamp(36px, 8.2vw, 126px) / 0.94 var(--d);
   letter-spacing: -0.02em;
   text-transform: uppercase;
   white-space: nowrap;
   display: inline-block;
-  position: relative;
-  overflow: visible;
   color: #ff2a3b;
   text-shadow: 
     0 0 35px rgba(255, 42, 59, 0.7),
     0 0 75px rgba(255, 42, 59, 0.35),
     0 0 120px rgba(255, 42, 59, 0.15);
   -webkit-font-smoothing: antialiased;
-  cursor: default;
-  animation: 
-    heroMatteReveal 1.25s cubic-bezier(0.85, 0, 0.15, 1) 0.12s both,
-    heroGlowBreathe 5s ease-in-out infinite 1.4s;
-  transition: transform 0.35s cubic-bezier(0.85, 0, 0.15, 1), text-shadow 0.35s;
 }
 
-.hero-name:hover {
-  transform: scale(1.02);
-  text-shadow: 
-    0 0 50px rgba(255, 42, 59, 0.95),
-    0 0 100px rgba(255, 42, 59, 0.6),
-    0 0 160px rgba(255, 42, 59, 0.35);
+/* Clipped Circular Lens Portal */
+.magnifier-lens-portal {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  clip-path: circle(var(--lens-radius, 95px) at var(--lens-x, 50%) var(--lens-y, 50%));
+  -webkit-clip-path: circle(var(--lens-radius, 95px) at var(--lens-x, 50%) var(--lens-y, 50%));
+  will-change: clip-path;
+}
+
+/* High-Contrast Solid Inverted Disc Fill */
+.lens-monochrome-disc {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.14);
+}
+
+/* Optical Magnification & Refraction Transform */
+.lens-refracted-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.24);
+  transform-origin: var(--lens-x, 50%) var(--lens-y, 50%);
+  will-change: transform-origin;
+  transition: transform-origin 0.05s ease-out;
+}
+
+/* Inverted Letterforms inside Lens Disc */
+.lens-inverted-typography {
+  color: #000000 !important;
+  text-shadow: none !important;
+  font-weight: 950 !important;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.28));
+}
+
+/* Physical Optical Glass Bevel Rim Ring at Lens Center */
+.lens-glass-beveled-rim {
+  position: absolute;
+  left: var(--lens-x, 50%);
+  top: var(--lens-y, 50%);
+  width: calc(var(--lens-radius, 95px) * 2);
+  height: calc(var(--lens-radius, 95px) * 2);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 15;
+  border: 2.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 0 30px rgba(255, 42, 59, 0.65),
+    0 0 60px rgba(255, 255, 255, 0.35),
+    inset 0 0 18px rgba(255, 255, 255, 0.45);
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.magnifier-stage:hover .lens-glass-beveled-rim,
+.magnifier-stage.is-hovered .lens-glass-beveled-rim {
+  border-color: #ffffff;
+  box-shadow: 
+    0 0 40px rgba(255, 42, 59, 0.9),
+    0 0 75px rgba(255, 255, 255, 0.55),
+    inset 0 0 24px rgba(255, 255, 255, 0.65);
 }
 
 @keyframes heroMatteReveal {
@@ -584,44 +675,6 @@ main {
       0 0 110px rgba(255, 42, 59, 0.5),
       0 0 150px rgba(255, 42, 59, 0.25);
     transform: scale(1.012);
-  }
-}
-
-/* 3. Inverted Monochrome Silhouette Blade Wipe (Cuts through solid tones) */
-.hero-name .inverted-alpha-blade {
-  position: absolute;
-  top: -15%;
-  bottom: -15%;
-  width: 45%;
-  pointer-events: none;
-  z-index: 10;
-  mix-blend-mode: difference;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.85) 45%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0.85) 55%,
-    transparent 100%
-  );
-  animation: invertedBladeWipe 8s cubic-bezier(0.85, 0, 0.15, 1) infinite;
-}
-
-@keyframes invertedBladeWipe {
-  0%, 65% {
-    transform: translateX(-160%) skewX(-20deg);
-    opacity: 0;
-  }
-  70% {
-    opacity: 0.95;
-  }
-  85% {
-    transform: translateX(360%) skewX(-20deg);
-    opacity: 0.95;
-  }
-  90%, 100% {
-    transform: translateX(360%) skewX(-20deg);
-    opacity: 0;
   }
 }
 
