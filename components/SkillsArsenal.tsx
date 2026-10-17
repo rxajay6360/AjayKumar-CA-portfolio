@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Box, Layers, Film, CheckCircle2 } from "lucide-react";
+import { Box, Layers, CheckCircle2 } from "lucide-react";
 
 const MayaWireframe3D = dynamic(
   () => import("@/components/3d/MayaWireframe3D"),
@@ -26,10 +26,6 @@ const MaterialShaderSphere3D = dynamic(
     ),
   }
 );
-
-const MotionShowcase = dynamic(() => import("@/components/MotionShowcase"), {
-  ssr: false,
-});
 
 export default function SkillsArsenal() {
   const disciplines = [
@@ -67,23 +63,6 @@ export default function SkillsArsenal() {
       ],
       deliverables: ["4K PBR Maps", "Curvature Masks", "Normal Bakes"],
     },
-    {
-      id: "03",
-      name: "MOTION GRAPHICS",
-      role: "Kinetic Design & Broadcast Animation",
-      icon: Film,
-      accent: "#ff2a3b",
-      component: <MotionShowcase />,
-      skills: [
-        "Animated typography",
-        "Visual storytelling",
-        "Cinematic transitions",
-        "Motion design",
-        "Speed graph easing",
-        "Title sequences & reveals",
-      ],
-      deliverables: ["Speed Curves", "Audio Syncing", "Color Grading"],
-    },
   ];
 
   return (
@@ -102,12 +81,12 @@ export default function SkillsArsenal() {
             Skills
           </h2>
           <p className="text-xs sm:text-sm text-[#888888] max-w-xl">
-            Animated visual presentation of core disciplines across Autodesk Maya, Substance 3D Painter, and Motion Graphics.
+            Interactive real-time 3D presentation of core disciplines across Autodesk Maya and Substance 3D Painter.
           </p>
         </div>
 
-        {/* 3 Discipline Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 2 Discipline Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {disciplines.map((disc) => {
             const Icon = disc.icon;
             return (
