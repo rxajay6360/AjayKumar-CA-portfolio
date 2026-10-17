@@ -384,8 +384,8 @@ export const projects: Project[] = [
   },
   {
     slug: "banana-car",
-    title: "Banana Car",
-    subtitle: "Stylized Concept Vehicle & Form Exploration",
+    title: "BANANA BUGGY",
+    subtitle: "A FRUITY TWIST ON FOUR WHEELS",
     category: "Stylized 3D Modeling",
     filterCategory: "modeling",
     featured: true,
@@ -401,8 +401,8 @@ export const projects: Project[] = [
       "Stylized Characterful Proportions",
       "Studio Turntable Setup",
     ],
-    heroImage: "/images/projects/banana-car/hero.svg",
-    wireframeImage: "/images/projects/banana-car/wireframe.svg",
+    heroImage: "/images/projects/banana-car/front-closeshot.jpg",
+    wireframeImage: "/images/projects/banana-car/front-closeshot-wireframe.jpg",
     keyHighlights: [
       "Expressive, whimsical silhouette blending automotive speed lines with organic banana curves",
       "Chunky retro-futuristic tires with deep cartoon treads and chrome hubcaps",
@@ -441,14 +441,34 @@ export const projects: Project[] = [
     ],
     galleryImages: [
       {
-        url: "/images/projects/banana-car/beauty-01.svg",
-        caption: "Dynamic 3/4 front view showcasing the banana aerodynamic cockpit and chunky wheels",
-        label: "Stylized Concept",
+        url: "/images/projects/banana-car/front-closeshot.jpg",
+        caption: "Dynamic front close-up shot showcasing the banana buggy cockpit and aerodynamic curve styling",
+        label: "Front Close Shot",
       },
       {
-        url: "/images/projects/banana-car/wireframe.svg",
-        caption: "Quad wireframe layout showing the continuous curvature lines",
+        url: "/images/projects/banana-car/front-closeshot-wireframe.jpg",
+        caption: "Subdivision surface wireframe topology on the front close shot",
         label: "Curvature Topology",
+      },
+      {
+        url: "/images/projects/banana-car/side-shot.jpg",
+        caption: "Full lateral profile displaying the streamlined banana silhouette and balanced ground stance",
+        label: "Side Profile",
+      },
+      {
+        url: "/images/projects/banana-car/left-side-shot.jpg",
+        caption: "Three-quarter left angle emphasizing the sculptural peel transitions and rim illumination",
+        label: "3/4 Perspective",
+      },
+      {
+        url: "/images/projects/banana-car/top-shot.jpg",
+        caption: "Overhead plan view revealing symmetrical form distribution and aerodynamic flow",
+        label: "Top View",
+      },
+      {
+        url: "/images/projects/banana-car/tyre-shot.jpg",
+        caption: "Close-up macro render of the custom stylized tire treads and polished chrome hubs",
+        label: "Tire & Wheel Detail",
       },
     ],
   },
