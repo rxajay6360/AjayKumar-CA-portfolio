@@ -71,12 +71,78 @@ export default function About() {
           </a>
         </div>
       </div>
-      <div className="float">
-        <i style={{ top: "10%", right: "12%", left: "auto", color: "#ff2a3b" }}>Ma</i>
-        <i style={{ top: "28%", right: "4%", left: "auto", color: "#ffffff" }}>3D</i>
-        <i style={{ top: "50%", right: "16%", left: "auto", color: "#3b9cff" }}>Ae</i>
-        <i style={{ top: "70%", right: "6%", left: "auto", color: "#d49755" }}>Pt</i>
-        <i style={{ top: "86%", right: "18%", left: "auto", color: "#aaa" }}>Ar</i>
+      <div className="float" aria-hidden="true">
+        {/* Autodesk Maya Logo Badge */}
+        <div
+          className="float-software-badge maya"
+          style={{ top: "8%", right: "12%" }}
+          title="Autodesk Maya"
+        >
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
+            <path d="M4 26L11 6L16 18L10 26H4Z" fill="url(#maya_f1)" />
+            <path d="M16 18L21 6L28 26H22L16 18Z" fill="url(#maya_f2)" />
+            <path d="M11 6L16 18L21 6H11Z" fill="url(#maya_f3)" />
+            <path d="M10 26L16 18L22 26H10Z" fill="url(#maya_f4)" />
+            <defs>
+              <linearGradient id="maya_f1" x1="4" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#00F0FF" />
+                <stop offset="1" stopColor="#0077B6" />
+              </linearGradient>
+              <linearGradient id="maya_f2" x1="28" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#48CAE4" />
+                <stop offset="1" stopColor="#023E8A" />
+              </linearGradient>
+              <linearGradient id="maya_f3" x1="11" y1="6" x2="21" y2="18" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#90E0EF" />
+                <stop offset="1" stopColor="#0096C7" />
+              </linearGradient>
+              <linearGradient id="maya_f4" x1="16" y1="18" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#00B4D8" />
+                <stop offset="1" stopColor="#03045E" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span className="float-badge-label">Maya</span>
+        </div>
+
+        {/* Substance 3D Painter Logo Badge */}
+        <div
+          className="float-software-badge substance"
+          style={{ top: "33%", right: "4%" }}
+          title="Substance 3D Painter"
+        >
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
+            <rect x="2.5" y="2.5" width="27" height="27" rx="6.5" fill="#1b120c" stroke="#ff7043" strokeWidth="1.8" />
+            <text x="6" y="22" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="16" fill="#ff7043" letterSpacing="-0.5">Pt</text>
+          </svg>
+          <span className="float-badge-label">Substance</span>
+        </div>
+
+        {/* Adobe Photoshop Logo Badge */}
+        <div
+          className="float-software-badge photoshop"
+          style={{ top: "58%", right: "16%" }}
+          title="Adobe Photoshop"
+        >
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
+            <rect x="2.5" y="2.5" width="27" height="27" rx="6.5" fill="#001e36" stroke="#31a8ff" strokeWidth="1.8" />
+            <text x="5.5" y="22" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="16" fill="#31a8ff" letterSpacing="-0.5">Ps</text>
+          </svg>
+          <span className="float-badge-label">Photoshop</span>
+        </div>
+
+        {/* Adobe Premiere Pro Logo Badge */}
+        <div
+          className="float-software-badge premiere"
+          style={{ top: "82%", right: "7%" }}
+          title="Adobe Premiere Pro"
+        >
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
+            <rect x="2.5" y="2.5" width="27" height="27" rx="6.5" fill="#1b002c" stroke="#ea77ff" strokeWidth="1.8" />
+            <text x="6" y="22" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="16" fill="#ea77ff" letterSpacing="-0.5">Pr</text>
+          </svg>
+          <span className="float-badge-label">Premiere</span>
+        </div>
       </div>
     </section>
   );

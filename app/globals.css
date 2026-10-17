@@ -1108,29 +1108,140 @@ h2.section-heading {
   pointer-events: none;
 }
 
-.float i {
+.float-software-badge {
   pointer-events: auto;
   position: absolute;
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   border-radius: 16px;
-  display: grid;
-  place-items: center;
-  font: 700 18px var(--d);
-  font-style: normal;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-  animation: fl 6s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 16, 24, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  cursor: pointer;
 }
 
-@keyframes fl {
+.float-software-badge.maya {
+  animation: floatSmooth1 7.2s ease-in-out infinite;
+}
+
+.float-software-badge.substance {
+  animation: floatSmooth2 8.4s ease-in-out infinite 1.4s;
+}
+
+.float-software-badge.photoshop {
+  animation: floatSmooth3 7.8s ease-in-out infinite 2.8s;
+}
+
+.float-software-badge.premiere {
+  animation: floatSmooth4 8.6s ease-in-out infinite 4.2s;
+}
+
+@keyframes floatSmooth1 {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
   }
-  50% {
-    transform: translateY(-18px) rotate(6deg);
+  33% {
+    transform: translate(3px, -15px) rotate(3deg);
   }
+  66% {
+    transform: translate(-3px, -7px) rotate(-2deg);
+  }
+}
+
+@keyframes floatSmooth2 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  33% {
+    transform: translate(-4px, -16px) rotate(-3deg);
+  }
+  66% {
+    transform: translate(2px, -8px) rotate(2deg);
+  }
+}
+
+@keyframes floatSmooth3 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  33% {
+    transform: translate(4px, -15px) rotate(4deg);
+  }
+  66% {
+    transform: translate(-2px, -6px) rotate(-1deg);
+  }
+}
+
+@keyframes floatSmooth4 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  33% {
+    transform: translate(-3px, -13px) rotate(-2deg);
+  }
+  66% {
+    transform: translate(3px, -8px) rotate(3deg);
+  }
+}
+
+.float-software-badge.maya:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(0, 229, 255, 0.55), inset 0 0 12px rgba(0, 229, 255, 0.2);
+  transform: scale(1.16) translateY(-4px);
+  z-index: 10;
+}
+
+.float-software-badge.substance:hover {
+  border-color: #ff7043;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(255, 112, 67, 0.55), inset 0 0 12px rgba(255, 112, 67, 0.2);
+  transform: scale(1.16) translateY(-4px);
+  z-index: 10;
+}
+
+.float-software-badge.photoshop:hover {
+  border-color: #31a8ff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(49, 168, 255, 0.55), inset 0 0 12px rgba(49, 168, 255, 0.2);
+  transform: scale(1.16) translateY(-4px);
+  z-index: 10;
+}
+
+.float-software-badge.premiere:hover {
+  border-color: #ea77ff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(234, 119, 255, 0.55), inset 0 0 12px rgba(234, 119, 255, 0.2);
+  transform: scale(1.16) translateY(-4px);
+  z-index: 10;
+}
+
+.float-badge-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--f, 'Space Mono', monospace);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(8, 10, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2px 7px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.float-software-badge:hover .float-badge-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
 }
 
 /* Services Section — 3D Glassmorphism Showcase */
@@ -2436,11 +2547,15 @@ h2.section-heading {
     margin-top: 10px;
   }
 
-  .float i {
+  .float-software-badge {
     width: 48px;
     height: 48px;
-    font-size: 15px;
-    border-radius: 12px;
+    border-radius: 13px;
+  }
+
+  .float-software-badge svg {
+    width: 26px;
+    height: 26px;
   }
 
   /* Services on mobile */
