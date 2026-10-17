@@ -82,15 +82,27 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <Navbar />
 
       <main className="flex-1 pt-28 pb-20">
-        {/* Back Link Breadcrumb */}
+        {/* Back Link Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
-          <Link
-            href="/#projects"
-            className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#888888] hover:text-[#ff2a3b] transition-colors"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            <span>BACK TO ALL PROJECTS</span>
-          </Link>
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-mono tracking-widest">
+            <Link
+              href="/#projects"
+              className="inline-flex items-center gap-2 text-[#888888] hover:text-[#ff2a3b] transition-colors group"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+              <span>BACK TO ALL PROJECTS</span>
+            </Link>
+
+            <span className="text-white/20 select-none">•</span>
+
+            <Link
+              href={`/#${project.slug}`}
+              className="inline-flex items-center gap-2 text-[#cccccc] hover:text-[#ff2a3b] transition-colors group"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 text-[#ff2a3b] group-hover:-translate-x-0.5 transition-transform" />
+              <span>BACK TO {project.title}</span>
+            </Link>
+          </div>
         </div>
 
         {/* Project Header Banner */}

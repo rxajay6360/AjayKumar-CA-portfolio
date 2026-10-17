@@ -203,6 +203,7 @@ export default function ProjectGallery() {
           {filteredProjects.map((p, idx) => (
             <article
               key={p.num}
+              id={p.link.replace("/work/", "")}
               className="proj"
               style={{ "--n": idx } as React.CSSProperties}
             >
