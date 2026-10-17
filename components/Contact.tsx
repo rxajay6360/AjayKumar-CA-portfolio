@@ -156,7 +156,7 @@ export default function Contact() {
 
         <label>Service required</label>
         <div className="chips">
-          {["3D Modeling", "Texturing", "Environments", "Motion Graphics", "Other"].map(
+          {["3D Modeling", "Texturing", "Environments", "Photoshop", "Premiere Pro", "Other"].map(
             (item) => (
               <button
                 key={item}

@@ -53,22 +53,6 @@ const SERVICES: ServiceItem[] = [
     tags: ["Smart Materials", "Curvature & AO", "4K Textures", "Roughness Maps"],
     floatClass: "service-card-float-2",
   },
-  {
-    id: "03",
-    serviceName: "Motion Graphics",
-    tag: "SERVICE 03",
-    imageWebp: "/images/services/motion-studio.webp",
-    imageFallback: "/images/services/service-motion.jpg",
-    alt: "Motion Graphics frosted glass card on studio desk with timeline monitor",
-    accent: "#7c4dff",
-    accentClass: "service-card-c3",
-    targetService: "Motion Graphics",
-    barText: "MOTION DESIGN • TYPOGRAPHY • AFTER EFFECTS",
-    description:
-      "Animated typography, visual storytelling, cinematic transitions, motion design, and broadcast title sequences.",
-    tags: ["Kinetic Type", "Speed Graphs", "Camera Projections", "Audio Sync"],
-    floatClass: "service-card-float-3",
-  },
 ];
 
 export default function Services() {
@@ -112,7 +96,7 @@ export default function Services() {
 
           <h2 className="chrome section-heading">Services</h2>
           <p>
-            Ultra-high fidelity 3D modeling, physically based texturing, and dynamic motion sequences tailored for games, cinematics, and digital production.
+            Ultra-high fidelity 3D modeling, physically based texturing, and cinematic rendering tailored for games, cinematics, and digital production.
           </p>
         </div>
 
