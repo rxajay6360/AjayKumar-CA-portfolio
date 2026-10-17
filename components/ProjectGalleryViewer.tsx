@@ -236,11 +236,10 @@ export default function ProjectGalleryViewer({
                       e.stopPropagation();
                       setActiveIndex(idx);
                     }}
-                    className={`relative w-16 h-11 sm:w-20 sm:h-12 rounded-md overflow-hidden border transition-all duration-200 shrink-0 ${
-                      idx === activeIndex
-                        ? "border-[#ff2a3b] ring-2 ring-[#ff2a3b]/60 scale-105"
-                        : "border-white/20 opacity-50 hover:opacity-100 hover:border-white/60"
-                    }`}
+                    className={`relative w-16 h-11 sm:w-20 sm:h-12 rounded-md overflow-hidden border transition-all duration-200 shrink-0 ${idx === activeIndex
+                      ? "border-[#ff2a3b] ring-2 ring-[#ff2a3b]/60 scale-105"
+                      : "border-white/20 opacity-50 hover:opacity-100 hover:border-white/60"
+                      }`}
                     aria-label={`Switch to ${img.label}`}
                   >
                     <Image

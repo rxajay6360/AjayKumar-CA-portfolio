@@ -1104,7 +1104,7 @@ export const projects: Project[] = [
       "High-Contrast Studio & Battlefield Spotlight Staging",
     ],
     heroImage: "/images/projects/frag-grenade/front-side-corner.jpg",
-    wireframeImage: "/images/projects/frag-grenade/right-side-wireframe.jpg",
+    wireframeImage: "/images/projects/frag-grenade/right-side-wireframe2.jpg",
     wireframeBeautyImage: "/images/projects/frag-grenade/right-side-view.jpg",
     keyHighlights: [
       "Precision-machined segmentation grid across cast iron fragmentation envelope with clean quad bevels",
