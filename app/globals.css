@@ -2009,6 +2009,7 @@ h2.section-heading {
   background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 140, 126, 0.05) 100%);
   border: 1px solid rgba(37, 211, 102, 0.35);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(37, 211, 102, 0.08);
+  cursor: url('/images/whatsapp-cursor.png') 16 16, url('/images/whatsapp-cursor.svg') 16 16, pointer !important;
 }
 
 .direct-action-card.wa:hover {
@@ -2016,6 +2017,15 @@ h2.section-heading {
   border-color: rgba(37, 211, 102, 0.65);
   transform: translateY(-2px);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 32px rgba(37, 211, 102, 0.25);
+  cursor: url('/images/whatsapp-cursor.png') 16 16, url('/images/whatsapp-cursor.svg') 16 16, pointer !important;
+}
+
+.direct-action-card.wa *,
+.connect-chip.wa,
+.connect-chip.wa *,
+[data-cursor="whatsapp"],
+[data-cursor="whatsapp"] * {
+  cursor: url('/images/whatsapp-cursor.png') 16 16, url('/images/whatsapp-cursor.svg') 16 16, pointer !important;
 }
 
 .action-icon-box {

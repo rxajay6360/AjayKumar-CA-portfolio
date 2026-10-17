@@ -108,6 +108,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="direct-action-card wa"
+          data-cursor="whatsapp"
           aria-label="Direct WhatsApp Chat with Ajay Kumar"
         >
           <div className="action-icon-box wa">
@@ -277,6 +278,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             className="connect-chip wa"
+            data-cursor="whatsapp"
             aria-label="Direct WhatsApp Chat with Ajay Kumar"
           >
             <span className="connect-chip-icon">
