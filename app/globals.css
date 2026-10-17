@@ -1101,147 +1101,296 @@ h2.section-heading {
   box-shadow: 0 0 24px rgba(255, 42, 59, 0.65);
 }
 
+/* About Section — Floating 3D Rotating Software Badges */
 .float {
   position: relative;
   z-index: 3;
   height: 480px;
   pointer-events: none;
+  overflow: visible;
 }
 
-.float-software-badge {
-  pointer-events: auto;
+/* Container for each floating 3D badge */
+.float-software-badge-wrap {
   position: absolute;
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
+  perspective: 900px;
+  pointer-events: auto;
+  z-index: 5;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: rgba(13, 16, 24, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
   cursor: pointer;
 }
 
-.float-software-badge.maya {
-  animation: floatSmooth1 7.2s ease-in-out infinite;
+/* Floating bob & drift animations */
+.float-software-badge-wrap.maya-wrap {
+  animation: floatDrift1 7.2s ease-in-out infinite;
 }
 
-.float-software-badge.substance {
-  animation: floatSmooth2 8.4s ease-in-out infinite 1.4s;
+.float-software-badge-wrap.substance-wrap {
+  animation: floatDrift2 8.4s ease-in-out infinite 1.2s;
 }
 
-.float-software-badge.photoshop {
-  animation: floatSmooth3 7.8s ease-in-out infinite 2.8s;
+.float-software-badge-wrap.photoshop-wrap {
+  animation: floatDrift3 7.6s ease-in-out infinite 2.4s;
 }
 
-.float-software-badge.premiere {
-  animation: floatSmooth4 8.6s ease-in-out infinite 4.2s;
+.float-software-badge-wrap.premiere-wrap {
+  animation: floatDrift4 8.8s ease-in-out infinite 3.6s;
 }
 
-@keyframes floatSmooth1 {
-  0%, 100% {
-    transform: translate(0px, 0px) rotate(0deg);
+@keyframes floatDrift1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes floatDrift2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes floatDrift3 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes floatDrift4 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+/* Badge Outer Container */
+.float-software-badge {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+/* 3D Rotator Element: continuous smooth rotation around Y axis */
+.badge-rotator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.float-software-badge.maya .badge-rotator {
+  animation: smoothRotate3D_Maya 10s linear infinite;
+}
+
+.float-software-badge.substance .badge-rotator {
+  animation: smoothRotate3D_Substance 11.5s linear infinite;
+}
+
+.float-software-badge.photoshop .badge-rotator {
+  animation: smoothRotate3D_Photoshop 9.6s linear infinite;
+}
+
+.float-software-badge.premiere .badge-rotator {
+  animation: smoothRotate3D_Premiere 12s linear infinite;
+}
+
+/* Continuous 360-degree turntable rotation with subtle 3D tilt */
+@keyframes smoothRotate3D_Maya {
+  0% {
+    transform: rotateY(0deg) rotateX(6deg);
   }
-  33% {
-    transform: translate(3px, -15px) rotate(3deg);
+  25% {
+    transform: rotateY(90deg) rotateX(0deg);
   }
-  66% {
-    transform: translate(-3px, -7px) rotate(-2deg);
+  50% {
+    transform: rotateY(180deg) rotateX(-6deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(6deg);
   }
 }
 
-@keyframes floatSmooth2 {
-  0%, 100% {
-    transform: translate(0px, 0px) rotate(0deg);
+@keyframes smoothRotate3D_Substance {
+  0% {
+    transform: rotateY(0deg) rotateX(-6deg);
   }
-  33% {
-    transform: translate(-4px, -16px) rotate(-3deg);
+  25% {
+    transform: rotateY(90deg) rotateX(0deg);
   }
-  66% {
-    transform: translate(2px, -8px) rotate(2deg);
+  50% {
+    transform: rotateY(180deg) rotateX(6deg);
   }
-}
-
-@keyframes floatSmooth3 {
-  0%, 100% {
-    transform: translate(0px, 0px) rotate(0deg);
+  75% {
+    transform: rotateY(270deg) rotateX(0deg);
   }
-  33% {
-    transform: translate(4px, -15px) rotate(4deg);
-  }
-  66% {
-    transform: translate(-2px, -6px) rotate(-1deg);
+  100% {
+    transform: rotateY(360deg) rotateX(-6deg);
   }
 }
 
-@keyframes floatSmooth4 {
-  0%, 100% {
-    transform: translate(0px, 0px) rotate(0deg);
+@keyframes smoothRotate3D_Photoshop {
+  0% {
+    transform: rotateY(0deg) rotateX(5deg);
   }
-  33% {
-    transform: translate(-3px, -13px) rotate(-2deg);
+  25% {
+    transform: rotateY(90deg) rotateX(0deg);
   }
-  66% {
-    transform: translate(3px, -8px) rotate(3deg);
+  50% {
+    transform: rotateY(180deg) rotateX(-5deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(5deg);
   }
 }
 
-.float-software-badge.maya:hover {
-  border-color: #00e5ff;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(0, 229, 255, 0.55), inset 0 0 12px rgba(0, 229, 255, 0.2);
-  transform: scale(1.16) translateY(-4px);
-  z-index: 10;
+@keyframes smoothRotate3D_Premiere {
+  0% {
+    transform: rotateY(0deg) rotateX(-5deg);
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(5deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(-5deg);
+  }
 }
 
-.float-software-badge.substance:hover {
-  border-color: #ff7043;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(255, 112, 67, 0.55), inset 0 0 12px rgba(255, 112, 67, 0.2);
-  transform: scale(1.16) translateY(-4px);
-  z-index: 10;
+/* Double-sided Faces for seamless 360° rotation without flipped text */
+.badge-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: rgba(11, 14, 21, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.22);
 }
 
-.float-software-badge.photoshop:hover {
-  border-color: #31a8ff;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(49, 168, 255, 0.55), inset 0 0 12px rgba(49, 168, 255, 0.2);
-  transform: scale(1.16) translateY(-4px);
-  z-index: 10;
+.badge-face.badge-front {
+  transform: rotateY(0deg) translateZ(1.5px);
 }
 
-.float-software-badge.premiere:hover {
-  border-color: #ea77ff;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 28px rgba(234, 119, 255, 0.55), inset 0 0 12px rgba(234, 119, 255, 0.2);
-  transform: scale(1.16) translateY(-4px);
-  z-index: 10;
+.badge-face.badge-back {
+  transform: rotateY(180deg) translateZ(1.5px);
+}
+
+/* Brand specific borders & ambient blooms */
+.float-software-badge.maya .badge-face {
+  border-color: rgba(0, 240, 255, 0.38);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 18px rgba(0, 240, 255, 0.22), inset 0 1px 1px rgba(0, 240, 255, 0.45);
+}
+
+.float-software-badge.substance .badge-face {
+  border-color: rgba(255, 112, 67, 0.42);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 18px rgba(255, 112, 67, 0.22), inset 0 1px 1px rgba(255, 112, 67, 0.45);
+}
+
+.float-software-badge.photoshop .badge-face {
+  border-color: rgba(49, 168, 255, 0.4);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 18px rgba(49, 168, 255, 0.22), inset 0 1px 1px rgba(49, 168, 255, 0.45);
+}
+
+.float-software-badge.premiere .badge-face {
+  border-color: rgba(234, 119, 255, 0.4);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 18px rgba(234, 119, 255, 0.22), inset 0 1px 1px rgba(234, 119, 255, 0.45);
+}
+
+/* Ambient 2D rotating orbital glow ring */
+.badge-orbital-ring {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.65;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  animation: orbitalRingRotate 14s linear infinite;
+}
+
+.float-software-badge.maya .badge-orbital-ring {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+.float-software-badge.substance .badge-orbital-ring {
+  border-color: rgba(255, 112, 67, 0.4);
+  box-shadow: 0 0 12px rgba(255, 112, 67, 0.25);
+}
+
+.float-software-badge.photoshop .badge-orbital-ring {
+  border-color: rgba(49, 168, 255, 0.4);
+  box-shadow: 0 0 12px rgba(49, 168, 255, 0.25);
+}
+
+.float-software-badge.premiere .badge-orbital-ring {
+  border-color: rgba(234, 119, 255, 0.4);
+  box-shadow: 0 0 12px rgba(234, 119, 255, 0.25);
+}
+
+@keyframes orbitalRingRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover: Pause spin, face viewer, intense neon bloom */
+.float-software-badge-wrap:hover .badge-rotator {
+  animation-play-state: paused;
+}
+
+.float-software-badge-wrap:hover .float-software-badge {
+  transform: scale(1.18);
+}
+
+.float-software-badge-wrap:hover .badge-face {
+  filter: brightness(1.22);
+}
+
+.float-software-badge-wrap:hover .float-badge-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
 }
 
 .float-badge-label {
   position: absolute;
-  bottom: -22px;
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0px);
+  margin-top: 10px;
   font-family: var(--f, 'Space Mono', monospace);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #ffffff;
-  background: rgba(8, 10, 15, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 2px 7px;
+  background: rgba(8, 10, 15, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 3px 9px;
   border-radius: 9999px;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.float-software-badge:hover .float-badge-label {
-  opacity: 1;
-  transform: translateX(-50%) translateY(2px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Services Section — 3D Glassmorphism Showcase */
@@ -2550,12 +2699,15 @@ h2.section-heading {
   .float-software-badge {
     width: 48px;
     height: 48px;
-    border-radius: 13px;
+  }
+
+  .badge-face {
+    border-radius: 14px;
   }
 
   .float-software-badge svg {
-    width: 26px;
-    height: 26px;
+    width: 25px;
+    height: 25px;
   }
 
   /* Services on mobile */
