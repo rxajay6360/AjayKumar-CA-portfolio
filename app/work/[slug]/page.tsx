@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import ProjectGalleryViewer from "@/components/ProjectGalleryViewer";
 import HeroShowcaseImage from "@/components/HeroShowcaseImage";
+import ProjectVideoPlayer from "@/components/ProjectVideoPlayer";
 import {
   ArrowLeft,
   ArrowRight,
@@ -189,6 +190,30 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Show Reel / Cinematic Video Section */}
+        {project.videoUrl && (
+          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+            <div className="mb-6">
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-1">
+                CINEMATIC SHOWCASE
+              </span>
+              <h2 className="font-cinzel text-2xl sm:text-3xl text-white font-semibold">
+                SHOW REEL
+              </h2>
+              <p className="text-xs text-[#888888] font-mono mt-1">
+                Full cinematic camera turntable, atmospheric breakdown, and environment flythrough.
+              </p>
+            </div>
+
+            <ProjectVideoPlayer
+              src={project.videoUrl}
+              poster={project.videoPoster}
+              title={project.videoTitle || `${project.title} — SHOW REEL`}
+              aspectRatio="aspect-[16/9]"
+            />
+          </section>
+        )}
 
         {/* Interactive Before & After: Wireframe vs Beauty Render */}
         {project.wireframeImage && (

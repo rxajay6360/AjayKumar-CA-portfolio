@@ -35,6 +35,8 @@ export interface Project {
   }[];
   keyHighlights: string[];
   videoUrl?: string;
+  videoPoster?: string;
+  videoTitle?: string;
 }
 
 export const projects: Project[] = [
@@ -163,6 +165,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/kgf-narachi/narachi-front-gate.jpg",
     wireframeImage: "/images/projects/kgf-narachi/narachi-front-gate-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/kgf-narachi/narachi-front-gate.jpg",
+    videoUrl: "/videos/projects/kgf-narachi-gate/kgf-show-reel.mp4",
+    videoPoster: "/videos/projects/kgf-narachi-gate/poster.jpg",
+    videoTitle: "KGF NARACHI GATE — SHOW REEL",
     keyHighlights: [
       "Monumental fortress front gate with authentic industrial wear, rust streaks, and heavy steel beams",
       "Dynamic dual-lighting studies comparing harsh desert daylight against moody cinematic night illumination",
