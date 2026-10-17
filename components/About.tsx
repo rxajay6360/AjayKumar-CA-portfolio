@@ -176,7 +176,7 @@ export default function About() {
         {/* Autodesk Maya — 3D Rotating Logo */}
         <div
           className="float-software-badge-wrap maya-wrap"
-          style={{ top: "8%", left: "10%" }}
+          style={{ top: "8%", right: "14%" }}
         >
           <div className="float-software-badge maya" title="Autodesk Maya">
             <div className="badge-rotator">
@@ -195,7 +195,7 @@ export default function About() {
         {/* Substance 3D Painter — 3D Rotating Logo */}
         <div
           className="float-software-badge-wrap substance-wrap"
-          style={{ top: "12%", right: "8%" }}
+          style={{ top: "32%", right: "5%" }}
         >
           <div className="float-software-badge substance" title="Substance 3D Painter">
             <div className="badge-rotator">
@@ -214,7 +214,7 @@ export default function About() {
         {/* Adobe Photoshop — 3D Rotating Logo */}
         <div
           className="float-software-badge-wrap photoshop-wrap"
-          style={{ top: "54%", left: "14%" }}
+          style={{ top: "58%", right: "16%" }}
         >
           <div className="float-software-badge photoshop" title="Adobe Photoshop">
             <div className="badge-rotator">
@@ -233,7 +233,7 @@ export default function About() {
         {/* Adobe Premiere Pro — 3D Rotating Logo */}
         <div
           className="float-software-badge-wrap premiere-wrap"
-          style={{ top: "60%", right: "10%" }}
+          style={{ top: "82%", right: "6%" }}
         >
           <div className="float-software-badge premiere" title="Adobe Premiere Pro">
             <div className="badge-rotator">
