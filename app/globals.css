@@ -778,7 +778,7 @@ main {
   position: absolute;
   left: clamp(16px, 4vw, 48px);
   bottom: 12vh;
-  max-width: 250px;
+  max-width: 290px;
   font-size: 13px;
   line-height: 1.5;
   color: #cfcfcf;

@@ -129,11 +129,11 @@ export default function Hero() {
 
       {/* Subtitle with dots badges matching reference HTML */}
       <div className="sub">
-        <em>A 3D artist</em> with deep focus in Maya modeling, Substance Painter texturing &amp; motion graphics.
+        <em>A 3D artist</em> with deep focus in Maya modeling, Substance Painter texturing &amp; Lighting and Rendering.
         <div className="dots">
           <i>Ma</i>
           <i>Pt</i>
-          <i>Ae</i>
+          <i>Ar</i>
           <i>Bl</i>
         </div>
       </div>
