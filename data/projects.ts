@@ -1201,4 +1201,126 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "radio",
+    title: "RADIIO",
+    subtitle: "VINTAGE FORM. MODERN SOUND",
+    category: "3D Prop Modeling & Vintage Audio LookDev",
+    filterCategory: "modeling",
+    featured: true,
+    year: "2025",
+    shortDescription:
+      "A retro-styled portable transistor radio featuring tactile knurled volume knobs, dual analog speaker grilles, metallic antenna, and weathered vintage blue casing crafted with high-fidelity PBR textures.",
+    objective:
+      "Design, model, and texture a nostalgic vintage radio asset with tactile mechanical controls, Sub-D curvature transitions, realistic speaker grille depth, and cinematic studio lookdev.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Vintage Hard-Surface Sub-D Modeling",
+      "Weathered Blue Enamel & Chrome PBR Texturing",
+      "Speaker Cavity & Knurled Knob Micro-Detailing",
+      "Studio Automotive Rim Lighting & High-Gloss Reflections",
+    ],
+    heroImage: "/images/projects/radio/front-close.jpg",
+    wireframeImage: "/images/projects/radio/front-close-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/radio/front-close.jpg",
+    keyHighlights: [
+      "Tactile knurled control dials and volume knobs with authentic mechanical spacing and rotation pivots",
+      "Dual backlit 'MUSIC' pill badges set into vintage enamel casing with subtle atmospheric glow",
+      "Detailed telescopic antenna and pivoting handle assembly with stamped steel brackets",
+      "High-density quad topology with clean Sub-D bevels and 1:1 wireframe-to-beauty inspection",
+    ],
+    textureBreakdown: [
+      {
+        name: "Weathered Blue Enamel Base Color",
+        resolution: "4096 x 4096",
+        description:
+          "Slightly worn vintage blue plastic and painted metal body with subtle edge scuffs and surface mottling.",
+      },
+      {
+        name: "Micro-Roughness & Tactile Wear",
+        resolution: "4096 x 4096",
+        description:
+          "Surface roughness variation simulating finger oils, dust accumulation in crevices, and dial handling.",
+      },
+      {
+        name: "Metallic & Chrome Antenna",
+        resolution: "4096 x 4096",
+        description:
+          "High-conductivity specular chrome response across antenna segments, handle hardware, and volume dial caps.",
+      },
+      {
+        name: "Normal & Speaker Cavity Bakes",
+        resolution: "4096 x 4096",
+        description:
+          "Deep concentric speaker cone ridges, slot recesses, and micro-bevels baked cleanly from high-poly geometry.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Retro Form Study & Sub-D Blockout",
+        description:
+          "Established iconic rounded-corner rectangular proportions, handle arch clearance, and dial spacing in Autodesk Maya.",
+        techniques: ["Proportion Blocking", "Sub-D Bevel Control", "Hard-Surface Quad Mesh"],
+      },
+      {
+        phase: "02",
+        title: "Knurled Dials & Speaker Detailing",
+        description:
+          "Modeled high-precision knurled volume knobs, telescopic antenna joints, and concentric speaker rings with crisp edge flow.",
+        techniques: ["Radial Detailing", "Mechanical Assemblies", "Quad Topology"],
+      },
+      {
+        phase: "03",
+        title: "Substance PBR Enamel & Aging",
+        description:
+          "Crafted multi-layer materials in Substance Painter with subtle plastic orange-peel roughness, chrome trim, and illuminated pill graphics.",
+        techniques: ["Substance Smart Materials", "Curvature Edge Wear", "Multi-Channel PBR Export"],
+      },
+      {
+        phase: "04",
+        title: "Arnold Studio LookDev & Rim Lighting",
+        description:
+          "Staged high-contrast three-point studio lighting with razor-sharp rim highlights accentuating the radio's silhouette on dark background.",
+        techniques: ["Arnold aiStandardSurface", "Studio Softbox Lighting", "Cinematic Depth of Field"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/radio/front-close.jpg",
+        caption: "Hero front close-up render highlighting the vintage blue body, speaker cone, and illuminated music badges",
+        label: "Front Closeup Hero",
+      },
+      {
+        url: "/images/projects/radio/front-2.jpg",
+        caption: "Direct front perspective displaying symmetrical balance, antenna height, and top dials",
+        label: "Front Perspective",
+      },
+      {
+        url: "/images/projects/radio/details.jpg",
+        caption: "Macro detail render focusing on the knurled control knobs, top volume dials, and metal handle pivots",
+        label: "Knob Details",
+      },
+      {
+        url: "/images/projects/radio/details-2.jpg",
+        caption: "Close-up perspective emphasizing surface micro-scratches, plastic roughness, and pill badge illumination",
+        label: "Surface Detail",
+      },
+      {
+        url: "/images/projects/radio/side-view.jpg",
+        caption: "Side profile angle showcasing handle curvature, body depth, and dial clearances",
+        label: "Side Profile",
+      },
+      {
+        url: "/images/projects/radio/upper.jpg",
+        caption: "High-angle dramatic perspective overlooking the antenna extension, top control knobs, and handle",
+        label: "Upper Perspective",
+      },
+      {
+        url: "/images/projects/radio/back.jpg",
+        caption: "Rear perspective displaying the battery compartment, rear ventilation slots, and solid body finish",
+        label: "Rear View",
+      },
+    ],
+  },
 ];

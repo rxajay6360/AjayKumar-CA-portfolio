@@ -158,6 +158,19 @@ export default function ProjectGallery() {
       image: "/images/projects/frag-grenade/front-side-corner.jpg",
       category: "3D ART",
     },
+    {
+      n: 10,
+      num: "11",
+      cat: "VINTAGE FORM. MODERN SOUND",
+      title: "RADIIO",
+      link: "/work/radio",
+      leftText: "Vintage",
+      leftClass: "p2a",
+      leftTag: "AUDIO PROP",
+      leftSub: "VINTAGE PBR ↗",
+      image: "/images/projects/radio/front-close.jpg",
+      category: "3D ART",
+    },
   ];
 
   const getCount = (cat: ProjectCategory) => {
