@@ -110,7 +110,7 @@ export default function ProjectGallery() {
       n: 6,
       num: "07",
       cat: "VINTAGE FORM. MODERN SOUND",
-      title: "RADIIO",
+      title: "RADIO",
       link: "/work/radio",
       leftText: "Vintage",
       leftClass: "p1a",

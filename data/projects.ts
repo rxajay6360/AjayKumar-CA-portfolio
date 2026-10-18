@@ -726,7 +726,7 @@ export const projects: Project[] = [
   },
   {
     slug: "radio",
-    title: "RADIIO",
+    title: "RADIO",
     subtitle: "VINTAGE FORM. MODERN SOUND",
     category: "3D Prop Modeling & Vintage Audio LookDev",
     filterCategory: "modeling",
