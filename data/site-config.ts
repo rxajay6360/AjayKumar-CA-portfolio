@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "ArtStation",
-      url: "https://www.artstation.com",
+      url: "https://www.artstation.com/rxajay_3dartist",
       label: "Portfolio & 3D Breakdowns",
       icon: "artstation",
     },

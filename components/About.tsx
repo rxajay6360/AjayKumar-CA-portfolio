@@ -155,7 +155,7 @@ export default function About() {
           I am C.A. Ajay Kumar, a creative artist focused on 3D modeling, texturing, materials, environments, lighting and rendering. I enjoy transforming ideas into visually striking digital experiences through detailed modeling, cinematic lighting, material development, and creative presentation. Let&apos;s build something incredible together!
         </p>
         <div className="soc">
-          <a href="https://www.artstation.com" target="_blank" rel="noopener noreferrer" title="ArtStation">
+          <a href="https://www.artstation.com/rxajay_3dartist" target="_blank" rel="noopener noreferrer" title="ArtStation">
             As
           </a>
           <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" title="Behance">
