@@ -1145,6 +1145,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/frag-grenade/front-side-corner.jpg",
     wireframeImage: "/images/projects/frag-grenade/right-side-wireframe2.jpg",
     wireframeBeautyImage: "/images/projects/frag-grenade/right-side-view.jpg",
+    videoUrl: "/videos/projects/frag-grenade/grenade-showreel.mp4",
+    videoPoster: "/videos/projects/frag-grenade/poster.jpg",
+    videoTitle: "FRAG GRENADE — SHOW REEL",
     keyHighlights: [
       "Precision-machined segmentation grid across cast iron fragmentation envelope with clean quad bevels",
       "Faithful mechanical safety assembly including zinc striker mechanism, stamped lever, and pull-ring cotter pin",
