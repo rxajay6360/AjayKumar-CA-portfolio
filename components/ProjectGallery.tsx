@@ -187,7 +187,7 @@ export default function ProjectGallery() {
         id="projects"
         style={{ position: "absolute", top: 0, opacity: 0, pointerEvents: "none" }}
       />
-      <h2 className="chrome section-heading">Project</h2>
+      <h2 className="chrome section-heading">3D Projects</h2>
 
       {/* Category Filter Switcher */}
       <div className="project-category-tabs" role="tablist" aria-label="Project categories">

@@ -7,7 +7,7 @@ import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Work", href: "#work" },
+  { name: "3D Projects", href: "#work" },
   { name: "3D ARTIST SHOWREEL", href: "#showreel" },
   { name: "Skills", href: "#skills" },
   { name: "Workflow", href: "#workflow" },
