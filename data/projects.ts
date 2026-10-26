@@ -1261,6 +1261,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/thors-hammer/front-wide-view.jpg",
     wireframeImage: "/images/projects/thors-hammer/front-wide-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/thors-hammer/front-wide-view.jpg",
+    videoUrl: "/videos/projects/thors-hammer/thors-hammer-showreel.mp4",
+    videoPoster: "/videos/projects/thors-hammer/poster.jpg",
+    videoTitle: "THOR’S HAMMER — SHOW REEL",
     keyHighlights: [
       "Faithful cinematic proportions with distinct beveled hammerhead edges, Norse filigree, and inset side plates",
       "Battle-worn forged steel materials with microscopic pitting, micro-scratches, and subtle edge wear highlights",
