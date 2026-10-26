@@ -627,6 +627,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/after-dark/front-closeup-angle.jpg",
     wireframeImage: "/images/projects/after-dark/front-closeup-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/after-dark/front-closeup-angle.jpg",
+    videoUrl: "/videos/projects/after-dark/after-dark-showreel.mp4",
+    videoPoster: "/videos/projects/after-dark/poster.jpg",
+    videoTitle: "AFTER DARK — SHOW REEL",
     keyHighlights: [
       "Intimate cocktail lounge ambiance illuminated by glowing neon wall art and warm Edison bulbs",
       "Rich PBR material palette featuring polished mahogany bar tops, brushed steel sinks, and dusty brickwork",
