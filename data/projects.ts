@@ -888,6 +888,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/the-street-skate/corner-view.jpg",
     wireframeImage: "/images/projects/the-street-skate/right-side-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/the-street-skate/right-side-view.jpg",
+    videoUrl: "/videos/projects/the-street-skate/skate-showreel.mp4",
+    videoPoster: "/videos/projects/the-street-skate/poster.jpg",
+    videoTitle: "THE STREET SKATE — SHOW REEL",
     keyHighlights: [
       "Ergonomic double-kick concave deck profile modeled with continuous Sub-D quad topology",
       "Authentic mechanical truck assemblies featuring cast aluminum hangers, baseplates, and polyurethane bushings",
