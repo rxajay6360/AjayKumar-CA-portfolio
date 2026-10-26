@@ -1024,6 +1024,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/cookie-jar/front-view.jpg",
     wireframeImage: "/images/projects/cookie-jar/closeup-details-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/cookie-jar/closeup-details.jpg",
+    videoUrl: "/videos/projects/cookie-jar/cookies-showreel.mp4",
+    videoPoster: "/videos/projects/cookie-jar/poster.jpg",
+    videoTitle: "COOKIE JAR — SHOW REEL",
     keyHighlights: [
       "Ultra-realistic baked cookie materials featuring multi-octave crumb displacement, sugar crystal sparkle, and chocolate inclusions",
       "Physically accurate soda-lime glass container with realistic wall thickness, Fresnel reflections, and internal refractions",
