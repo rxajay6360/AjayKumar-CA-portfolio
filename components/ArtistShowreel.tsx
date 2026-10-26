@@ -30,8 +30,8 @@ export default function ArtistShowreel() {
           
           <div className="showreel-player-card">
             <ProjectVideoPlayer
-              src="/videos/projects/hanuman-gadha/hanuman-showreel.mp4"
-              poster="/videos/projects/hanuman-gadha/poster.jpg"
+              src="/videos/showreel/artist-showreel.mp4"
+              poster="/videos/showreel/poster.jpg"
               title="C.A. AJAY KUMAR — 3D ARTIST SHOWREEL"
               aspectRatio="aspect-[16/9]"
               className="showreel-main-player !rounded-none !border-0 !shadow-none"
@@ -41,13 +41,13 @@ export default function ArtistShowreel() {
             <div className="showreel-meta-bar">
               <div className="showreel-meta-info">
                 <div className="showreel-meta-tags">
-                  <span className="showreel-cat-pill">FEATURED REEL</span>
-                  <span className="showreel-specs-pill">1080p 60fps • Arnold & PBR Lookdev</span>
+                  <span className="showreel-cat-pill">OFFICIAL REEL</span>
+                  <span className="showreel-specs-pill">1080p HD • 03:41 • Arnold & PBR Lookdev</span>
                 </div>
-                <h3 className="showreel-reel-title">C.A. AJAY KUMAR — 3D ARTIST DEMO REEL</h3>
+                <h3 className="showreel-reel-title">C.A. AJAY KUMAR — 3D ARTIST SHOWREEL</h3>
                 <p className="showreel-reel-desc">
-                  Featuring production-ready game and cinematic assets with clean edge flow, 
-                  custom procedural wear, 4K multi-channel PBR textures, and studio lighting setups.
+                  Official 2026 master showreel featuring high-fidelity hard-surface modeling, 
+                  production-ready topology, procedural textures, and cinematic lookdev lighting.
                 </p>
 
                 {/* Software tags */}
