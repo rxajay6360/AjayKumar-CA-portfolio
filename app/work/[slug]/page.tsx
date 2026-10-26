@@ -63,6 +63,8 @@ export async function generateMetadata({
   };
 }
 
+export const instant = false;
+
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const projectIndex = projects.findIndex((p) => p.slug === slug);
