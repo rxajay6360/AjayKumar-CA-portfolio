@@ -3388,4 +3388,204 @@ h2.showreel-heading {
   }
 }
 
+/* =========================================================================
+   Showreel Cinema Popup Modal
+   ========================================================================= */
+.showreel-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.showreel-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.showreel-modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  background: #09090d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.92), 0 0 50px rgba(255, 42, 59, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.showreel-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background: rgba(16, 16, 22, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+}
+
+.showreel-modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.showreel-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: rgba(255, 42, 59, 0.15);
+  border: 1px solid rgba(255, 42, 59, 0.4);
+  color: var(--lime);
+  font: 700 10px var(--b);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.showreel-modal-title {
+  font: 800 14px var(--d);
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.showreel-modal-specs {
+  font: 600 11px var(--b);
+  color: #888894;
+  letter-spacing: 0.04em;
+}
+
+.showreel-modal-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font: 700 11px var(--b);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showreel-modal-close:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  box-shadow: 0 0 20px rgba(255, 42, 59, 0.6);
+  transform: scale(1.04);
+}
+
+.showreel-modal-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.showreel-modal-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000000;
+}
+
+.showreel-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background: rgba(12, 12, 16, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.showreel-modal-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.showreel-modal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: var(--lime);
+  color: #ffffff;
+  font: 700 11px var(--b);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(255, 42, 59, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.showreel-modal-cta:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 42, 59, 0.7);
+}
+
+@media (max-width: 800px) {
+  .showreel-modal-overlay {
+    padding: 8px;
+  }
+  .showreel-modal-header {
+    padding: 10px 14px;
+  }
+  .showreel-modal-footer {
+    padding: 10px 14px;
+  }
+  .showreel-modal-title {
+    font-size: 12px;
+  }
+  .showreel-modal-specs {
+    display: none;
+  }
+}
+
+
 

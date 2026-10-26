@@ -61,11 +61,21 @@ export default function ArtistShowreel() {
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Action Buttons */}
               <div className="showreel-meta-actions">
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent("open-showreel-modal"))}
+                  className="showreel-case-btn"
+                  title="Watch Showreel in Cinema Lightbox Popup"
+                >
+                  <Sparkles size={14} />
+                  <span>Popup Cinema Mode ↗</span>
+                </button>
+
                 <Link
                   href="/#contact"
-                  className="showreel-case-btn"
+                  className="showreel-case-btn !bg-white/10 !border !border-white/15 !text-white !shadow-none hover:!bg-white/20"
                   title="Collaborate with C.A. Ajay Kumar"
                 >
                   <span>Let&apos;s Talk</span>

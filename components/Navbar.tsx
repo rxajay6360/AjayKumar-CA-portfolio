@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
+import ShowreelModal from "@/components/ShowreelModal";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showreelModalOpen, setShowreelModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +66,22 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  // Listen for custom trigger to open showreel popup
+  useEffect(() => {
+    const handleOpen = () => setShowreelModalOpen(true);
+    window.addEventListener("open-showreel-modal", handleOpen);
+    return () => window.removeEventListener("open-showreel-modal", handleOpen);
+  }, []);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // When clicking 3D Artist Showreel, pop up the video modal directly and play!
+    if (href === "#showreel") {
+      e.preventDefault();
+      setMobileOpen(false);
+      setShowreelModalOpen(true);
+      return;
+    }
+
     // If not on homepage (e.g. /work/[slug]), standard navigation
     if (window.location.pathname !== "/") {
       return;
@@ -216,6 +233,12 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Cinematic 3D Artist Showreel Popup Video Modal */}
+      <ShowreelModal
+        isOpen={showreelModalOpen}
+        onClose={() => setShowreelModalOpen(false)}
+      />
     </>
   );
 }
