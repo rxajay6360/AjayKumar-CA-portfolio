@@ -62,6 +62,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/hanuman-gadha/closeup.jpg",
     wireframeImage: "/images/projects/hanuman-gadha/Front-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/hanuman-gadha/Front.jpg",
+    videoUrl: "/videos/projects/hanuman-gadha/hanuman-showreel.mp4",
+    videoPoster: "/videos/projects/hanuman-gadha/poster.jpg",
+    videoTitle: "HANUMAN GADHA — SHOW REEL",
     keyHighlights: [
       "Ornate golden finish with realistic micro-roughness, specular reflections, and surface wear",
       "Dynamic alpine setting with snow coverage, rocky cliff terrain, and dramatic sky backdrop",
