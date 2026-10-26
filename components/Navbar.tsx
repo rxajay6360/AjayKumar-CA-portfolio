@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import ShowreelModal from "@/components/ShowreelModal";
 
 const NAV_ITEMS = [
@@ -137,7 +137,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right Action: Resume & Let's Talk CTA */}
+          {/* Right Action: Resume */}
           <div className="nav-actions">
             <a
               href="/Ajay_Kumar_Resume.pdf"
@@ -149,15 +149,6 @@ export default function Navbar() {
             >
               <FileText className="nav-resume-icon" size={13} />
               <span>Resume</span>
-            </a>
-
-            <a
-              href="/#contact"
-              onClick={(e) => handleNavClick(e, "#contact")}
-              className="nav-cta"
-            >
-              <span>Let&apos;s Talk</span>
-              <ArrowUpRight className="nav-cta-icon" />
             </a>
 
             {/* Mobile Menu Toggle */}

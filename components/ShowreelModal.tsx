@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { X, Sparkles, ArrowUpRight, CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { X, Sparkles, CheckCircle2 } from "lucide-react";
 
 interface ShowreelModalProps {
   isOpen: boolean;
@@ -121,16 +120,6 @@ export default function ShowreelModal({
               </span>
             ))}
           </div>
-
-          <Link
-            href="/#contact"
-            onClick={onClose}
-            className="showreel-modal-cta"
-            title="Get in touch with C.A. Ajay Kumar"
-          >
-            <span>Let&apos;s Talk</span>
-            <ArrowUpRight size={14} />
-          </Link>
         </div>
       </div>
     </div>

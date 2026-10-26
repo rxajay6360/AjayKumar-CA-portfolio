@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { Sparkles, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Sparkles, CheckCircle2 } from "lucide-react";
 import ProjectVideoPlayer from "@/components/ProjectVideoPlayer";
 
 export default function ArtistShowreel() {
@@ -27,13 +26,14 @@ export default function ArtistShowreel() {
         {/* Master Showcase Cinema Player */}
         <div className="showreel-cinema-stage">
           <div className="showreel-player-halo" aria-hidden="true" />
-          
           <div className="showreel-player-card">
             <ProjectVideoPlayer
               src="/videos/showreel/artist-showreel.mp4"
               poster="/videos/showreel/poster.jpg"
               title="C.A. AJAY KUMAR — 3D ARTIST SHOWREEL"
               aspectRatio="aspect-[16/9]"
+              objectFit="contain"
+              showTopHeader={false}
               className="showreel-main-player !rounded-none !border-0 !shadow-none"
             />
 
@@ -72,15 +72,6 @@ export default function ArtistShowreel() {
                   <Sparkles size={14} />
                   <span>Popup Cinema Mode ↗</span>
                 </button>
-
-                <Link
-                  href="/#contact"
-                  className="showreel-case-btn !bg-white/10 !border !border-white/15 !text-white !shadow-none hover:!bg-white/20"
-                  title="Collaborate with C.A. Ajay Kumar"
-                >
-                  <span>Let&apos;s Talk</span>
-                  <ArrowUpRight size={15} />
-                </Link>
               </div>
             </div>
           </div>

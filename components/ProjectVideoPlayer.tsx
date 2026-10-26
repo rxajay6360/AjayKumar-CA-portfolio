@@ -18,6 +18,8 @@ interface ProjectVideoPlayerProps {
   title?: string;
   aspectRatio?: string;
   className?: string;
+  objectFit?: "contain" | "cover";
+  showTopHeader?: boolean;
 }
 
 export default function ProjectVideoPlayer({
@@ -26,6 +28,8 @@ export default function ProjectVideoPlayer({
   title = "SHOW REEL",
   aspectRatio = "aspect-[16/9]",
   className = "",
+  objectFit = "contain",
+  showTopHeader = true,
 }: ProjectVideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -132,7 +136,8 @@ export default function ProjectVideoPlayer({
   return (
     <div
       ref={containerRef}
-      className={`group relative select-none overflow-hidden rounded-xl border border-white/10 bg-[#060608] shadow-[0_20px_50px_rgba(0,0,0,0.85)] transition-all duration-300 hover:border-white/20 ${aspectRatio} ${className}`}
+      style={{ aspectRatio: "16 / 9" }}
+      className={`group relative select-none overflow-hidden rounded-xl border border-white/10 bg-black shadow-[0_20px_50px_rgba(0,0,0,0.85)] transition-all duration-300 hover:border-white/20 ${aspectRatio} ${className}`}
       onMouseEnter={() => {
         setIsHovered(true);
         resetHideTimer();
@@ -179,38 +184,42 @@ export default function ProjectVideoPlayer({
           setIsEnded(true);
           setShowControls(true);
         }}
-        className="w-full h-full object-cover cursor-pointer"
+        className={`w-full h-full cursor-pointer bg-black ${
+          objectFit === "cover" ? "object-cover" : "object-contain"
+        }`}
       />
 
       {/* Top Header Overlay Bar */}
-      <div
-        className={`absolute top-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none transition-opacity duration-300 z-20 flex items-center justify-between ${
-          showControls || !isPlaying ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-black/60 border border-white/10 flex items-center justify-center text-[#ff2a3b]">
-            <Film className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#ff2a3b] animate-pulse" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff2a3b]">
-                CINEMATIC SHOW REEL
-              </span>
+      {showTopHeader && (
+        <div
+          className={`absolute top-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none transition-opacity duration-300 z-20 flex items-center justify-between ${
+            showControls || !isPlaying ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-black/60 border border-white/10 flex items-center justify-center text-[#ff2a3b]">
+              <Film className="w-4 h-4" />
             </div>
-            <h3 className="text-sm sm:text-base font-semibold text-white tracking-wide">
-              {title}
-            </h3>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#ff2a3b] animate-pulse" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff2a3b]">
+                  CINEMATIC SHOW REEL
+                </span>
+              </div>
+              <h3 className="text-sm sm:text-base font-semibold text-white tracking-wide">
+                {title}
+              </h3>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-2 font-mono text-[10px] tracking-widest text-[#888888] bg-black/50 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
+            <span>1080P HD</span>
+            <span className="text-white/20">&bull;</span>
+            <span>24 FPS</span>
           </div>
         </div>
-
-        <div className="hidden sm:flex items-center gap-2 font-mono text-[10px] tracking-widest text-[#888888] bg-black/50 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
-          <span>1080P HD</span>
-          <span className="text-white/20">&bull;</span>
-          <span>24 FPS</span>
-        </div>
-      </div>
+      )}
 
       {/* Center Cinematic Play / Replay Button */}
       {(!isPlaying || isEnded) && (
