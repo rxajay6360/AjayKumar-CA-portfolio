@@ -405,7 +405,7 @@ export const projects: Project[] = [
       "A playful vehicle concept focused on stylized shapes, visual balance, material variation, and presentation.",
     objective:
       "Translate an imaginative cartoon concept into a tangible 3D asset with charming proportions, organic curves, clean surface reflection lines, and vibrant automotive appeal.",
-    software: ["Autodesk Maya", "Arnold Renderer"],
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
     techniques: [
       "Organic-to-Mechanical Form Blending",
       "Car Paint Material Tuning",
