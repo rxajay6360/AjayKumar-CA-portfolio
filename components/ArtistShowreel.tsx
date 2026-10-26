@@ -17,7 +17,7 @@ export default function ArtistShowreel() {
             <Sparkles size={14} className="showreel-badge-icon" />
             <span>OFFICIAL DEMO REEL</span>
           </div>
-          <h2 className="chrome section-heading">3D ARTIST SHOWREEL</h2>
+          <h2 className="chrome showreel-heading">3D ARTIST SHOWREEL</h2>
           <p className="showreel-subtitle">
             Cinematic turntable breakdowns highlighting precision hard-surface topology, 
             sub-division modeling, photorealistic PBR material authoring, and lookdev lighting by C.A. Ajay Kumar.
@@ -34,7 +34,7 @@ export default function ArtistShowreel() {
               poster="/videos/projects/hanuman-gadha/poster.jpg"
               title="C.A. AJAY KUMAR — 3D ARTIST SHOWREEL"
               aspectRatio="aspect-[16/9]"
-              className="showreel-main-player"
+              className="showreel-main-player !rounded-none !border-0 !shadow-none"
             />
 
             {/* Showcase Details Metadata Bar */}
