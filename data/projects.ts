@@ -414,6 +414,10 @@ export const projects: Project[] = [
     ],
     heroImage: "/images/projects/banana-car/front-closeshot.jpg",
     wireframeImage: "/images/projects/banana-car/front-closeshot-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/banana-car/front-closeshot.jpg",
+    videoUrl: "/videos/projects/banana-car/banana-buggy-showreel.mp4",
+    videoPoster: "/videos/projects/banana-car/poster.jpg",
+    videoTitle: "BANANA BUGGY — SHOW REEL",
     keyHighlights: [
       "Expressive, whimsical silhouette blending automotive speed lines with organic banana curves",
       "Chunky retro-futuristic tires with deep cartoon treads and chrome hubcaps",
