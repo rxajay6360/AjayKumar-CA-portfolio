@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Work", href: "#work" },
+  { name: "3D ARTIST SHOWREEL", href: "#showreel" },
   { name: "Skills", href: "#skills" },
   { name: "Workflow", href: "#workflow" },
   { name: "Contact", href: "#contact" },
@@ -104,13 +105,15 @@ export default function Navbar() {
           <div className="nav-links-desktop">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.href.substring(1);
+              const isShowreel = item.href === "#showreel";
               return (
                 <a
                   key={item.name}
                   href={`/${item.href}`}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`nav-link ${isActive ? "active" : ""}`}
+                  className={`nav-link ${isActive ? "active" : ""} ${isShowreel ? "nav-link-showreel" : ""}`}
                 >
+                  {isShowreel && <span className="nav-reel-pulse" aria-hidden="true" />}
                   <span className="nav-link-text">{item.name}</span>
                 </a>
               );
