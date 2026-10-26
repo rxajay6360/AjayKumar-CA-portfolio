@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "A mythic, ornate golden mace (Gadha) inspired by Hindu mythology, featuring intricate sculptural ornamentation, metallic PBR texturing, and cinematic mountain atmosphere.",
     objective:
       "Design and render an imposing divine hero prop embedded in a rugged alpine landscape, balancing mythic reverence with realistic gold material response and dramatic lighting.",
-    software: ["Autodesk Maya", "ZBrush", "Substance 3D Painter", "Arnold Renderer"],
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
     techniques: [
       "High-Poly Hard Surface & Sculpting",
       "PBR Gold & Weathered Metal Texturing",
