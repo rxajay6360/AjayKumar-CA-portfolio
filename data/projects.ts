@@ -510,6 +510,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/vintage-gramophone/front-view.jpg",
     wireframeImage: "/images/projects/vintage-gramophone/right-side-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/vintage-gramophone/right-side-view.jpg",
+    videoUrl: "/videos/projects/vintage-gramophone/gramophone-showreel.mp4",
+    videoPoster: "/videos/projects/vintage-gramophone/poster.jpg",
+    videoTitle: "VINTAGE GRAMOPHONE — SHOW REEL",
     keyHighlights: [
       "Complex curved brass horn crafted with smooth radial flow, hand-hammered relief, and subtle oxidation",
       "Multi-layered mahogany wood case with realistic organic grain depth, brass corner insets, and lacquer sheen",
