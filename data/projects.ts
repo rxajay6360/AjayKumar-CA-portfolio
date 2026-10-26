@@ -289,6 +289,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/futuristic-bike/front-low-angle.jpg",
     wireframeImage: "/images/projects/futuristic-bike/front-low-angle-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/futuristic-bike/front-low-angle.jpg",
+    videoUrl: "/videos/projects/futuristic-single-wheel-bike/bike-showreel.mp4",
+    videoPoster: "/videos/projects/futuristic-single-wheel-bike/poster.jpg",
+    videoTitle: "FUTURISTIC SINGLE WHEEL BIKE — SHOW REEL",
     keyHighlights: [
       "Center hubless monowheel design featuring heavy ribbed tire tread and dynamic shock suspension",
       "Matching 1:1 wireframe topology comparison showing clean quad distribution across complex mechanical parts",
