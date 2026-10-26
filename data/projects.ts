@@ -762,6 +762,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/radio/front-close.jpg",
     wireframeImage: "/images/projects/radio/front-close-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/radio/front-close.jpg",
+    videoUrl: "/videos/projects/radio/radio-showreel.mp4",
+    videoPoster: "/videos/projects/radio/poster.jpg",
+    videoTitle: "RADIO — SHOW REEL",
     keyHighlights: [
       "Tactile knurled control dials and volume knobs with authentic mechanical spacing and rotation pivots",
       "Dual backlit 'MUSIC' pill badges set into vintage enamel casing with subtle atmospheric glow",
