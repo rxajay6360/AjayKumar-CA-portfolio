@@ -140,12 +140,12 @@ export default function Navbar() {
           {/* Right Action: Resume */}
           <div className="nav-actions">
             <a
-              href="/Ajay_Kumar_Resume.pdf"
+              href="/AJAY_3D_ARTIST_RESUME.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              download="Ajay_Kumar_Resume.pdf"
+              download="AJAY_3D_ARTIST_RESUME.jpg"
               className="nav-resume-btn"
-              title="Download C.A. Ajay Kumar's Resume"
+              title="View & Download C.A. Ajay Kumar's Resume"
             >
               <FileText className="nav-resume-icon" size={13} />
               <span>Resume</span>
@@ -204,10 +204,10 @@ export default function Navbar() {
 
           <div className="mobile-drawer-footer">
             <a
-              href="/Ajay_Kumar_Resume.pdf"
+              href="/AJAY_3D_ARTIST_RESUME.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              download="Ajay_Kumar_Resume.pdf"
+              download="AJAY_3D_ARTIST_RESUME.jpg"
               className="mobile-resume-btn"
             >
               <FileText size={16} />
