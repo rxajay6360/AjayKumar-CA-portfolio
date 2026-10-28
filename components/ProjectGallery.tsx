@@ -187,6 +187,14 @@ export default function ProjectGallery() {
         id="projects"
         style={{ position: "absolute", top: 0, opacity: 0, pointerEvents: "none" }}
       />
+      {/* Section Header Badge */}
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <span className="text-[#ff2a3b] font-mono text-xs tracking-[0.25em]">02</span>
+        <div className="w-8 h-[1px] bg-[#ff2a3b]/40" />
+        <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#888888]">
+          FEATURED WORK &bull; PORTFOLIO
+        </span>
+      </div>
       <h2 className="chrome section-heading">3D Projects</h2>
 
       {/* Category Filter Switcher */}

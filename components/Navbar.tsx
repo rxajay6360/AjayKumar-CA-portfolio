@@ -145,7 +145,7 @@ export default function Navbar() {
               title="Email C.A. Ajay Kumar (ajay636029@gmail.com)"
             >
               <Mail className="nav-email-icon" size={13} />
-              <span>Email</span>
+              <span className="nav-btn-text">Email</span>
             </a>
 
             <a
@@ -157,7 +157,7 @@ export default function Navbar() {
               title="View & Download C.A. Ajay Kumar's Resume"
             >
               <FileText className="nav-resume-icon" size={13} />
-              <span>Resume</span>
+              <span className="nav-btn-text">Resume</span>
             </a>
 
             {/* Mobile Menu Toggle */}

@@ -53,18 +53,18 @@ export default function WorkflowTimeline() {
     <section id="workflow" className="py-24 border-b border-[#171717] relative bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col mb-16 w-full">
-          <div className="flex items-center gap-3 mb-3">
+        <div className="flex flex-col items-center text-center mb-16 w-full">
+          <div className="flex items-center justify-center gap-3 mb-3">
             <span className="text-[#ff2a3b] font-mono text-xs tracking-[0.25em]">05</span>
             <div className="w-6 h-[1px] bg-[#ff2a3b]/40" />
             <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-[#888888]">
               PRODUCTION PIPELINE &bull; WORKFLOW
             </span>
           </div>
-          <h2 className="chrome text-[clamp(36px,5.8vw,86px)] leading-[0.95] tracking-[-0.03em] mb-4 whitespace-nowrap inline-block">
+          <h2 className="chrome text-center text-[clamp(36px,5.8vw,86px)] leading-[0.95] tracking-[-0.03em] mb-4 whitespace-nowrap">
             Workflow
           </h2>
-          <p className="text-xs sm:text-sm text-[#888888] max-w-xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#888888] max-w-xl leading-relaxed mx-auto text-center">
             A methodical six-stage pipeline ensuring high-fidelity visual results from initial blockout to the polished final frame.
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function WorkflowTimeline() {
         </div>
 
         {/* Mobile / Tablet Vertical Timeline (Hidden on Desktop) */}
-        <div className="lg:hidden relative border-l-2 border-[#ff2a3b]/40 ml-4 pl-6 space-y-10">
+        <div className="lg:hidden relative border-l-2 border-[#ff2a3b]/40 ml-5 pl-7 sm:ml-6 sm:pl-8 space-y-10">
           {steps.map((st, idx) => {
             const Icon = st.icon;
             return (
@@ -132,7 +132,7 @@ export default function WorkflowTimeline() {
                 className="relative group"
               >
                 {/* Timeline Dot */}
-                <div className="absolute -left-[35px] top-1.5 w-6 h-6 rounded-full bg-[#0a0a0c] border-2 border-[#ff2a3b] flex items-center justify-center text-[9px] font-mono font-bold text-white shadow-[0_0_10px_#ff2a3b]">
+                <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0a0c] border-2 border-[#ff2a3b] flex items-center justify-center text-[9px] font-mono font-bold text-white shadow-[0_0_10px_#ff2a3b]">
                   {st.step.substring(1)}
                 </div>
 
