@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X, FileText, Mail } from "lucide-react";
 import ShowreelModal from "@/components/ShowreelModal";
 
 const NAV_ITEMS = [
@@ -137,8 +137,17 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right Action: Resume */}
+          {/* Right Action: Email & Resume */}
           <div className="nav-actions">
+            <a
+              href="mailto:ajay636029@gmail.com"
+              className="nav-email-btn"
+              title="Email C.A. Ajay Kumar (ajay636029@gmail.com)"
+            >
+              <Mail className="nav-email-icon" size={13} />
+              <span>Email</span>
+            </a>
+
             <a
               href="/AJAY_3D_ARTIST_RESUME.jpg"
               target="_blank"
@@ -203,6 +212,13 @@ export default function Navbar() {
           </div>
 
           <div className="mobile-drawer-footer">
+            <a
+              href="mailto:ajay636029@gmail.com"
+              className="mobile-email-btn"
+            >
+              <Mail size={16} />
+              <span>ajay636029@gmail.com</span>
+            </a>
             <a
               href="/AJAY_3D_ARTIST_RESUME.jpg"
               target="_blank"
