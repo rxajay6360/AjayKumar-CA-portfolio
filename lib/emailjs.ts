@@ -4,7 +4,7 @@ export const EMAILJS_CONFIG = {
   serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_nlnrf0v",
   templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_10mxy7j",
   publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "IupGmi-M4W0J4nNbR",
-  recipientEmail: "rxajay9196@gmail.com",
+  recipientEmail: "ajay636029@gmail.com",
 };
 
 export interface ContactFormData {

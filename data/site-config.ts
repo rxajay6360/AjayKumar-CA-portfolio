@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
   tagline: "BUILT IN 3D. FINISHED WITH IMPACT.",
   bio: "I transform creative ideas into detailed 3D assets, realistic materials, cinematic renders, and dynamic motion visuals — from the first blockout to the final frame.",
   aboutQuote: "Details matter. Feeling matters more.",
-  email: "rxajay9196@gmail.com",
+  email: "ajay636029@gmail.com",
   phone: "+91 63602 94419",
   whatsapp: "https://wa.me/916360294419",
   location: "India • Available Worldwide",

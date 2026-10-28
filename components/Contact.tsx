@@ -42,7 +42,7 @@ export default function Contact() {
 
       setStatus("success");
       setStatusMessage(
-        `Thank you ${name}! Your inquiry has been sent directly to rxajay9196@gmail.com. I will get back to you within 24 hours.`
+        `Thank you ${name}! Your inquiry has been sent directly to ${siteConfig.email}. I will get back to you within 24 hours.`
       );
       setName("");
       setEmail("");
@@ -58,7 +58,7 @@ export default function Contact() {
 
       setStatus("success");
       setStatusMessage(
-        `Thanks ${name}! Your message was drafted to rxajay9196@gmail.com. I will review it and reply within 24 hours.`
+        `Thanks ${name}! Your message was drafted to ${siteConfig.email}. I will review it and reply within 24 hours.`
       );
     }
   };
@@ -294,7 +294,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="mailto:rxajay9196@gmail.com"
+            href={`mailto:${siteConfig.email}`}
             className="connect-chip mail"
           >
             <span className="connect-chip-icon">
@@ -305,7 +305,7 @@ export default function Contact() {
             </span>
             <div className="connect-chip-text">
               <span className="connect-chip-lbl">Email</span>
-              <span className="connect-chip-val">rxajay9196@gmail.com</span>
+              <span className="connect-chip-val">{siteConfig.email}</span>
             </div>
             <span className="connect-chip-arrow">↗</span>
           </a>
