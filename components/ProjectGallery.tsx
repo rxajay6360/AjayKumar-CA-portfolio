@@ -171,6 +171,19 @@ export default function ProjectGallery() {
       image: "/images/projects/thors-hammer/front-wide-view.jpg",
       category: "3D ART",
     },
+    {
+      n: 11,
+      num: "12",
+      cat: "BRINGING TRADITIONAL VILLAGE HERITAGE TO LIFE THROUGH 3D ART",
+      title: "THE VILLAGE WELL",
+      link: "/work/the-village-well",
+      leftText: "Heritage",
+      leftClass: "p3a",
+      leftTag: "VILLAGE PROP",
+      leftSub: "TRADITIONAL ↗",
+      image: "/images/projects/the-village-well/wide-angle.jpg",
+      category: "3D ART",
+    },
   ];
 
   const getCount = (cat: ProjectCategory) => {

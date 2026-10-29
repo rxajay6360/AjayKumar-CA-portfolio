@@ -1354,4 +1354,131 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "the-village-well",
+    title: "THE VILLAGE WELL",
+    subtitle: "Bringing Traditional Village Heritage to Life Through 3D Art",
+    category: "3D Environment Prop / Texturing / Lookdev",
+    filterCategory: "environments",
+    featured: true,
+    year: "2026",
+    shortDescription:
+      "A rustic, culturally authentic Indian village well featuring weathered stone masonry, aged wooden timber rafters, coiled hemp ropes, and historic hand-carved architectural details.",
+    objective:
+      "Recreate the timeless beauty of rural heritage through detailed hard-surface modeling in Maya, organic weathering and PBR stone texturing in Substance Painter, and realistic sunlight rendering in Arnold.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Sub-D Stone & Timber Modeling",
+      "PBR Weathered Wood & Chipped Rock Texturing",
+      "Coiled Rope & Hardware Detailing",
+      "Cinematic Natural Sunlight & Shadow Lookdev",
+    ],
+    heroImage: "/images/projects/the-village-well/wide-angle.jpg",
+    wireframeImage: "/images/projects/the-village-well/wide-angle-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/the-village-well/wide-angle.jpg",
+    keyHighlights: [
+      "Authentic rural Indian well architecture with hand-hewn stone blocks, timber canopy supports, and tiled roof structure",
+      "Multi-layered PBR materials showcasing moss patina, weathered timber grain, aged metal pulleys, and earthen dust buildup",
+      "1:1 matching wireframe topology comparison showing clean quad edge flow across curved masonry and wooden joints",
+      "Comprehensive multi-angle portfolio coverage including wide shots, corner perspectives, low angles, and macro details",
+    ],
+    textureBreakdown: [
+      {
+        name: "Aged Fieldstone Masonry",
+        resolution: "4096 x 4096",
+        description:
+          "Hand-stacked circular stone wall with organic mortar depth, mineral staining, and moss growth in crevices.",
+      },
+      {
+        name: "Weathered Hardwood Timber",
+        resolution: "4096 x 4096",
+        description:
+          "Sun-bleached structural beams and support pillars with deep longitudinal wood grain cracks and rough knots.",
+      },
+      {
+        name: "Coiled Hemp Rope & Pulley Wheel",
+        resolution: "4096 x 4096",
+        description:
+          "Twisted fiber strand normal maps with microscopic fraying and oxidised wrought iron pulley axle brackets.",
+      },
+      {
+        name: "Terracotta Roof Tiles",
+        resolution: "4096 x 4096",
+        description:
+          "Clay baked earthen tiles with subtle color variation, edge chipping, and natural environmental weathering.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Reference Gathering & Maya Sub-D Blockout",
+        description:
+          "Studied traditional Indian village well structures, establishing accurate architectural proportions, pulley heights, and stone circular circumference.",
+        techniques: ["Cultural Reference Alignment", "Sub-D Blockout", "Scale & Proportion Study"],
+      },
+      {
+        phase: "02",
+        title: "High-Poly Masonry & Timber Construction",
+        description:
+          "Modeled individual stone blocks, wooden mortise joints, canopy rafters, and coiled suspension rope with clean quad edge flow.",
+        techniques: ["Bevel Management", "Rope Spline Extrusion", "Non-Destructive Quad Topology"],
+      },
+      {
+        phase: "03",
+        title: "PBR Material Authoring in Substance Painter",
+        description:
+          "Authored multi-layer smart materials in Substance 3D Painter with curvature-driven edge wear, cavity dirt, moss patina, and wood grain roughness maps.",
+        techniques: ["Smart Masks", "Curvature & AO Baking", "Normal Detailing", "Roughness Variation"],
+      },
+      {
+        phase: "04",
+        title: "Arnold Lighting & Multi-Angle Lookdev",
+        description:
+          "Crafted natural atmospheric golden hour and midday sun illumination using Arnold skydome and directional physical lights.",
+        techniques: ["Arnold Physical Sun", "ACEScg Color Management", "Depth of Field & Composition"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/the-village-well/wide-angle.jpg",
+        caption: "Wide angle perspective showcasing the complete village well architecture and scenic atmospheric environment",
+        label: "Wide Angle Master",
+      },
+      {
+        url: "/images/projects/the-village-well/front-view.jpg",
+        caption: "Direct frontal elevation highlighting the timber canopy framework, pulley wheel, and symmetrical stonework",
+        label: "Front View",
+      },
+      {
+        url: "/images/projects/the-village-well/corner-view.jpg",
+        caption: "Three-quarter corner view revealing the volumetric depth, stone curvature, and wooden support columns",
+        label: "Corner View",
+      },
+      {
+        url: "/images/projects/the-village-well/side-low-angle.jpg",
+        caption: "Low-angle heroic perspective accentuating the scale and weathered texture detailing of the well superstructure",
+        label: "Low Angle Shot",
+      },
+      {
+        url: "/images/projects/the-village-well/upper-view.jpg",
+        caption: "Overhead perspective looking down into the well rim and canopy structure, highlighting top-down lighting response",
+        label: "Upper Top View",
+      },
+      {
+        url: "/images/projects/the-village-well/details.jpg",
+        caption: "Macro close-up render capturing the intricate hemp rope coils, wooden grain fissures, and iron fittings",
+        label: "Macro Rope & Timber Detail",
+      },
+      {
+        url: "/images/projects/the-village-well/details-2.jpg",
+        caption: "Secondary close-up focus on hand-carved stone block joints, organic mortar weathering, and surface roughness",
+        label: "Masonry Close-up",
+      },
+      {
+        url: "/images/projects/the-village-well/back-wide-angle.jpg",
+        caption: "Rear wide perspective demonstrating complete 360-degree modeling fidelity across all sides of the asset",
+        label: "Back Wide Angle",
+      },
+    ],
+  },
 ];
