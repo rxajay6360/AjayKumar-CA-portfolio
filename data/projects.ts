@@ -1376,6 +1376,9 @@ export const projects: Project[] = [
     heroImage: "/images/projects/the-village-well/wide-angle.jpg",
     wireframeImage: "/images/projects/the-village-well/wide-angle-wireframe.jpg",
     wireframeBeautyImage: "/images/projects/the-village-well/wide-angle.jpg",
+    videoUrl: "/videos/projects/the-village-well/village-well-showreel.mp4",
+    videoPoster: "/videos/projects/the-village-well/poster.jpg",
+    videoTitle: "THE VILLAGE WELL — CINEMATIC SHOW REEL",
     keyHighlights: [
       "Authentic rural Indian well architecture with hand-hewn stone blocks, timber canopy supports, and tiled roof structure",
       "Multi-layered PBR materials showcasing moss patina, weathered timber grain, aged metal pulleys, and earthen dust buildup",
