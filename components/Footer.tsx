@@ -35,18 +35,20 @@ export default function Footer() {
 
           {/* Social Quick Links */}
           <div className="flex flex-wrap items-center gap-6 text-xs font-mono">
-            {siteConfig.socials.slice(0, 4).map((soc) => (
-              <a
-                key={soc.name}
-                href={soc.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#ff2a3b] transition-colors flex items-center gap-1"
-              >
-                <span>{soc.name}</span>
-                <ArrowUpRight className="w-3 h-3 text-[#555555]" />
-              </a>
-            ))}
+            {siteConfig.socials
+              .filter((soc) => soc.name !== "WhatsApp")
+              .map((soc) => (
+                <a
+                  key={soc.name}
+                  href={soc.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#ff2a3b] transition-colors flex items-center gap-1"
+                >
+                  <span>{soc.name}</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#555555]" />
+                </a>
+              ))}
           </div>
 
           {/* Back to Top */}

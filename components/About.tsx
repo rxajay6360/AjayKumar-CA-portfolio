@@ -155,19 +155,49 @@ export default function About() {
           I am C.A. Ajay Kumar, a creative artist focused on 3D modeling, texturing, materials, environments, lighting and rendering. I enjoy transforming ideas into visually striking digital experiences through detailed modeling, cinematic lighting, material development, and creative presentation. Let&apos;s build something incredible together!
         </p>
         <div className="soc">
-          <a href="https://www.artstation.com/rxajay_3dartist" target="_blank" rel="noopener noreferrer" title="ArtStation">
+          <a
+            href="https://www.artstation.com/rxajay_3dartist"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="ArtStation"
+            aria-label="ArtStation Profile"
+          >
             As
           </a>
-          <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" title="Behance">
+          <a
+            href="https://www.behance.net/ajaykumar203"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Behance"
+            aria-label="Behance Profile"
+          >
             Be
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="LinkedIn Profile"
+          >
             in
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+            aria-label="Instagram Profile"
+          >
             Ig
           </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="YouTube"
+            aria-label="YouTube Profile"
+          >
             Yt
           </a>
         </div>

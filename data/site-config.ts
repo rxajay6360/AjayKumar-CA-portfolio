@@ -63,7 +63,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "Behance",
-      url: "https://www.behance.net",
+      url: "https://www.behance.net/ajaykumar203",
       label: "Creative Case Studies",
       icon: "behance",
     },
