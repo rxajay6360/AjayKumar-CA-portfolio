@@ -1484,4 +1484,144 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "the-jeep-garage",
+    title: "THE JEEP GARAGE",
+    subtitle: "Every dent tells a story of the road behind",
+    category: "3D Vehicle & Workshop Environment / LookDev",
+    filterCategory: "environments",
+    featured: true,
+    year: "2026",
+    shortDescription:
+      "A rugged, atmospheric off-road Jeep parked inside an industrial mechanic workshop, featuring weathered automotive metal, heavy mud spatter, custom tool cabinets, weapon mounts, and cinematic workshop lighting.",
+    objective:
+      "Model, texture, and light a battle-tested off-road 4x4 Jeep within a detailed mechanic garage environment, highlighting hard-surface mechanical sub-assemblies, heavy PBR weathering, and cinematic moody workshop illumination.",
+    software: ["Autodesk Maya", "Substance 3D Painter", "Arnold Renderer"],
+    techniques: [
+      "Hard-Surface Automotive & Mechanical Sub-D Modeling",
+      "PBR Rust, Mud, Scratched Enamel & Oil Grime Texturing",
+      "Modular Workshop Environment & Tool Props",
+      "Cinematic Volumetric Workshop Lighting & ACES Lookdev",
+    ],
+    heroImage: "/images/projects/the-jeep-garage/jeep-front-view.jpg",
+    wireframeImage: "/images/projects/the-jeep-garage/jeep-front-view-wireframe.jpg",
+    wireframeBeautyImage: "/images/projects/the-jeep-garage/jeep-front-view.jpg",
+    videoUrl: "/videos/projects/the-jeep-garage/jeep-garage-showreel.mp4",
+    videoPoster: "/videos/projects/the-jeep-garage/poster.jpg",
+    videoTitle: "THE JEEP GARAGE — CINEMATIC SHOW REEL",
+    keyHighlights: [
+      "Rugged 4x4 off-road vehicle featuring custom bull bar, snorkel intake, heavy-duty suspension, and aggressive all-terrain tires",
+      "Extensive environmental prop library including rollaway tool chests, pneumatic wrenches, oil barrels, and tactical equipment",
+      "Multi-layered Substance Painter lookdev featuring chipping clearcoat, oxidized sheet metal, dried mud splatter, and grease stains",
+      "1:1 matching wireframe topology comparison illustrating clean quad edge flow across complex automotive body panels and chassis",
+    ],
+    textureBreakdown: [
+      {
+        name: "Weathered Olive Body Paint & Clearcoat",
+        resolution: "4096 x 4096",
+        description:
+          "Sun-faded military olive paint layered with stone chips, scratched clearcoat, micro-roughness, and bare exposed steel.",
+      },
+      {
+        name: "Dried Mud, Dust & Underbody Grime",
+        resolution: "4096 x 4096",
+        description:
+          "High-viscosity caked mud on wheel arches, undercarriage dirt buildup, and splatter maps baked with normal map displacement.",
+      },
+      {
+        name: "Machined Steel, Chrome & Exhaust Rust",
+        resolution: "4096 x 4096",
+        description:
+          "Heat-stained exhaust manifold, oxidized suspension springs, and metallic chrome headlight reflectors with Fresnel accuracy.",
+      },
+      {
+        name: "Industrial Tool Cabinets & Garage Concrete",
+        resolution: "4096 x 4096",
+        description:
+          "Powder-coated red steel cabinets with edge wear, greasy fingerprints, and cracked epoxy concrete workshop floor.",
+      },
+    ],
+    processStages: [
+      {
+        phase: "01",
+        title: "Vehicle & Workshop Architectural Blockout",
+        description:
+          "Established accurate wheelbase dimensions, tire clearance, bull-bar geometry, and industrial garage structural columns in Autodesk Maya.",
+        techniques: ["Automotive Proportion Study", "Sub-D Blockout", "Modular Environment Layout"],
+      },
+      {
+        phase: "02",
+        title: "High-Poly Hard Surface Mechanical Detailing",
+        description:
+          "Crafted intricate suspension linkage, brake calipers, winch assemblies, engine bay components, and modular tool sets with clean quad topology.",
+        techniques: ["Mechanical Assemblies", "Quad Sub-D Bevel Control", "Hard-Surface Edge Flow"],
+      },
+      {
+        phase: "03",
+        title: "PBR Material Craftsmanship in Substance Painter",
+        description:
+          "Authored smart materials combining automotive enamel, layered rust streaks, grease smudges, and procedural dirt generators across high-density UDIM tiles.",
+        techniques: ["UDIM Texturing", "Curvature & AO Smart Masks", "Multi-Layered Grunge & Rust"],
+      },
+      {
+        phase: "04",
+        title: "Arnold Cinematic LookDev & Lighting",
+        description:
+          "Composed dramatic garage lighting utilizing overhead industrial fluorescent fixtures, warm accent lamps, and volumetric dust haze in Arnold.",
+        techniques: ["Arnold aiStandardSurface", "Volumetric Atmosphere", "ACEScg Color Workflow"],
+      },
+    ],
+    galleryImages: [
+      {
+        url: "/images/projects/the-jeep-garage/jeep-front-view.jpg",
+        caption: "Hero frontal perspective showcasing the aggressive front grille, winch bumper, and textured garage ambiance",
+        label: "Hero Front View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/front-view.jpg",
+        caption: "Direct frontal view displaying symmetrical lighting, roof spotlights, and rugged stance",
+        label: "Front View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/corner-view.jpg",
+        caption: "Three-quarter corner view highlighting the wheel well flares, snorkel intake, and side body contours",
+        label: "Corner 3/4 View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/corner-parallel-view.jpg",
+        caption: "Wide parallel corner angle displaying the full workshop interior, vehicle silhouette, and background assets",
+        label: "Corner Parallel View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/side-view.jpg",
+        caption: "Side profile angle emphasizing the rugged off-road wheelbase, tire tread depth, and ground clearance",
+        label: "Side Profile",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/top-view.jpg",
+        caption: "High-angle overhead view revealing the roof rack, hood ventilation, and garage workbench layout",
+        label: "Top-Down View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/glass-view.jpg",
+        caption: "Atmospheric close-up focusing on windshield transparency, wiper sweeps, and glass surface reflections",
+        label: "Windshield & Glass Detail",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/cupboard-details-view.jpg",
+        caption: "Environmental close-up highlighting the red steel tool cupboard, hand tools, and workshop props",
+        label: "Tool Cupboard Details",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/weapon-view.jpg",
+        caption: "Detailed prop lookdev showcasing tactical equipment mounted inside the workshop setup",
+        label: "Tactical Equipment View",
+      },
+      {
+        url: "/images/projects/the-jeep-garage/details-1.jpg",
+        caption: "Macro render focusing on mechanical joints, weathered hardware, and grease accumulation in crevices",
+        label: "Mechanical Macro Details",
+      },
+    ],
+  },
 ];

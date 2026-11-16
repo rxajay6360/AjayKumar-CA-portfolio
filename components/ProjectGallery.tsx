@@ -184,6 +184,19 @@ export default function ProjectGallery() {
       image: "/images/projects/radio/front-close.jpg",
       category: "3D ART",
     },
+    {
+      n: 12,
+      num: "13",
+      cat: "EVERY DENT TELLS A STORY OF THE ROAD BEHIND",
+      title: "THE JEEP GARAGE",
+      link: "/work/the-jeep-garage",
+      leftText: "Garage",
+      leftClass: "p1a",
+      leftTag: "VEHICLE & WORKSHOP",
+      leftSub: "OFF-ROAD PBR ↗",
+      image: "/images/projects/the-jeep-garage/jeep-front-view.jpg",
+      category: "3D ART",
+    },
   ];
 
   const getCount = (cat: ProjectCategory) => {
