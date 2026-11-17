@@ -43,7 +43,15 @@ export default function Footer() {
                   href={soc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#ff2a3b] transition-colors flex items-center gap-1"
+                  onClick={
+                    soc.name === "YouTube"
+                      ? (e) => {
+                          e.preventDefault();
+                          window.dispatchEvent(new CustomEvent("open-youtube-modal"));
+                        }
+                      : undefined
+                  }
+                  className="hover:text-[#ff2a3b] transition-colors flex items-center gap-1 cursor-pointer"
                 >
                   <span>{soc.name}</span>
                   <ArrowUpRight className="w-3 h-3 text-[#555555]" />

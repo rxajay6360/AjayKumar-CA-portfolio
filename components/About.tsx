@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import YouTubeModal from "@/components/YouTubeModal";
 
 function MayaLogoSvg({ idSuffix }: { idSuffix: string }) {
   return (
@@ -106,7 +107,14 @@ function PremiereLogoSvg() {
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
+  const [youtubeModalOpen, setYoutubeModalOpen] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleOpenYoutube = () => setYoutubeModalOpen(true);
+    window.addEventListener("open-youtube-modal", handleOpenYoutube);
+    return () => window.removeEventListener("open-youtube-modal", handleOpenYoutube);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -192,11 +200,14 @@ export default function About() {
             Ig
           </a>
           <a
-            href="https://www.youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="YouTube"
-            aria-label="YouTube Profile"
+            href="https://youtu.be/WNWs30LTdTc"
+            onClick={(e) => {
+              e.preventDefault();
+              setYoutubeModalOpen(true);
+            }}
+            title="Watch YouTube Video in Popup"
+            aria-label="Play YouTube Video in Popup"
+            className="cursor-pointer"
           >
             Yt
           </a>
@@ -279,6 +290,14 @@ export default function About() {
           <span className="float-badge-label">Adobe Premiere Pro</span>
         </div>
       </div>
+
+      {/* YouTube Cinema Popup Modal */}
+      <YouTubeModal
+        isOpen={youtubeModalOpen}
+        onClose={() => setYoutubeModalOpen(false)}
+        videoId="WNWs30LTdTc"
+        videoTitle="C.A. AJAY KUMAR — 3D ARTIST REEL"
+      />
     </section>
   );
 }

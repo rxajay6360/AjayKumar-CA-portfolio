@@ -69,7 +69,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "YouTube",
-      url: "https://www.youtube.com",
+      url: "https://youtu.be/WNWs30LTdTc",
       label: "Showreels & Turntables",
       icon: "youtube",
     },
