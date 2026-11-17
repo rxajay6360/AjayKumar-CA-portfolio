@@ -1,24 +1,21 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { X, Sparkles, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
+import { X, Sparkles, CheckCircle2, ExternalLink } from "lucide-react";
 
 interface ShowreelModalProps {
   isOpen: boolean;
   onClose: () => void;
-  videoSrc?: string;
-  posterSrc?: string;
+  videoId?: string;
+  title?: string;
 }
 
 export default function ShowreelModal({
   isOpen,
   onClose,
-  videoSrc = "/videos/showreel/artist-showreel.mp4",
-  posterSrc = "/videos/showreel/poster.jpg",
+  videoId = "WNWs30LTdTc",
+  title = "C.A. AJAY KUMAR — 3D ARTIST SHOWREEL",
 }: ShowreelModalProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
   // Lock body scroll and listen for Escape key
   useEffect(() => {
     if (!isOpen) return;
@@ -38,35 +35,15 @@ export default function ShowreelModal({
     };
   }, [isOpen, onClose]);
 
-  // Autoplay video on modal open and pause on close
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (isOpen) {
-      video.currentTime = 0;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(() => {
-            // If browser blocks unmuted autoplay, mute and resume playback
-            video.muted = true;
-            video.play().then(() => setIsPlaying(true)).catch(() => {});
-          });
-      }
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  }, [isOpen]);
-
   if (!isOpen) return null;
 
   return (
-    <div className="showreel-modal-overlay" role="dialog" aria-modal="true" aria-label="3D Artist Showreel Popup">
+    <div
+      className="showreel-modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="3D Artist Showreel Popup"
+    >
       {/* Backdrop */}
       <div className="showreel-modal-backdrop" onClick={onClose} />
 
@@ -79,8 +56,8 @@ export default function ShowreelModal({
               <Sparkles size={12} />
               <span>OFFICIAL 3D SHOWREEL</span>
             </div>
-            <h3 className="showreel-modal-title">C.A. AJAY KUMAR — 3D ARTIST SHOWREEL</h3>
-            <span className="showreel-modal-specs">1080p HD • 03:41 • Maya &amp; Substance</span>
+            <h3 className="showreel-modal-title">{title}</h3>
+            <span className="showreel-modal-specs">1080p HD • YouTube • Maya &amp; Substance</span>
           </div>
 
           <button
@@ -95,18 +72,14 @@ export default function ShowreelModal({
           </button>
         </div>
 
-        {/* Video Player */}
-        <div className="showreel-modal-video-wrap">
-          <video
-            ref={videoRef}
-            src={videoSrc}
-            poster={posterSrc}
-            controls
-            autoPlay
-            playsInline
-            className="showreel-modal-video"
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
+        {/* Video Player (YouTube Embed with Autoplay) */}
+        <div className="showreel-modal-video-wrap relative w-full aspect-video bg-black">
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full border-0"
           />
         </div>
 
@@ -120,6 +93,17 @@ export default function ShowreelModal({
               </span>
             ))}
           </div>
+
+          <a
+            href={`https://youtu.be/${videoId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="showreel-modal-cta"
+            title="Watch Showreel directly on YouTube"
+          >
+            <span>Watch on YouTube</span>
+            <ExternalLink size={12} />
+          </a>
         </div>
       </div>
     </div>

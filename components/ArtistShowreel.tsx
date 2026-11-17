@@ -1,7 +1,6 @@
 "use client";
 
-import { Sparkles, CheckCircle2 } from "lucide-react";
-import ProjectVideoPlayer from "@/components/ProjectVideoPlayer";
+import { Sparkles, CheckCircle2, ExternalLink } from "lucide-react";
 
 export default function ArtistShowreel() {
   return (
@@ -27,15 +26,16 @@ export default function ArtistShowreel() {
         <div className="showreel-cinema-stage">
           <div className="showreel-player-halo" aria-hidden="true" />
           <div className="showreel-player-card">
-            <ProjectVideoPlayer
-              src="/videos/showreel/artist-showreel.mp4"
-              poster="/videos/showreel/poster.jpg"
-              title="C.A. AJAY KUMAR — 3D ARTIST SHOWREEL"
-              aspectRatio="aspect-[16/9]"
-              objectFit="contain"
-              showTopHeader={false}
-              className="showreel-main-player !rounded-none !border-0 !shadow-none"
-            />
+            {/* Embedded YouTube Player */}
+            <div className="relative w-full aspect-[16/9] bg-black overflow-hidden rounded-t-[20px]">
+              <iframe
+                src="https://www.youtube.com/embed/WNWs30LTdTc?rel=0&modestbranding=1&playsinline=1"
+                title="C.A. AJAY KUMAR — 3D ARTIST SHOWREEL"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
 
             {/* Showcase Details Metadata Bar */}
             <div className="showreel-meta-bar">
@@ -72,6 +72,17 @@ export default function ArtistShowreel() {
                   <Sparkles size={14} />
                   <span>Popup Cinema Mode ↗</span>
                 </button>
+
+                <a
+                  href="https://youtu.be/WNWs30LTdTc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="showreel-case-btn"
+                  title="Watch Showreel on YouTube"
+                >
+                  <ExternalLink size={14} />
+                  <span>YouTube ↗</span>
+                </a>
               </div>
             </div>
           </div>
