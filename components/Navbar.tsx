@@ -149,12 +149,11 @@ export default function Navbar() {
             </a>
 
             <a
-              href="/AJAY_3D_ARTIST_RESUME.jpg"
+              href="/AJAY_3D_ARTIST_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="AJAY_3D_ARTIST_RESUME.jpg"
               className="nav-resume-btn"
-              title="View & Download C.A. Ajay Kumar's Resume"
+              title="View & Download C.A. Ajay Kumar's Resume (PDF)"
             >
               <FileText className="nav-resume-icon" size={13} />
               <span className="nav-btn-text">Resume</span>
@@ -220,10 +219,10 @@ export default function Navbar() {
               <span>ajay636029@gmail.com</span>
             </a>
             <a
-              href="/AJAY_3D_ARTIST_RESUME.jpg"
+              href="/AJAY_3D_ARTIST_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="AJAY_3D_ARTIST_RESUME.jpg"
+              download="AJAY_3D_ARTIST_RESUME.pdf"
               className="mobile-resume-btn"
             >
               <FileText size={16} />
