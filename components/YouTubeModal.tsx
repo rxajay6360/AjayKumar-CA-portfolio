@@ -142,7 +142,7 @@ export default function YouTubeModal({
             href={`https://youtu.be/${videoId}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold tracking-wider text-[#cccccc] hover:text-white bg-white/[0.06] hover:bg-[#ff2a3b] border border-white/10 hover:border-[#ff2a3b] transition-all"
+            className="showreel-modal-cta"
             title="Open video directly on YouTube"
           >
             <span>Watch on YouTube</span>

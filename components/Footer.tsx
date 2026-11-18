@@ -17,12 +17,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#040405] border-t border-white/[0.08] text-[#888888] py-14">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/[0.06]">
+    <footer className="bg-[#040405] border-t border-white/[0.08] text-[#888888] py-12 md:py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="flex flex-col md:flex-row items-center text-center md:text-left justify-between gap-8 pb-10 md:pb-12 border-b border-white/[0.06]">
           {/* Brand & Title */}
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
               <span className="text-[#ff2a3b] text-xs">◆</span>
               <span className="font-cinzel text-lg text-white font-bold tracking-wider">
                 {siteConfig.name}
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Social Quick Links */}
-          <div className="flex flex-wrap items-center gap-6 text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3 text-xs font-mono">
             {siteConfig.socials
               .filter((soc) => soc.name !== "WhatsApp")
               .map((soc) => (

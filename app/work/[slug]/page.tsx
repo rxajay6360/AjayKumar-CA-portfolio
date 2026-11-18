@@ -83,9 +83,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     <div className="flex flex-col min-h-screen bg-[#050505] text-[#eee]">
       <Navbar />
 
-      <main className="flex-1 pt-28 pb-20">
+      <main className="flex-1 pt-24 sm:pt-28 pb-16 sm:pb-20">
         {/* Back Link Breadcrumbs */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-6 sm:mb-8">
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-mono tracking-widest">
             <Link
               href="/#projects"
@@ -108,7 +108,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Project Header Banner */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-12 sm:mb-16">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="px-2.5 py-1 rounded bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 text-[10px] font-mono tracking-widest text-[#ff2a3b] uppercase">
               {project.category}
@@ -118,16 +118,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </span>
           </div>
 
-          <h1 className="font-cinzel text-4xl sm:text-6xl text-white font-bold tracking-tight mb-4 leading-tight">
+          <h1 className="font-cinzel text-3xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight mb-4 leading-tight break-words">
             {project.title}
           </h1>
 
-          <p className="font-cinzel text-lg sm:text-xl text-[#d49755] mb-8 max-w-3xl">
+          <p className="font-cinzel text-base sm:text-xl text-[#d49755] mb-8 max-w-3xl">
             {project.subtitle}
           </p>
 
           {/* Quick Stats Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 bg-[#0a0a0d] border border-white/[0.08] rounded-lg">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 sm:p-6 bg-[#0a0a0d] border border-white/[0.08] rounded-lg">
             <div>
               <span className="block text-[10px] font-mono tracking-widest uppercase text-[#666666] mb-1">
                 SOFTWARE
@@ -164,7 +164,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
 
         {/* Hero Render / Showcase Image */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
           <HeroShowcaseImage
             src={project.heroImage}
             alt={project.title}
@@ -173,7 +173,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
 
         {/* Objective & Concept Section */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-4">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-2">
@@ -207,7 +207,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Show Reel / Cinematic Video Section */}
         {project.videoUrl && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
             <div className="mb-6">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-1">
                 CINEMATIC SHOWCASE
@@ -231,7 +231,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Interactive Before & After: Wireframe vs Beauty Render */}
         {project.wireframeImage && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
             <div className="mb-6">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-1">
                 TOPOLOGY BREAKDOWN
@@ -256,7 +256,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Texture Breakdown (If present) */}
         {project.textureBreakdown && project.textureBreakdown.length > 0 && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
             <div className="mb-8">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#d49755] block mb-1">
                 SUBSTANCE 3D PAINTER
@@ -291,7 +291,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* 4-Stage Production Process Breakdown */}
         {project.processStages && project.processStages.length > 0 && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-20">
             <div className="mb-8">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-1">
                 PIPELINE WALKTHROUGH
@@ -307,8 +307,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   key={stage.phase}
                   className="p-6 rounded bg-[#09090c] border border-white/[0.06] hover:border-[#ff2a3b]/30 transition-colors"
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-mono font-bold text-[#ff2a3b] bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 px-2 py-0.5 rounded">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+                    <span className="text-xs font-mono font-bold text-[#ff2a3b] bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 px-2 py-0.5 rounded shrink-0">
                       PHASE {stage.phase}
                     </span>
                     <h3 className="font-cinzel text-base text-white font-semibold">
@@ -336,7 +336,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Gallery Views (Filtered to supplied assets only) */}
         {project.galleryImages && project.galleryImages.length > 0 && (
-          <section className="max-w-7xl mx-auto px-6 md:px-12 mb-24">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-24">
             <div className="mb-8">
               <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#ff2a3b] block mb-1">
                 CAMERA ANGLES &amp; DETAILS
@@ -354,7 +354,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         )}
 
         {/* Previous / Next Project Navigation Bar */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 pt-12 border-t border-white/[0.08]">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-12 border-t border-white/[0.08]">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Prev Project */}
             <Link

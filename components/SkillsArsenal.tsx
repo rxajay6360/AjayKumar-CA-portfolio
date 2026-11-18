@@ -66,7 +66,7 @@ export default function SkillsArsenal() {
   ];
 
   return (
-    <section id="skills" className="py-28 px-4 sm:px-8 md:px-12 border-b border-[#171717] relative bg-[#070709] overflow-hidden select-none">
+    <section id="skills" className="py-16 md:py-28 px-4 sm:px-8 md:px-12 border-b border-[#171717] relative bg-[#070709] overflow-hidden select-none">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
@@ -92,7 +92,7 @@ export default function SkillsArsenal() {
             return (
               <div
                 key={disc.id}
-                className="bg-[#0a0a0c] border border-white/[0.08] p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#ff2a3b]/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.8)] relative group rounded"
+                className="bg-[#0a0a0c] border border-white/[0.08] p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#ff2a3b]/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.8)] relative group rounded"
               >
                 {/* Accent top stripe */}
                 <div

@@ -50,8 +50,8 @@ export default function WorkflowTimeline() {
   ];
 
   return (
-    <section id="workflow" className="py-24 border-b border-[#171717] relative bg-[#050505]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="workflow" className="py-16 md:py-24 border-b border-[#171717] relative bg-[#050505]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 w-full">
           <div className="flex items-center justify-center gap-3 mb-3">
@@ -132,7 +132,7 @@ export default function WorkflowTimeline() {
                 className="relative group"
               >
                 {/* Timeline Dot */}
-                <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0a0c] border-2 border-[#ff2a3b] flex items-center justify-center text-[9px] font-mono font-bold text-white shadow-[0_0_10px_#ff2a3b]">
+                <div className="absolute -left-[41px] sm:-left-[45px] top-1.5 w-6 h-6 rounded-full bg-[#0a0a0c] border-2 border-[#ff2a3b] flex items-center justify-center text-[9px] font-mono font-bold text-white shadow-[0_0_10px_#ff2a3b]">
                   {st.step.substring(1)}
                 </div>
 
