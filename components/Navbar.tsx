@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, FileText, Mail } from "lucide-react";
 import ShowreelModal from "@/components/ShowreelModal";
+import ResumeModal from "@/components/ResumeModal";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showreelModalOpen, setShowreelModalOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,11 +68,16 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // Listen for custom trigger to open showreel popup
+  // Listen for custom triggers to open showreel or resume popups
   useEffect(() => {
-    const handleOpen = () => setShowreelModalOpen(true);
-    window.addEventListener("open-showreel-modal", handleOpen);
-    return () => window.removeEventListener("open-showreel-modal", handleOpen);
+    const handleOpenShowreel = () => setShowreelModalOpen(true);
+    const handleOpenResume = () => setResumeModalOpen(true);
+    window.addEventListener("open-showreel-modal", handleOpenShowreel);
+    window.addEventListener("open-resume-modal", handleOpenResume);
+    return () => {
+      window.removeEventListener("open-showreel-modal", handleOpenShowreel);
+      window.removeEventListener("open-resume-modal", handleOpenResume);
+    };
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -103,24 +110,10 @@ export default function Navbar() {
     }
   };
 
-  const handleResumeDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleResumeOpen = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setMobileOpen(false);
-    try {
-      const response = await fetch("/AJAY_3D_ARTIST_RESUME.pdf");
-      if (!response.ok) throw new Error("Failed to fetch resume PDF");
-      const blob = await response.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = blobUrl;
-      link.download = "AJAY_3D_ARTIST_RESUME.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1500);
-    } catch {
-      window.open("/AJAY_3D_ARTIST_RESUME.pdf", "_blank", "noopener,noreferrer");
-    }
+    setResumeModalOpen(true);
   };
 
   return (
@@ -170,10 +163,9 @@ export default function Navbar() {
 
             <a
               href="/AJAY_3D_ARTIST_RESUME.pdf"
-              download="AJAY_3D_ARTIST_RESUME.pdf"
-              onClick={handleResumeDownload}
-              className="nav-resume-btn"
-              title="Download C.A. Ajay Kumar's Resume (PDF)"
+              onClick={handleResumeOpen}
+              className="nav-resume-btn cursor-pointer"
+              title="View & Download C.A. Ajay Kumar's Resume (PDF)"
             >
               <FileText className="nav-resume-icon" size={13} />
               <span className="nav-btn-text">Resume</span>
@@ -240,12 +232,11 @@ export default function Navbar() {
             </a>
             <a
               href="/AJAY_3D_ARTIST_RESUME.pdf"
-              download="AJAY_3D_ARTIST_RESUME.pdf"
-              onClick={handleResumeDownload}
-              className="mobile-resume-btn"
+              onClick={handleResumeOpen}
+              className="mobile-resume-btn cursor-pointer"
             >
               <FileText size={16} />
-              <span>Download Resume</span>
+              <span>View &amp; Download Resume</span>
             </a>
             <a
               href="/#contact"
@@ -263,6 +254,14 @@ export default function Navbar() {
       <ShowreelModal
         isOpen={showreelModalOpen}
         onClose={() => setShowreelModalOpen(false)}
+      />
+
+      {/* Cinematic Resume Preview & Download Popup Modal */}
+      <ResumeModal
+        isOpen={resumeModalOpen}
+        onClose={() => setResumeModalOpen(false)}
+        pdfUrl="/AJAY_3D_ARTIST_RESUME.pdf"
+        fileName="AJAY_3D_ARTIST_RESUME.pdf"
       />
     </>
   );
