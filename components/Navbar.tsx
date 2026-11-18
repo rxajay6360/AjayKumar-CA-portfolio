@@ -103,6 +103,26 @@ export default function Navbar() {
     }
   };
 
+  const handleResumeDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    try {
+      const response = await fetch("/AJAY_3D_ARTIST_RESUME.pdf");
+      if (!response.ok) throw new Error("Failed to fetch resume PDF");
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = "AJAY_3D_ARTIST_RESUME.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1500);
+    } catch {
+      window.open("/AJAY_3D_ARTIST_RESUME.pdf", "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <>
       <header className={`cinematic-navbar-container ${scrolled ? "scrolled" : ""}`}>
@@ -150,10 +170,10 @@ export default function Navbar() {
 
             <a
               href="/AJAY_3D_ARTIST_RESUME.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              download="AJAY_3D_ARTIST_RESUME.pdf"
+              onClick={handleResumeDownload}
               className="nav-resume-btn"
-              title="View & Download C.A. Ajay Kumar's Resume (PDF)"
+              title="Download C.A. Ajay Kumar's Resume (PDF)"
             >
               <FileText className="nav-resume-icon" size={13} />
               <span className="nav-btn-text">Resume</span>
@@ -220,9 +240,8 @@ export default function Navbar() {
             </a>
             <a
               href="/AJAY_3D_ARTIST_RESUME.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
               download="AJAY_3D_ARTIST_RESUME.pdf"
+              onClick={handleResumeDownload}
               className="mobile-resume-btn"
             >
               <FileText size={16} />
